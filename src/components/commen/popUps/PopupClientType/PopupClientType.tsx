@@ -2,9 +2,10 @@ import "./popu_client_type.css";
 import small_logo from "../../../../assets/small-logo.png"
 import './popu_client_type.css'
 import { useYourContext } from "../../../../context/MultiStepForm";
+import Stepper from "../../ui/Stepper";
 
 const PopupClientType = () => {
-  const { handleNext , toggleshowPopup } = useYourContext();
+  const { handleNext , toggleshowPopup ,handleButtonClick , userType  } = useYourContext();
 
   return (
     <>
@@ -19,33 +20,27 @@ const PopupClientType = () => {
         <img src={small_logo} className="box-img" alt="" />
         <p className="section-titel">S’inscrire</p>
       </div>
-      <div className="d-flex align-items-center justify-content-center" style={{ gap: "19px" }}>
-        <span className="step-box done">
-          <i className="bi bi-check2 text-white"></i>
-        </span>
-        <hr className="blue-line done" />
-        <span className="step-box">
-          2
-        </span>
-        <hr className="blue-line" />
-        <span className="step-box">3</span>
-      </div>
+      <Stepper stepNumber={0} />
       <div className="col-sm-8 col-lg-6 mx-auto d-grid gap-2 gap-lg-3 gap-xl-4 text-center">
         <h3 className="subtitel-popup my-4">quel est le type de vos services?</h3>
-        <button className="btn-white-shadow mx-auto">Particulier</button>
+        <button className={`${userType === 'Particulier' ? 'active': ''} btn-white-shadow mx-auto`} 
+        onClick={() => handleButtonClick('Particulier')}>Particulier</button>
         <div className="flex-items gap-4">
           <hr className="line-ou" />
           <p className="ou-text">Ou</p>
           <hr className="line-ou" />
         </div>
-        <button className="btn-white-shadow mx-auto">Indépendant</button>
-        <button className="btn-white-shadow mx-auto entreprise">Entreprise</button>
+        <button className={`${userType === 'Indépendant' ? 'active': ''} btn-white-shadow mx-auto`} 
+        onClick={() => handleButtonClick('Indépendant')}>Indépendant</button>
+        <button className={`${userType === 'Entreprise' ? 'active': ''} btn-white-shadow mx-auto`} 
+        onClick={() => handleButtonClick('Entreprise')}>Entreprise</button>
         <div className="flex-items gap-4">
           <hr className="line-ou" />
           <p className="ou-text">Ou</p>
           <hr className="line-ou" />
         </div>
-        <button className="btn-white-shadow mx-auto">Association</button>
+        <button className={`${userType === 'Association' ? 'active': ''} btn-white-shadow mx-auto`} 
+        onClick={() => handleButtonClick('Association')}>Association</button>
         <button onClick={handleNext} type="submit" className="btn-primary w-100">M’inscrire</button>
       </div>
     </section>

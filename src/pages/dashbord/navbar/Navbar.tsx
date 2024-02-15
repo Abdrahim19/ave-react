@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo  from '../../../assets/logo.png'
 import PopupInfo from './PopupInfo';
 
@@ -7,9 +8,9 @@ const Navbar = () => {
     return (
       <header className="home-header">
         <div className="container-md flex-items justify-content-between py-1">
-          <a href="index.html" className="home-logo">
+          <Link to="/" className='home-logo'>
             <img src={logo} alt="Logo" />
-          </a>
+          </Link>
           <ul className="d-md-flex menu-container flex justify-content-between">
             <li className="topmenu-link active">
               <a href="#" className="flex-items gap-2 active">

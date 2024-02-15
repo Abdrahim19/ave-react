@@ -39,8 +39,8 @@ const HomeLayout = () => {
       <Trouve />
       <Jobtype />
       <Carousel />
-      <Application />
       <Communauté />
+      <Application />
       <Footer />
     {showPopup  ? <MultiStepForm /> : false} 
     </>

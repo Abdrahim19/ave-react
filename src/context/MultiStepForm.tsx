@@ -4,9 +4,12 @@ import React, { createContext, useContext, ReactNode, useState } from 'react';
 interface YourContextProps {
   step: number;
   showPopup:boolean;
+  userType:string;
   handleNext: () => void;
   handlePrevious: () => void;
-  toggleshowPopup:() => void
+  toggleshowPopup:() => void;
+  handleButtonClick:(value:string) => void;
+  ToStep:(stepNumber:number) => void
 }
 
 // Create the context
@@ -20,6 +23,17 @@ interface YourContextProviderProps {
 const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) => {
   const [step, setStep] = useState(1);
   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [userType, setuserType] = useState<string>('Entreprise');
+
+  const handleButtonClick = (value:string) => {
+    setuserType(value);
+  };
+  
+  const ToStep = (stepNumber:number) => {
+    if (stepNumber > step) {
+       return setStep(stepNumber)
+    }
+  }
 
 
   const handleNext = () => {
@@ -39,7 +53,10 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
     handleNext,
     handlePrevious,
     showPopup,
-    toggleshowPopup
+    toggleshowPopup,
+    userType,
+    handleButtonClick,
+    ToStep
   };
 
   return <YourContext.Provider value={contextValue}>{children}</YourContext.Provider>;

@@ -16,7 +16,7 @@ const Hero = () => {
             <h1 className="hero-titel text-center text-lg-start my-3">Prestations de <br className="d-none d-md-block" /> services et location de <br className="d-none d-md-block" /> matériel</h1>
             <p className="hero-discrption text-center text-lg-start">4 millions d’habitants et <br /> professionnels partout en France</p>
             <div className="position-relative hero-input-container w-75 mx-auto mx-lg-0">
-              <input type="search" className="hero-input w-100 bg-transparent" placeholder="Que recherchez vous ?" />
+              <input type="text" className="hero-input w-100 bg-transparent" placeholder="Que recherchez vous ?" />
               <i className="bi bi-search top-50 translate-middle-y" style={{ position: 'absolute', right: '1rem' }}></i>
             </div>
             <div className="flex-items justify-content-center justify-content-lg-start mt-4" style={{ gap: 'clamp( 5px ,4vw , 10px)', marginLeft: '5px' }}>

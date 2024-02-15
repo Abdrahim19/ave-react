@@ -2,6 +2,7 @@ import small_logo from "../../../../assets/small-logo.png"
 import { useYourContext } from "../../../../context/MultiStepForm";
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
+import Stepper from "../../ui/Stepper";
 import './popupPritacler.css'
 
 
@@ -23,19 +24,7 @@ const PopupPritacler = () => {
         <img src={small_logo} className="box-img" alt="" />
         <p className="section-titel">S’inscrire</p>
       </div>
-      <div className="d-flex align-items-center justify-content-center" style={{gap: "19px"}}>
-        <span className="step-box done">
-          <i className="bi bi-check2 text-white"></i>
-        </span>
-        <hr className="blue-line done" />
-        <span className="step-box done">
-          <i className="bi bi-check2 text-white"></i>
-        </span>
-        <hr className="blue-line done" />
-        <span className="step-box">
-          3
-        </span>
-      </div>
+      <Stepper stepNumber={0} />
       <div className="d-flex flex-column w-100 flex-md-row gap-2">
       <div className="flex-1 position-relative">
       <Inputlabel name={""} type={"text"} label={"Nom"} error={""} />   

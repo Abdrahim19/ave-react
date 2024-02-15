@@ -1,6 +1,6 @@
 /* start apliction section */
 .apliction-section {
-    background-color: #99C4E717;
+    background-color: #f1f5f8;
     .apliction-titel {
         font-size:clamp(20px ,4vw ,30px );
         font-weight: 700;

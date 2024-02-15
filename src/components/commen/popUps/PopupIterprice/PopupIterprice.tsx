@@ -2,6 +2,7 @@ import small_logo from "../../../../assets/small-logo.png"
 import { useYourContext } from "../../../../context/MultiStepForm";
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
+import Stepper from "../../ui/Stepper";
 import './popupIterprice.css'
 
 
@@ -13,7 +14,7 @@ const PopupIterprice = () => {
   return (
     <>
     <section
-     className={`active interpricePopup row d-grid py-4 gap-4 overflow-y-auto overflow-x-hidden  bg-white`} >
+     className={`active interpricePopup row d-grid p-4 gap-4 overflow-y-auto overflow-x-hidden  bg-white`} >
       <div className="text-end mb-3">
    <button id="close" onClick={toggleshowPopup}>
               <i className="bi bi-x-lg" style={{fontSize:'min(40px ,20px)'}}></i>
@@ -23,19 +24,7 @@ const PopupIterprice = () => {
         <img src={small_logo} className="box-img" alt="" />
         <p className="section-titel">S’inscrire</p>
       </div>
-      <div className="d-flex align-items-center justify-content-center" style={{gap: "19px"}}>
-        <span className="step-box done">
-          <i className="bi bi-check2 text-white"></i>
-        </span>
-        <hr className="blue-line done" />
-        <span className="step-box done">
-          <i className="bi bi-check2 text-white"></i>
-        </span>
-        <hr className="blue-line done" />
-        <span className="step-box">
-          3
-        </span>
-      </div>
+      <Stepper stepNumber={0} />
       <div className="flex-items gap-2">
       <div className="col-lg-6 position-relative">
       <Inputlabel name={""} type={"text"} label={"Nom"} error={""} />   

@@ -17,7 +17,7 @@ const Popu_association = () => {
       <div className={`active bg-shadow`}>
     </div>
     <section 
-     className={`associationPopup p-2 gap-4 overflow-y-auto overflow-x-hidden bg-white`} >
+     className={`associationPopup p-4 d-grid gap-4 overflow-y-auto overflow-x-hidden bg-white`} >
       <div className="text-end">
    <button id="close" onClick={toggleshowPopup}>
               <i className="bi bi-x-lg" style={{fontSize:'min(40px ,20px)'}}></i>

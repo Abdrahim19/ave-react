@@ -3,6 +3,7 @@ import facebook_icon from "../../../../assets/icon _facebook.png"
 import googl_icon from "../../../../assets/googl-icon.png"
 import small_logo from "../../../../assets/small-logo.png"
 import { useYourContext } from "../../../../context/MultiStepForm";
+import Stepper from "../../ui/Stepper";
 
 
 // type Props = {
@@ -28,20 +29,14 @@ const Popup_media = () => {
         <img src={small_logo}className="box-img" alt="" />
         <p className="section-titel">S’inscrire</p>
       </div>
-      <div className="d-flex align-items-center justify-content-center" style={{ gap: "clamp(10px, 4vw, 19px)" }}>
-        <span className="step-box">1</span>
-        <hr className="blue-line" />
-        <span className="step-box">2</span>
-        <hr className="blue-line" />
-        <span className="step-box">3</span>
-      </div>
+      <Stepper stepNumber={0} />
       <div className="col-12 mt-4">
         <div className="col-sm-8 col-md-6 mx-auto">
           <a href="#" onClick={handleNext} className="Facebook singup-box d-flex align-items-center justify-content-center mx-auto mb-4 px-2" style={{ gap: "20px" }}>
             <img src={facebook_icon} alt="" />
             Sign in with Facebook
           </a>
-          <a href="#" className="Google singup-box d-flex align-items-center justify-content-center mx-auto px-2 mb-3" style={{ gap: "20px" }}>
+          <a href="#" onClick={handleNext} className="Google singup-box d-flex align-items-center justify-content-center mx-auto px-2 mb-3" style={{ gap: "20px" }}>
             <img src={googl_icon} alt="" />
             Sign in with Google
           </a>
