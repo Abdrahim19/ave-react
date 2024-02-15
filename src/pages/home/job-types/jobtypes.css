@@ -51,7 +51,7 @@
     @media (min-width:992px) {
         .second-sction {
           position: relative;
-          margin-top: 4rem;
+          margin-top: 4rem !important;
           &::before {
               content: '';
               position: absolute;
@@ -64,7 +64,7 @@
           }
           .thered-sction {
               position: relative;
-              margin-top: 8rem;
+              margin-top: 8rem !important;
               &::before {
                   content: '';
                   position: absolute;

@@ -67,6 +67,10 @@ line-height: 24px;
 background-color: var(--clr-main-blue);
 width:min(200px , 80%);
 height: 50px;
+transition: .5s;
+&:hover {
+background-color: #4d63a3ad;
+}
 
  }
 
