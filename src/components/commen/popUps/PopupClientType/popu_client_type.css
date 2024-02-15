@@ -1,0 +1,122 @@
+/* start first popup  */
+.btn-white-shadow {
+  width: 100%;
+min-height: 47px; 
+background: #ffffff;
+border-radius: 23.5px;
+box-shadow: 0px 4px 4px rgba(190, 190, 190, 0.46);
+font-style: normal;
+font-weight: 500;
+font-size:clamp(8px ,4vw , 14px);
+line-height: 20px;
+color: #30447f;
+display: grid;
+place-items: center;
+&.entreprise {
+  border: 4px solid #99c3e7;
+}
+} 
+.line-ou {
+width: 100%;
+border: 0.699999988079071px solid #afb7cf;
+} 
+.ou-text {
+font-family: var(--ff-inter);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #afb7cf;
+} 
+.subtitel-popup {
+font-style: normal;
+font-weight: 500;
+font-size: clamp(10px ,4vw , 1.3rem);
+line-height: 29px; 
+color: #aeb6cf;
+text-align: center;
+}
+/* end first popup  */
+
+/* start auth section */
+.cliienttype-popup {
+  max-width: min(1200px , 90%);
+  height: 80vh;
+    z-index: 15;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transition: .5s;
+    transform: translate(-50% , -50%);
+    border-radius: 20px;
+    .box-img {
+      width:clamp(70px , 4vw,100px);
+      aspect-ratio: 1;
+    }
+    .section-titel {
+      font-size:clamp(20px,4vw ,40px);
+      font-weight: 800;
+      line-height: 61px;
+      color: #30447F;    
+    }
+    .step-box {
+      border: 4px solid #f1f1f1;
+      outline: 4px solid #30447F;
+      width:60px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+  font-size:clamp(15px ,4vw  ,25px ) ;
+  font-weight: 400;
+  line-height: 41px;
+  border-radius: 50%;
+  background-color:#30447F ;
+  color: #f1f1f1;
+  &.done {
+  background-color:#71D78E ;
+  outline: 4px solid #71D78E;
+  }
+  i {
+    font-size: clamp(.5rem ,3vw , 2.5rem);
+  }
+    }
+    .blue-line {
+  height: 6px;
+  border-radius: 50px;
+  background-color:#30447F ;
+  width:142px ;
+  opacity: 1;
+  &.done {
+    background-color:#71D78E;
+    border: none;
+  }
+    }  
+  }
+
+
+  /* .popup-type-server {
+    background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  width:min(657px , 80%);
+  min-height: 472px;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50% , -50%);
+   transition: .5s;
+  }
+  .box-subtitel {
+  font-style: normal;
+  font-weight: 500;
+  font-size:clamp(7px ,4vw , 1rem);
+  line-height: 21px;
+  color: #aeb6cf;
+  }
+  
+  .arrow-right {
+    font-size:clamp(1rem ,4vw ,1.5rem );
+    font-weight: 500;
+  } */
