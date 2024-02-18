@@ -17,7 +17,7 @@ const Popup_media = () => {
   return (
     <>
     <section
-      className={`row m-0 gap-4 animate__animated 
+      className={`row m-0 gap-4  
       ${step === 1 ? 'animate__bounceInDown' : 'animate__bounceOutDown'}
       `}
     >

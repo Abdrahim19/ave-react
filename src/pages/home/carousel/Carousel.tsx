@@ -2,7 +2,10 @@ import './carousel.css';
 import half_circal from "../../../assets/Ellipse 63.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick'
+import Slider from 'react-slick';
+import user_img from '../../../assets/img5.jpg';
+import user_img_two from '../../../assets/Vijay-Mathew-square-headshot-2023-05_3200x32000.jpg'
+
 export default function Carousel() {
   const settings = {
     dots: true,
@@ -10,7 +13,7 @@ export default function Carousel() {
     slidesToShow: 5,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     responsive: [
       {
@@ -47,7 +50,7 @@ export default function Carousel() {
         </div>
         <Slider {...settings}>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+          <img src={user_img} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -59,7 +62,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+            <img src={user_img_two} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -71,7 +74,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+          <img src={user_img} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -83,7 +86,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+            <img src={user_img_two} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -95,7 +98,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+          <img src={user_img} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -107,7 +110,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+            <img src={user_img_two} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -119,7 +122,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+          <img src={user_img} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -131,7 +134,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+            <img src={user_img_two} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -143,7 +146,7 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+          <img src={user_img} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
@@ -155,7 +158,55 @@ export default function Carousel() {
             </div>
           </div>
           <div className="user-card position-relative">
-            {/* <img src={user_img} className="user-img" alt="" /> */}
+            <img src={user_img_two} className="user-img" alt="" />
+            <div className="inner-content position-absolute">
+              <h4 className="shadow-userTitel">Angela mars</h4>
+              <span className="job-name">Nettoyage</span>
+              <div className="flex-items mt-3 gap-2 flex-wrap">
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+              </div>
+            </div>
+          </div>
+          <div className="user-card position-relative">
+          <img src={user_img} className="user-img" alt="" />
+            <div className="inner-content position-absolute">
+              <h4 className="shadow-userTitel">Angela mars</h4>
+              <span className="job-name">Nettoyage</span>
+              <div className="flex-items mt-3 gap-2 flex-wrap">
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+              </div>
+            </div>
+          </div>
+          <div className="user-card position-relative">
+            <img src={user_img_two} className="user-img" alt="" />
+            <div className="inner-content position-absolute">
+              <h4 className="shadow-userTitel">Angela mars</h4>
+              <span className="job-name">Nettoyage</span>
+              <div className="flex-items mt-3 gap-2 flex-wrap">
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+              </div>
+            </div>
+          </div>
+          <div className="user-card position-relative">
+          <img src={user_img} className="user-img" alt="" />
+            <div className="inner-content position-absolute">
+              <h4 className="shadow-userTitel">Angela mars</h4>
+              <span className="job-name">Nettoyage</span>
+              <div className="flex-items mt-3 gap-2 flex-wrap">
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+                <span className="user-tag">Nettoyage</span>
+              </div>
+            </div>
+          </div>
+          <div className="user-card position-relative">
+            <img src={user_img_two} className="user-img" alt="" />
             <div className="inner-content position-absolute">
               <h4 className="shadow-userTitel">Angela mars</h4>
               <span className="job-name">Nettoyage</span>
