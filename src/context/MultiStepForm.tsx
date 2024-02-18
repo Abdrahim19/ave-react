@@ -30,7 +30,7 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
   };
   
   const ToStep = (stepNumber:number) => {
-    if (stepNumber > step) {
+    if ( step > stepNumber ) {
        return setStep(stepNumber)
     }
   }
