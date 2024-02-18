@@ -1,9 +1,9 @@
 import "./popupMedia.css";
 import facebook_icon from "../../../../assets/icon _facebook.png"
 import googl_icon from "../../../../assets/googl-icon.png"
-import small_logo from "../../../../assets/small-logo.png"
 import { useYourContext } from "../../../../context/MultiStepForm";
-import Stepper from "../../ui/Stepper";
+import Inputlabel from "../../ui/Inputlabel";
+import OuLine from "../../OuLine";
 
 
 // type Props = {
@@ -12,27 +12,24 @@ import Stepper from "../../ui/Stepper";
 // };
 
 const Popup_media = () => {
-  const { handleNext ,  toggleshowPopup } = useYourContext();
+  const { handleNext , step } = useYourContext();
 
   return (
     <>
     <section
-      className={`mediaPopup_box 
-      row m-0 gap-4 overflow-y-auto p-1 p-sm-4 bg-white`}
+      className={`row m-0 gap-4 animate__animated 
+      ${step === 1 ? 'animate__bounceInDown' : 'animate__bounceOutDown'}
+      `}
     >
-      <div className="text-end">
-        <button id="close" onClick={toggleshowPopup}>
-          <i className="bi bi-x-lg" style={{ fontSize: "min(40px, 20px)" }}></i>
-        </button>
-      </div>
-      <div className="text-center">
-        <img src={small_logo}className="box-img" alt="" />
-        <p className="section-titel">S’inscrire</p>
-      </div>
-      <Stepper stepNumber={0} />
-      <div className="col-12 mt-4">
+      <form action="" method="post" className="col-8 mx-auto d-grid gap-3">
+      <Inputlabel name={"email"} type={"text"} label={"Email"} error={""} />
+      <Inputlabel name={"password"} type={"password"} label={"Mot de passe"} error={""} />
+      <button className="singup-button" type="submit">S’inscrire</button>
+      </form>
+      <OuLine />
+      <div className="col-12">
         <div className="col-sm-8 col-md-6 mx-auto">
-          <a href="#" onClick={handleNext} className="Facebook singup-box d-flex align-items-center justify-content-center mx-auto mb-4 px-2" style={{ gap: "20px" }}>
+          <a href="#" onClick={handleNext} className="Facebook singup-box d-flex align-items-center justify-content-center mx-auto mb-3 px-2" style={{ gap: "20px" }}>
             <img src={facebook_icon} alt="" />
             Sign in with Facebook
           </a>

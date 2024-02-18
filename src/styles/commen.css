@@ -157,7 +157,7 @@ background: rgba(255, 253, 253, 0.019999999552965164);
 border: 2px solid #afb7cf;
 border-radius: 16px;
 &::placeholder {
-font-size:clamp(14px ,4vw ,22px );
+font-size:clamp(1rem ,5vw ,30px );
 font-weight: 500;
 line-height: 27px;
 }
@@ -347,6 +347,7 @@ line-height: 41px;
 border-radius: 50%;
 background-color:#30447F ;
 color: #f1f1f1;
+transition: .5s;
 &.done {
 background-color:#71D78E ;
 outline: 4px solid #71D78E;
@@ -355,14 +356,79 @@ i {
 font-size: clamp(.5rem ,3vw , 2.5rem);
 }
 }
+
 .blue-line {
-height: 6px;
-border-radius: 50px;
-background-color:#30447F ;
-width:142px ;
-opacity: 1;
-&.done {
-background-color:#71D78E;
-border: none;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #30447f;
+  width: 142px;
+  opacity: 1;
+  position: relative;
+  transition: width 0.5s, background-color 0.5s;
 }
-} 
+
+.blue-line::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #71d78e;
+  border-radius: 50px;
+  transition: width 0.5s;
+  
+}
+
+.blue-line.done::after {
+  width: 100%;
+}
+
+/* start ou line  */
+.line-ou {
+  width: 100%;
+  border: 0.699999988079071px solid #afb7cf;
+  } 
+  .ou-text {
+  font-family: var(--ff-inter);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #afb7cf;
+  } 
+/* end ou line  */
+
+/* start auth box  */
+.auth_box {
+  max-width: min(1200px , 90%);
+  height: 80vh;
+    z-index: 15;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transition: .5s;
+    transform: translate(-50% , -50%);
+    border-radius: 20px;
+    .box-img {
+      width:clamp(70px , 4vw,100px);
+      aspect-ratio: 1;
+    }
+    .section-titel {
+      font-size:clamp(20px,4vw ,40px);
+      font-weight: 800;
+      line-height: 61px;
+      color: #30447F;    
+    }
+    .subtitel-popup {
+      font-style: normal;
+      font-weight: 500;
+      font-size: clamp(10px ,4vw , 1.3rem);
+      line-height: 29px; 
+      color: #aeb6cf;
+      text-align: center;
+      }
+}
+/* end auth box  */
+
+

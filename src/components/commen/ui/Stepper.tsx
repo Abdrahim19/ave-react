@@ -1,15 +1,11 @@
-import { FC } from "react";
 import { useYourContext } from "../../../context/MultiStepForm";
 
-type props = {
-    stepNumber:number,
-}
-const Stepper:FC<props> = ({stepNumber}) => {
+
+const Stepper = () => {
   const { ToStep , step} = useYourContext();
-  console.log(stepNumber);
   
   return (
-    <div className="d-flex align-items-center justify-content-center" style={{gap: "19px"}}>
+    <div className="d-flex animate__animated animate__bounceInDown align-items-center justify-content-center" style={{gap: "19px"}}>
     <span onClick={() => ToStep(1) } className={`step-box cursor-pointer 
     ${step === 1 ? "" : 'done'}`}>
       {step === 1 ? 1 :<i className="bi bi-check2 text-white"></i>}
@@ -28,3 +24,4 @@ const Stepper:FC<props> = ({stepNumber}) => {
 }
 
 export default Stepper
+
