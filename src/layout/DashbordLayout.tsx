@@ -11,8 +11,8 @@ const DashbordLayout = () => {
     <>
     <Navbar />
     <div className="main-page d-flex justify-content-center py-4">
-      <div className="row gap-5 gap-lg-0 container">
-          <div className="col-lg-8">
+      <div className="row gap-5 gap-md-0 container-lg">
+          <div className="col-md-7 col-lg-8">
             <AddPost />
             <UserPost
   userName="Gilberto B."
@@ -22,7 +22,7 @@ const DashbordLayout = () => {
   postDescription="Bonjour, Je cherche un plombier pour remplacer un wc à poser assez rapidement. Je joins de photos de l'existant et de celui que nous avons commandé."
 />
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-5 col-lg-4">
             <DemandeCard />
             <ProposezCard />
           </div>

@@ -38,7 +38,13 @@ const UserPost: React.FC<UserPostProps> = ({
       <div className="p-4">
         <p className="post-discrption">{postDescription}</p>
         <hr className="post-line" />
-        <div className="flex-items gap-3 justify-content-end">
+        <div className='flex-items justify-content-between gap-3'>
+          <button className='Demande-publique-button flex-items gap-2'>
+          <i className="bi bi-globe-asia-australia"></i>
+          Demande publique
+          </button>
+
+        <div className="flex-items gap-3">
           <a href="">
             <i className="bi bi-suit-heart"></i>
           </a>
@@ -48,6 +54,7 @@ const UserPost: React.FC<UserPostProps> = ({
           <a href="">
             <i className="bi bi-chat"></i>
           </a>
+        </div>
         </div>
       </div>
     </div>

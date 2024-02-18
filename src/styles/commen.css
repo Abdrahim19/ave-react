@@ -441,4 +441,19 @@ font-size: clamp(.5rem ,3vw , 2rem);
 }
 /* end auth box  */
 
+.Demande-publique-button {
+  max-width: 174px;
+min-height: 24px;
+border-radius: 10px;
+border: 1px solid #30447F;
+font-size: 12px;
+font-weight: 500;
+line-height: 17px;
+color:#30447F ;
+i {
+  font-size: 14px;
+}
+
+}
+
 

@@ -1,4 +1,4 @@
-import user_img  from '../../../assets/request-imges/Image-40.png'
+import user_img  from '../../../assets/Image-60.png';
 
 const AddPost = () => {
     return (
