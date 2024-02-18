@@ -9,7 +9,7 @@ const PopupClientType = () => {
   return (
     <>
     <section
-    className={`cliienttype-popup py-3 overflow-y-auto row gap-4 bg-white animate__animated
+    className={`row gap-4 animate__animated mx-auto
     ${step === 2 ? 'animate__bounceInDown' : 'animate__bounceOutDown'}
     `}>
       <div className="col-sm-8 col-lg-6 mx-auto text-center">

@@ -5,7 +5,8 @@ const Stepper = () => {
   const { ToStep , step} = useYourContext();
   
   return (
-    <div className="d-flex align-items-center justify-content-center mb-3 animate__animated animate__bounceInDown" style={{gap: "19px"}}>
+    <div className="d-flex align-items-center justify-content-center
+     mb-3 animate__animated animate__bounceInDown" style={{gap: "19px"}}>
     <span onClick={() => ToStep(1) } className={`step-box cursor-pointer 
     ${step === 1 ? "" : 'done'}`}>
       {step === 1 ? 1 :<i className="bi bi-check2 text-white"></i>}
