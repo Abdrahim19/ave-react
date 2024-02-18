@@ -5,7 +5,7 @@ import Inputlabel from "../../ui/Inputlabel";
 
 
 const Popu_association = () => {
-  const { handleNext } = useYourContext();
+  const { handleNext  } = useYourContext();
 
   const handleCheckboxChange = (checked: boolean) => {
     console.log('Checkbox checked:', checked);
@@ -26,7 +26,7 @@ animate__bounceInDown">
         <div className="col-12 mb-2 position-relative">
           <Inputlabel name={""} type={"text"} label={"Adresse E-mail"} error={""} />
         </div>
-      <div className="flex-items gap-3">
+      <div className="flex-items my-3 gap-3">
         <Checkbox  onChange={handleCheckboxChange}  />
       <label className="form-check-label" htmlFor="exampleCheck1">
         J’accepte 
@@ -36,7 +36,7 @@ animate__bounceInDown">
         </label>
       </div>
       <div className="row">
-        <button type="submit" onClick={handleNext} className="btn-primary col-8 mx-auto ">M’inscrire</button>
+        <button type="submit"  onClick={handleNext} className="btn-primary col-8 mx-auto ">M’inscrire</button>
       </div>
     </section>
     </>

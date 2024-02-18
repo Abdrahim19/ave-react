@@ -4,6 +4,7 @@ import small_logo from '../../../assets/small-logo.png';
 import { useYourContext } from '../../../context/MultiStepForm';
 import Singup from './Singup';
 import Stepper from '../../../components/commen/ui/Stepper';
+import PopupDone from '../../../components/commen/popUps/PopupDone/PopupDone';
 
 const MultiStepForm = () => {
   const { step, showPopup, toggleshowPopup } = useYourContext();
@@ -17,6 +18,8 @@ const MultiStepForm = () => {
         return <PopupClientType />;
       case 3:
         return <Singup />;
+      case 4:
+        return <PopupDone />;  
       default:
         return null;
     }

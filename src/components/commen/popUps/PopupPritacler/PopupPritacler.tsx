@@ -1,6 +1,5 @@
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
-import './popupPritacler.css'
 
 
 const PopupPritacler = () => {

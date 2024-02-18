@@ -13,12 +13,12 @@ const Stepper = () => {
     </span>
     <hr className={`blue-line ${step >= 2 ? 'done'  : '' }`} />
     <span onClick={() => ToStep(2) } className={`step-box cursor-pointer 
-    ${step === 3 ? "done" : ''}`}>
-    {step === 3 ? <i className="bi bi-check2 text-white"></i> : 2}
+    ${step >= 3 ? "done" : ''}`}>
+    {step >= 3 ? <i className="bi bi-check2 text-white"></i> : 2}
     </span>
-    <hr className={`blue-line ${step === 3 ? 'done' : '' }`} />
-    <span onClick={() => ToStep(3) } className="step-box cursor-pointer">
-      3
+    <hr className={`blue-line ${step >= 3 ? 'done' : '' }`} />
+    <span onClick={() => ToStep(3) } className={`step-box cursor-pointer ${step > 3 ? "done" : ''}`}>
+    {step > 3 ? <i className="bi bi-check2 text-white"></i> : 3}
     </span>
   </div>
   )

@@ -154,7 +154,7 @@ transition: .5s;
   border-radius: 16px;
   outline: none;
   font-family: var(--ff-monserrat);
-  height:50px;
+  height:45px;
 background: rgba(255, 253, 253, 0.019999999552965164);
 border: 2px solid #afb7cf;
 border-radius: 16px;
@@ -418,6 +418,8 @@ font-size: clamp(.5rem ,3vw , 2rem);
     transition: .5s;
     transform: translate(-50% , -50%);
     border-radius: 20px;
+    opacity: 1;
+    transition: opacity .5s;
     .box-img {
       width:clamp(70px , 4vw,100px);
       aspect-ratio: 1;
@@ -431,8 +433,8 @@ font-size: clamp(.5rem ,3vw , 2rem);
     .subtitel-popup {
       font-style: normal;
       font-weight: 500;
-      font-size: clamp(10px ,4vw , 1.3rem);
-      line-height: 29px; 
+      font-size: clamp(10px ,4vw , 1.2rem);
+      line-height:clamp(15px ,4vw ,30px) 29px; 
       color: #aeb6cf;
       text-align: center;
       }
