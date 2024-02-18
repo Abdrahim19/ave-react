@@ -30,7 +30,7 @@ border-radius: 8px;
 display: grid;
 place-items: center;
 span {
-font-size: 14px;
+font-size:clamp( 8px ,4vw ,14px );
 font-weight: 600;
 line-height: 17px;
 }

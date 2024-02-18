@@ -4,7 +4,7 @@
     margin-top: clamp(20px ,4vw ,40px);
     display: grid;
     .user-name {
-font-size: 18px;
+font-size:clamp(10px ,4vw ,18px );
 font-weight: 700;
 line-height: 22px;
     }
@@ -15,7 +15,7 @@ line-height: 12px;
 color: var(--clr-gray-300);
     }
     .user-loction {
-        font-size: 16px;
+font-size:clamp(8px ,4vw ,1rem);
         font-weight: 500;
         line-height: 20px;
 color: var(--clr-gray-300);

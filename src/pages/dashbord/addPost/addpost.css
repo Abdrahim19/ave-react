@@ -19,7 +19,7 @@ padding-left: clamp(30px , 4vw, 50px);
             outline: none;
             background-color: transparent;
             flex: 1;
-font-size:clamp(8px ,4vw ,16px );
+font-size:clamp(6px ,4vw ,14px );
 font-weight: 500;
 line-height: 20px;
 color: var(--clr-gray-300);

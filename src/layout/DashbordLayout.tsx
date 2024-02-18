@@ -11,7 +11,7 @@ const DashbordLayout = () => {
     <>
     <Navbar />
     <div className="main-page d-flex justify-content-center py-4">
-      <div className="row gap-5 gap-md-0 container-lg">
+      <div className="row gap-4 gap-md-0 container-lg">
           <div className="col-md-7 col-lg-8">
             <AddPost />
             <UserPost
