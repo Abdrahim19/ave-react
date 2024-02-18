@@ -28,7 +28,7 @@ const MultiStepForm = () => {
         <div onClick={toggleshowPopup} className='bg-shadow active'></div>
       )}
       <section
-        className={`auth_box  row m-0 gap-4 overflow-y-auto h-75 p-1 p-sm-4 bg-white`}
+        className={`auth_box row m-0 gap-2 overflow-y-auto p-2 h-75 bg-white`}
       >
         <div className='text-end animate__animated animate__bounceInDown'>
           <button id='close' onClick={toggleshowPopup}>

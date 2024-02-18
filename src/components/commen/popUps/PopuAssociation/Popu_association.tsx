@@ -12,11 +12,9 @@ const Popu_association = () => {
   };
   return (
     <>
-      <div className={`active bg-shadow`}>
-    </div>
     <section className="animate__animated
 animate__bounceInDown">
-      <div className="col-12 my-3 position-relative">
+      <div className="col-12 mb-2 position-relative">
       <Inputlabel name={""} type={"text"} label={"Nom de l’association"} error={""} />   
         </div>
         <div className="col-12 mb-2 position-relative">

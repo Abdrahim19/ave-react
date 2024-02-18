@@ -124,6 +124,7 @@ line-height: 22px;
   left: 20px;
   top: 18px;
   transition: 0.2s ease all;
+  z-index: 1;
 }
 
 .green-outline-button  {
@@ -156,29 +157,36 @@ transition: .5;
 background: rgba(255, 253, 253, 0.019999999552965164);
 border: 2px solid #afb7cf;
 border-radius: 16px;
+transition: .5s;
 &::placeholder {
 font-size:clamp(1rem ,5vw ,30px );
 font-weight: 500;
 line-height: 27px;
 }
+&:focus {
+  border-color: #30447F;
+}
   }  
   .floting-label {
-    font-size:clamp(14px ,4vw ,12px );
+    font-size: clamp(14px, 4vw, 1rem);
     font-weight: 500;
     line-height: 27px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 2rem;    
-color: #afb7cf;
-background-color: white;
-transform: .5s;
+    left: 2rem;
+    color: #afb7cf;
+    background-color: white;
+    transition: transform 0.5s, color 0.5s, padding-inline 0.5s;
+    z-index: -1;
   }
+  
   .floting-input:focus + .floting-label {
-color: var(--clr-green-light);
-top: 0;
-transform: .5s;
-
+    color: #30447F;
+    padding-inline: 6px;
+    top: 0;
+    transform: translateY(-50%) scale(0.9);
+    z-index: 1;
   }
   
   .checkbox-wrapper-30 .checkbox {
@@ -402,7 +410,6 @@ font-size: clamp(.5rem ,3vw , 2.5rem);
 /* start auth box  */
 .auth_box {
   max-width: min(1200px , 90%);
-  height: 80vh;
     z-index: 15;
     position: fixed;
     left: 50%;

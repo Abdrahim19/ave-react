@@ -17,18 +17,20 @@ const Popup_media = () => {
   return (
     <>
     <section
-      className={`row m-0 gap-4  
+      className={`row m-0 gap-2  animate__animated
       ${step === 1 ? 'animate__bounceInDown' : 'animate__bounceOutDown'}
       `}
     >
-      <form action="" method="post" className="col-8 mx-auto d-grid gap-3">
+      <form action="" method="post" className="col-lg-7 col-xxl-6 mx-auto d-grid gap-3">
       <Inputlabel name={"email"} type={"text"} label={"Email"} error={""} />
       <Inputlabel name={"password"} type={"password"} label={"Mot de passe"} error={""} />
       <button className="singup-button" type="submit">S’inscrire</button>
       </form>
+      <div className="col-lg-8 col-xl-6 mx-auto">
       <OuLine />
+      </div>
       <div className="col-12">
-        <div className="col-sm-8 col-md-6 mx-auto">
+        <div className="col-lg-7 col-xxl-6 mx-auto">
           <a href="#" onClick={handleNext} className="Facebook singup-box d-flex align-items-center justify-content-center mx-auto mb-3 px-2" style={{ gap: "20px" }}>
             <img src={facebook_icon} alt="" />
             Sign in with Facebook
