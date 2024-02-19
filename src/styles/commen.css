@@ -180,9 +180,11 @@ line-height: 27px;
     background-color: white;
     transition: transform 0.5s, color 0.5s, padding-inline 0.5s;
     z-index: -1;
+    pointer-events: none; /* Allow interaction with the input */
   }
   
-  .floting-input:focus + .floting-label {
+  .floting-input:focus + .floting-label,
+  .floting-input:focus .floting-input:not(:placeholder-shown) + .floting-label {
     color: #30447F;
     padding-inline: 6px;
     top: 0;
@@ -411,6 +413,7 @@ font-size: clamp(.5rem ,3vw , 2rem);
 /* start auth box  */
 .auth_box {
   max-width: min(1200px , 90%);
+  height: 90%;
     z-index: 15;
     position: fixed;
     left: 50%;
@@ -458,7 +461,7 @@ i {
 
 
 .user-img {
-  --Userimg-width:101px;
+  --Userimg-width:60px;
   object-fit: contain;
   width:var(--Userimg-width);
   aspect-ratio: 1;

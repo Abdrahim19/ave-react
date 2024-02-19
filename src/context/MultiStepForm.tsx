@@ -23,7 +23,7 @@ interface YourContextProviderProps {
 const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) => {
   const [step, setStep] = useState(1);
   const [showPopup, setShowPopup] = useState<boolean>(false);
-  const [userType, setuserType] = useState<string>('Entreprise');
+  const [userType, setuserType] = useState<string>('Particulier');
 
   const handleButtonClick = (value:string) => {
     setuserType(value);

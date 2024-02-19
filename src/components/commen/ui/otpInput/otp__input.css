@@ -1,0 +1,33 @@
+.otp-input-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(100px , 1fr));
+    gap: 1rem;
+    place-items: center;
+  }
+  
+  .otp-input {
+    text-align: center;
+    margin: 0 0.5em;
+    width: 78px;
+    height: 94px;
+border-radius: 10px;
+opacity: 0.4px;
+border: 3px solid var(--clr-green-light);
+font-size: 2rem;
+&:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color:var(--clr-green-light);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(70, 239, 121, 0.25);
+}
+
+  }
+  
+  .Popupvladtion__discrption,
+  .timer-discrption {
+    color: var(--clr-gray-300);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }  

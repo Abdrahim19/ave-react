@@ -25,7 +25,7 @@ const PopupPritacler = () => {
         <Inputlabel name={"Numéro"} type={"text"} label={"Numéro de téléphone"} error={""} />
         </div>
         <div className="col-12 position-relative">
-          <Inputlabel name={"Adresse"} type={"text"} label={"Adresse postale"} error={""} />
+          <Inputlabel name={"Adresse"} type={"text"} label={"Adresse E-mail"} error={""} />
         </div>
       <div className="flex-items gap-3">
         <Checkbox  onChange={handleCheckboxChange}  />
@@ -36,7 +36,7 @@ const PopupPritacler = () => {
           </span> 
         </label>
       </div>
-        <button type="submit" className="btn-primary col-8 mx-auto ">M’inscrire</button>
+        <button type="submit" className="btn-primary col-8 mx-auto">M’inscrire</button>
     </section>
     </>
   )
