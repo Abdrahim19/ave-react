@@ -466,7 +466,7 @@ border-radius: 50%
 
 }
 .user-name {
-  font-size: 18px;
+  font-size:clamp(8px  ,4vw , 1rem) 18px;
   font-weight: 700;
   line-height: 22px;        
 }
@@ -510,7 +510,7 @@ color: var(--clr-gray-300);
 }
 
 .user-name {
-  font-size:clamp(10px ,4vw ,18px );
+  font-size:clamp(8px ,4vw ,16px );
   font-weight: 700;
   line-height: 22px;
   margin-bottom: 0 !important;
@@ -522,7 +522,7 @@ color: var(--clr-gray-300);
   color: var(--clr-gray-300);
       }
       .user-loction {
-  font-size:clamp(8px ,4vw ,1rem);
+  font-size:clamp(6px ,4vw ,.8rem);
           font-weight: 500;
           line-height: 20px;
   color: var(--clr-gray-300);

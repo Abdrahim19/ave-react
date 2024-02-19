@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import userImage  from "../../../assets/Image-40.png";
 import './demandeUserPost.css'
 import Post from "./Post";
@@ -43,10 +44,10 @@ const DemandeUserPost = () => {
       <Userloction />
       <hr className="line" />
       <div className='flex-items flex-column-reverse justify-content-center flex-sm-row justify-content-sm-between gap-3'>
-          <button className='Demande-publique-button flex-items gap-2'>
+          <Link to='/DetailsDemand' className='Demande-publique-button flex-items gap-2'>
           <i className="bi bi-globe-asia-australia"></i>
           Demande publique
-          </button>
+          </Link>
         <div className="flex-items gap-3">
           <a href="">
             <i className="bi bi-suit-heart"></i>
