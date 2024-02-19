@@ -43,7 +43,6 @@ const UserPost: React.FC<UserPostProps> = ({
           <i className="bi bi-globe-asia-australia"></i>
           Demande publique
           </button>
-
         <div className="flex-items gap-3">
           <a href="">
             <i className="bi bi-suit-heart"></i>

@@ -15,6 +15,10 @@ font-size: 14px;
 font-weight: 600;
 line-height: 28px;
 border-radius: 20.5px;
+i {
+    color: var(--clr-blue-gray);
+    font-size: clamp(15px , 6vw, 23px);
+}
         }
         i {
             color: var(--clr-blue-gray);

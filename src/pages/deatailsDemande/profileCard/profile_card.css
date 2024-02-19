@@ -1,0 +1,6 @@
+.ProfileCard {
+    --card-heigt:361px;
+min-height:var(--card-heigt) ;
+background-color: white;
+border-radius: 15px;
+}

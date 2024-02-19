@@ -457,3 +457,147 @@ i {
 }
 
 
+.user-img {
+  --Userimg-width:101px;
+  object-fit: contain;
+  width:var(--Userimg-width);
+  aspect-ratio: 1;
+border-radius: 50%
+
+}
+.user-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;        
+}
+.small-blue-button {
+  border: 0.5px solid var(--clr-main-blue);
+min-height: 14px;
+border-radius: 10px;
+font-size: 8px;
+font-weight: 400;
+line-height: 10px;
+color: var(--clr-main-blue);
+}
+.rate-gray {
+font-size: 10px;
+font-weight: 400;
+line-height: 12px;
+letter-spacing: 0.1em;
+color: var(--clr-gray-300);
+}
+.bi-star-fill {
+  font-size: 14px;
+}
+.contect-link {
+color: var(--clr-gray-300);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;      
+}
+.line {
+  border: 1px solid #E4E4E4;
+}
+.user-deatiles {
+  i {
+      font-size: 25px;
+  }
+  span {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 12px;            
+  }
+}
+
+.user-name {
+  font-size:clamp(10px ,4vw ,18px );
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 0 !important;
+      }
+      .publich-time {
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 12px;
+  color: var(--clr-gray-300);
+      }
+      .user-loction {
+  font-size:clamp(8px ,4vw ,1rem);
+          font-weight: 500;
+          line-height: 20px;
+  color: var(--clr-gray-300);
+      }
+      .post-img {
+          width: 100%;
+      }
+  .post-discrption {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  }
+  .post-line {
+      border: 0.7px solid #AFB7CF;
+      margin-block: 1rem;
+  }
+  i {
+      font-size: 23px;
+  }
+
+  .ProfileLoction {
+min-height: 232px;
+border-radius: 15px;
+background-color: white;
+padding: 1rem 2rem;
+
+  }
+  .min_top {
+    margin-top: -6rem;
+    z-index: 1;
+  }
+  .bi-star-fill{
+    color: #fcdd2e;
+  }
+  .verySmall-button {
+    border: 0.5px solid #5C85FF;
+border-radius: 10px;
+display: grid;
+place-items: center;
+color: var(--clr-main-blue);
+font-size:clamp(8px ,4vw , .8rem);
+font-weight: 400;
+line-height: 10px;
+margin-left: 10px;
+padding-inline: 6px;
+padding-block: 4px;
+}
+.box {
+  background-color: white;
+  border-radius: 15px;
+  padding: .7rem 1.5rem;
+}
+
+
+.big__box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  .titel {
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+  }
+}
+@media (max-width:400px) {
+  
+  .box {
+      padding: .5rem; 
+    }
+    .big__box {
+      padding: 1rem;
+    }
+    
+  }
+
+  .border-right {
+    border-right: 1.5px solid #EFF0F3
+  }
