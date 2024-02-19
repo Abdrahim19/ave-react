@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom"
 
 const PopupDone = () => {
   return (
-    <div>PopupDone</div>
+    <>
+    <Link to='Accueil' className="verySmall-button">Accueil</Link>
+    </>
   )
 }
 

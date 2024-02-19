@@ -18,7 +18,7 @@ const PopupInfo = () => {
     <div ref={ref} className={`${Isvisabel  ? 'active animate__zoomIn' : 'animate__zoomOut'} 
     animate__animated  user-popup-info d-grid gap-3 p-3`}>
       <div className="flex-items justify-content-between gap-3">
-        <Link to="" className="underline-name text-decoration-underline">
+        <Link to="/profile" className="underline-name text-decoration-underline">
         Morgan louis
         </Link>
         <div className="small-price-box px-2">
@@ -26,10 +26,11 @@ const PopupInfo = () => {
         </div>
       </div>
       <hr className="sparaiter" />
-      <a href="#" className="d-flex align-items-center gap-3 link">
-        <i className="bi bi-plus-circle"></i>
+      <Link to='' className="d-flex align-items-center gap-3 link">
+      <i className="bi bi-plus-circle"></i>
         Mes demandes
-      </a>
+      </Link>
+
       <a href="#" className="d-flex align-items-center gap-3 link">
         <i className="bi bi-currency-euro"></i>
         Mon solde

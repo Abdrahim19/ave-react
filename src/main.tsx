@@ -18,7 +18,7 @@ import OfferLayout from './layout/OfferLayout';
 
 const router = createBrowserRouter([
   {element:<HomeLayout /> , path: '/' , errorElement:<ErrorBoundary />},
-  {element:<DashbordLayout /> , path: 'dashbord' , errorElement:<ErrorBoundary />},
+  {element:<DashbordLayout /> , path: 'Accueil' , errorElement:<ErrorBoundary />},
   {element:<DetailsDemandeLayout /> , path: 'DetailsDemand' , errorElement:<ErrorBoundary />},
   {element:<ProfileLayout /> , path: 'profile' , errorElement:<ErrorBoundary />},
   {element:<OfferLayout /> , path: 'offreurs' , errorElement:<ErrorBoundary />},
