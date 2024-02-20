@@ -23,7 +23,7 @@ const MessagesLayout = () => {
               <input type="text" placeholder="Recherchez ici" className="msg-searchInput" />
               <i className="bi bi-search top-50 translate-middle-y"></i>
             </div>
-            <div className="msg-user flex-items gap-3">
+            <div className="msg-user cursor-pointer flex-items gap-3">
               <div className="position-relative masg_user_img">
               <img src={masg_user_img} className="img-fluid" alt="" />
               <span className="online-dot position-absolute"></span>
@@ -33,7 +33,7 @@ const MessagesLayout = () => {
                 <p className="data-left">En ligne à 17h00</p>
               </div>
             </div>
-            <div className="msg-user flex-items gap-3">
+            <div className="msg-user cursor-pointer flex-items gap-3">
               <div className="position-relative masg_user_img">
               <img src={masg_user_img} className="img-fluid" alt="" />
               <span className="online-dot position-absolute"></span>
@@ -43,7 +43,7 @@ const MessagesLayout = () => {
                 <p className="data-left">En ligne à 17h00</p>
               </div>
             </div>
-            <div className="msg-user flex-items gap-3">
+            <div className="msg-user cursor-pointer active flex-items gap-3">
               <div className="position-relative masg_user_img">
               <img src={masg_user_img} className="img-fluid" alt="" />
               <span className="online-dot position-absolute"></span>
@@ -53,7 +53,7 @@ const MessagesLayout = () => {
                 <p className="data-left">En ligne à 17h00</p>
               </div>
             </div>
-            <div className="msg-user flex-items gap-3">
+            <div className="msg-user cursor-pointer flex-items gap-3">
               <div className="position-relative masg_user_img">
               <img src={masg_user_img} className="img-fluid" alt="" />
               <span className="online-dot position-absolute"></span>
@@ -63,7 +63,7 @@ const MessagesLayout = () => {
                 <p className="data-left">En ligne à 17h00</p>
               </div>
             </div>
-            <div className="msg-user flex-items gap-3">
+            <div className="msg-user cursor-pointer flex-items gap-3">
               <div className="position-relative masg_user_img">
               <img src={masg_user_img} className="img-fluid" alt="" />
               <span className="online-dot position-absolute"></span>

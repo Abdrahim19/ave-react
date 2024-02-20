@@ -28,6 +28,10 @@ width: 100%;
    margin-bottom: 1rem;
    padding-bottom: 1rem;
    border-bottom: 1.5px solid #E4E4E4;
+   &.active {
+    background-color: white;
+    border: none;
+}
   }
   
   .masg_user_img {
