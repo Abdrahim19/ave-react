@@ -5,7 +5,7 @@ import './offreurs_cards.css'
 const OffreursCards = () => {
   return (
     <div className='OffreursCards mt-3'>
-      <h1 className='Offreur-titel my-4'>Réponses d’offreurs</h1>
+      <h1 className='Offreur-titel mb-4'>Réponses d’offreurs</h1>
       <div className='OffreursCards-container'>
         <div className='offerUser-Card'>
         <div className='mb-2'>

@@ -8,14 +8,11 @@ import Userloction from "./Userloction";
 
 
 const DemandeUserPost = () => {
-      const image =[
-
-        'https://images.techopedia.com/images/uploads/web-developer.jpg',
-    
-        'https://www.betterteam.com/images/web-developer-job-description-6494x4331-2020128.jpeg?crop=4:3,smart&width=1200&dpr=2',
-    
+      const image =[    
         'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
-    
+        'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
+        'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
+        'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
       ]
   return (
     <div className="DemandeUserPost mb-4">
@@ -44,7 +41,7 @@ const DemandeUserPost = () => {
       <Userloction />
       <hr className="line" />
       <div className='flex-items flex-column-reverse justify-content-center flex-sm-row justify-content-sm-between gap-3'>
-          <Link to='/DetailsDemand' className='Demande-publique-button flex-items gap-2'>
+          <Link to='/DetailsDemand' className='Demande-publique-button px-2 flex-items gap-2'>
           <i className="bi bi-globe-asia-australia"></i>
           Demande publique
           </Link>

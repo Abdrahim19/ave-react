@@ -11,7 +11,7 @@ const Headerlinks = () => {
   ];
 
   return (
-    <ul className="d-md-flex align-items-md-baseline menu-container flex justify-content-between">
+    <ul className="d-md-flex align-items-center menu-container flex justify-content-between">
       {links.map((link, index) => (
         <li key={index} className={`topmenu-link ${location.pathname === link.path  ? 'active' : ''}`}>
           <Link

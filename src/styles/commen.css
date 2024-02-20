@@ -176,7 +176,6 @@ line-height: 27px;
     color: #afb7cf;
     background-color: white;
     transition: transform 0.5s, color 0.5s, padding-inline 0.5s;
-    z-index: -1;
     pointer-events: none; /* Allow interaction with the input */
   }
   
