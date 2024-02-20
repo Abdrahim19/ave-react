@@ -17,6 +17,11 @@ const OtpInput: React.FC<OtpInputProps> = ({ length, onChange }) => {
     newOtp[index] = value;
     setOtp(newOtp);
     onChange(newOtp.join(''));
+
+     // Move focus to the next input if available
+     if (index < length - 1 && value !== '') {
+      inputRefs[index + 1]?.current?.focus();
+    }
   };
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
