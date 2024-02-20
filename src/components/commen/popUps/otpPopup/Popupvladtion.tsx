@@ -4,7 +4,7 @@ import OtpInput from "../../ui/otpInput/OtpInput";
 import OptCounter from "./OptCounter";
 
 const Popupvladtion = () => {
-  const { TypeVerification , setVerification } = useYourContext();
+  const { TypeVerification , setVerification , handleNext } = useYourContext();
 
   const handleOtpChange = (otp: string) => {
     console.log('OTP:', otp);
@@ -25,7 +25,7 @@ const Popupvladtion = () => {
       <OtpInput length={6} onChange={handleOtpChange} />
       {TypeVerification !== '' && <OptCounter startSeconds={60} />}
       <div className="row text-center mt-3">
-      <button className="green-button col-lg-8">Done</button>
+      <button onClick={handleNext} className="green-button col-lg-8">Done</button>
       </div>
       </div> 
     </div>
