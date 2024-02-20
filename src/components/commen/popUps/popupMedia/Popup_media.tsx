@@ -17,7 +17,7 @@ const Popup_media = () => {
   return (
     <>
     <section
-      className={`row m-0 gap-2  animate__animated
+      className={`m-0 gap-2  animate__animated
       ${step === 1 ? 'animate__bounceInDown' : 'animate__bounceOutDown'}
       `}
     >
@@ -29,7 +29,6 @@ const Popup_media = () => {
       <div className="col-lg-8 col-xl-6 mx-auto">
       <OuLine />
       </div>
-      <div className="col-12">
         <div className="col-lg-7 col-xxl-6 mx-auto">
           <a href="#" onClick={handleNext} className="Facebook singup-box d-flex align-items-center justify-content-center mx-auto mb-3 px-2" style={{ gap: "20px" }}>
             <img src={facebook_icon} alt="" />
@@ -40,7 +39,6 @@ const Popup_media = () => {
             Sign in with Google
           </a>
         </div>
-      </div>
       <p className="text-center media-discrption"> 
       En continuant, vous acceptez automatiquement nos
        <a href="#" className="text-text-decoration-underline">conditions générales</a>, <br />

@@ -32,7 +32,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ length, onChange }) => {
   }, []);
 
   return (
-    <div className="otp-input-container col-8 mx-auto my-3">
+    <div className="otp-input-container col-md-8 mx-auto my-3">
       {otp.map((value, index) => (
         <input
           key={index}

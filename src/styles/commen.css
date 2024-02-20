@@ -273,9 +273,9 @@ line-height: 27px;
   }
   
   .form-check-label {
-  font-size:clamp(10px ,4vw , 1rem);
+  font-size:clamp(10px ,3vw , 1rem);
   font-weight: 500;
-  line-height: 27px;
+  line-height:clamp(1rem ,4vw ,27px );
   color: #30447F;
   margin-top: -5px;
   span {
@@ -350,6 +350,7 @@ color: #aeb6cf;
   outline: 4px solid #30447F;
   width:50px;
   aspect-ratio: 1;
+  margin-inline: .5rem;
   display: grid;
   place-items: center;
 font-size:clamp(10px ,4vw  ,20px ) ;
@@ -364,7 +365,7 @@ background-color:#71D78E ;
 outline: 4px solid #71D78E;
 }
 i {
-font-size: clamp(.5rem ,3vw , 2rem);
+font-size: clamp(1rem ,4vw , 2rem);
 }
 }
 
@@ -372,10 +373,13 @@ font-size: clamp(.5rem ,3vw , 2rem);
   height: 6px;
   border-radius: 50px;
   background-color: #30447f;
-  width: 142px;
+  width: 100px;
   opacity: 1;
   position: relative;
   transition: width 0.5s, background-color 0.5s;
+  @media (max-width:768px) {
+    width: 30px;
+}
 }
 
 .blue-line::after {

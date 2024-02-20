@@ -11,7 +11,7 @@ const Popupvladtion = () => {
   };
   return (
     <div className="Popupvladtion mt-3 animate__animated animate__bounceInDown">
-      <div className={`col-8 mx-auto 
+      <div className={`col-md-8 mx-auto 
       ${TypeVerification === '' ? 'animate__animated animate__bounceInDown' : ' animate__animated animate__fadeOutUpBig d-none' }`}>
       <button onClick={() => setVerification('email')} className={`btn-white-shadow  mx-auto mt-3 
       ${TypeVerification === 'email' ? 'active' : false}`} >Email Verification</button>
