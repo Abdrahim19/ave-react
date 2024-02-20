@@ -1,6 +1,6 @@
 /* start Professionnels section */
 .Professionnels-titel {
-    font-size:clamp( 20px ,4vw ,25px );
+    font-size:clamp( 30px ,4vw ,40px );
     font-weight: 700;
     line-height:clamp(30px ,4vw ,39px );
     margin-top: clamp(15px , 4vw , 25px);

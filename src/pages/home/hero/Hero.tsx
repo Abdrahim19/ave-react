@@ -5,7 +5,7 @@ import pics from "../../../assets/pics.png";
 
 const Hero = () => {
   return (
-    <main className="hero-section mt-2 mt-md-5 container-lg position-relative cenetr-grid">
+    <main className="hero-section mt-5 container-lg position-relative cenetr-grid">
       <img src={Ellipse} className="position-absolute big-circal w-100 z-1" alt="" />
       <div className="hero-background position-relative z-2 py-4">
         <div className="row gap-4 gap-lg-0">

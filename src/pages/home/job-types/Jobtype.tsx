@@ -11,7 +11,7 @@ export default function Jobtype() {
             <span>activité</span></h1>
         </div>
         <div className="row types-container">
-          <div className="col-lg-4">
+          <div className="col-md-6 mb-4 col-lg-4">
             <div className="titel-box-two mx-auto mx-lg-0 d-flex align-items-center" style={{ gap: "24px" }}>
               <div className="inner-content d-flex align-items-center" style={{ gap: "24px" }}>
                 <img src={green_circal} className="img-titel" alt="" />
@@ -21,7 +21,7 @@ export default function Jobtype() {
             <p className="Professionnel-discrption text-center my-4">Des milliers de demandes <br /> chaque jour</p>
             <p className="Professionnel-discrption text-center">Partout en France</p>
           </div>
-          <div className="col-lg-4 second-sction">
+          <div className="col-md-6 mb-4 col-lg-4 second-sction">
             <div className="titel-box-two mx-auto mx-lg-0 d-flex align-items-center" style={{ gap: "24px" }}>
               <div className="inner-content d-flex align-items-center" style={{ gap: "24px" }}>
                 <img src={green_circal} className="img-titel" alt="" />

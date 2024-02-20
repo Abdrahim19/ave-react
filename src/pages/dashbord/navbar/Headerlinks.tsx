@@ -6,8 +6,8 @@ const Headerlinks = () => {
   const links = [
     { icon: 'bi bi-house', text: 'Accueil' , path:'/Accueil' },
     { icon: 'bi bi-people-fill', text: 'offreurs' , path:'/offreurs' },
-    { icon: 'bi bi-plus-circle', text: 'Plus' , path:'' },
-    { icon: 'bi bi-envelope', text: 'Envelope' , path:'/chat' },
+    { icon: 'bi bi-plus-circle', text: 'Demande' , path:'/' },
+    { icon: 'bi bi-envelope', text: 'Messages' , path:'/Messages' },
   ];
 
   return (
