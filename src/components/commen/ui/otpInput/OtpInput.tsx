@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './otp__input.css'; // Create a CSS file for styling if needed
+import './OtpInput.css'; // Create a CSS file for styling if needed
 
 interface OtpInputProps {
   length: number;
@@ -24,6 +24,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ length, onChange }) => {
       inputRefs[index - 1]?.current?.focus();
     }
   };
+  
 
   useEffect(() => {
     // Set focus on the first input when the component mounts
@@ -31,7 +32,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ length, onChange }) => {
   }, []);
 
   return (
-    <div className="otp-input-container my-5">
+    <div className="otp-input-container col-8 mx-auto my-3">
       {otp.map((value, index) => (
         <input
           key={index}

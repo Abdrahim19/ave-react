@@ -30,7 +30,7 @@ const PopupPritacler = () => {
       <div className="flex-items gap-3">
         <Checkbox  onChange={handleCheckboxChange}  />
       <label className="form-check-label" htmlFor="exampleCheck1">
-        J’accepte 
+        J’accepte {" "}
             <span>  
               les conditions générales de vente et d’utilisation    
           </span> 

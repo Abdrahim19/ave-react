@@ -9,11 +9,11 @@ import user_img_two from '../../../assets/Vijay-Mathew-square-headshot-2023-05_3
 export default function Carousel() {
   const settings = {
     dots: true,
-    speed: 2000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -21,14 +21,30 @@ export default function Carousel() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: true
         }
       },
-       ]
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots:false,
+        }
+      }
+    ]
   };
  
   return (
-    <section className="min-vh-100 cenetr-grid">
+    <section className="min-vh-100 d-flex justify-content-center align-items-center">
       <div className="container">
         <div className="titel-box d-flex align-items-center" style={{ gap: '24px' , marginBottom:'clamp(2rem ,4vw , 4rem)' }}>
           <img src={half_circal} className="img-titel" alt="" />

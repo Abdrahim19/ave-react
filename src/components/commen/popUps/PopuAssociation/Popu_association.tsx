@@ -27,9 +27,9 @@ animate__bounceInDown">
           <Inputlabel name={""} type={"text"} label={"Adresse E-mail"} error={""} />
         </div>
       <div className="flex-items my-3 gap-3">
-        <Checkbox  onChange={handleCheckboxChange}  />
-      <label className="form-check-label" htmlFor="exampleCheck1">
-        J’accepte 
+        <Checkbox  onChange={handleCheckboxChange}   />
+      <label className="form-check-label" htmlFor="Check1">
+        J’accepte {" "}
             <span>  
               les conditions générales de vente et d’utilisation    
           </span> 

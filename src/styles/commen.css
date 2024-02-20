@@ -164,9 +164,6 @@ font-size:clamp(1rem ,5vw ,30px );
 font-weight: 500;
 line-height: 27px;
 }
-&:focus {
-  border-color: #30447F;
-}
   }  
   .floting-label {
     font-size: clamp(14px, 4vw, 1rem);
@@ -184,12 +181,16 @@ line-height: 27px;
   }
   
   .floting-input:focus + .floting-label,
-  .floting-input:focus .floting-input:not(:placeholder-shown) + .floting-label {
+  .floting-input:not(:placeholder-shown) + .floting-label {
     color: #30447F;
     padding-inline: 6px;
     top: 0;
     transform: translateY(-50%) scale(0.9);
     z-index: 1;
+  }
+  .floting-input:focus,
+  .floting-input:not(:placeholder-shown) {
+    border-color: #30447F;
   }
   
   .checkbox-wrapper-30 .checkbox {
@@ -413,7 +414,7 @@ font-size: clamp(.5rem ,3vw , 2rem);
 /* start auth box  */
 .auth_box {
   max-width: min(1200px , 90%);
-  height: 90%;
+  height:min(800px ,90% );
     z-index: 15;
     position: fixed;
     left: 50%;

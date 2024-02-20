@@ -9,7 +9,9 @@ interface YourContextProps {
   handlePrevious: () => void;
   toggleshowPopup:() => void;
   handleButtonClick:(value:string) => void;
-  ToStep:(stepNumber:number) => void
+  ToStep:(stepNumber:number) => void,
+  setVerification:(vlaue:string) => void,
+  TypeVerification:string,
 }
 
 // Create the context
@@ -24,6 +26,7 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
   const [step, setStep] = useState(1);
   const [showPopup, setShowPopup] = useState<boolean>(false);
   const [userType, setuserType] = useState<string>('Particulier');
+  const [TypeVerification, setTypeVerification] = useState<string>('');
 
   const handleButtonClick = (value:string) => {
     setuserType(value);
@@ -34,6 +37,11 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
        return setStep(stepNumber)
     }
   }
+
+  const setVerification = (vlaue:string) => {
+    setTypeVerification(vlaue)
+  }
+
 
 
   const handleNext = () => {
@@ -56,7 +64,9 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
     toggleshowPopup,
     userType,
     handleButtonClick,
-    ToStep
+    ToStep,
+    setVerification,
+    TypeVerification,
   };
 
   return <YourContext.Provider value={contextValue}>{children}</YourContext.Provider>;

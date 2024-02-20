@@ -13,7 +13,7 @@ const PopupIterprice = () => {
     <>
     <section
      className={`animate__animated
-     animate__bounceInDown row gap-4`} >
+     animate__bounceInDown row gap-2`} >
       <div className="flex-items gap-2">
       <div className="col-lg-6 position-relative">
       <Inputlabel name={""} type={"text"} label={"Nom"} error={""} />   
@@ -39,8 +39,8 @@ const PopupIterprice = () => {
         </div>
       <div className="flex-items gap-3">
         <Checkbox  onChange={handleCheckboxChange}  />
-      <label className="form-check-label" htmlFor="exampleCheck1">
-        J’accepte 
+      <label className="form-check-label" htmlFor="Check1">
+        J’accepte {" "}
             <span>  
               les conditions générales de vente et d’utilisation    
           </span> 
