@@ -66,3 +66,10 @@ border-radius: 20px;
 .slick-next {
     right: -20px !important;
 }
+
+@media (max-width:768px) {
+    .slick-next,
+    .slick-prev:before{
+        display: none !important;
+    }
+}
