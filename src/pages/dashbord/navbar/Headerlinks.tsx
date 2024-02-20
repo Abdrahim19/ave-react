@@ -19,7 +19,7 @@ const Headerlinks = () => {
             className="flex-items gap-2"
           >
             <i className={link.icon}></i>
-            {location.pathname === link.path ? link.text : false} {/* Conditionally render the text */}
+            {location.pathname === link.path ? link.text : false}
           </Link>
         </li>
       ))}

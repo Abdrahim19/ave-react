@@ -1,5 +1,6 @@
 import PopupDmaend from "../components/commen/popUps/PopupDmaend/PopupDmaend"
 import PopupHome from "../components/commen/popUps/PopupHome/PopupHome"
+import { postsData } from "../data/Postes"
 import ProposezCard from "../pages/dashbord/ProposezCard/ProposezCard"
 import AddPost from "../pages/dashbord/addPost/AddPost"
 import DemandeCard from "../pages/dashbord/dmaned/Dmanedcart"
@@ -14,13 +15,10 @@ const DashbordLayout = () => {
       <div className="row gap-4 gap-md-0 container-lg">
           <div className="col-md-7 col-lg-8">
             <AddPost />
-            <UserPost
-  userName="Gilberto B."
-  postTime="Hier à 13h"
-  userLocation="Vienne (Jean-Moulin) - 13,4 km"
-  postImage={["../../../assets/request-imges/Image-40.png"]}
-  postDescription="Bonjour, Je cherche un plombier pour remplacer un wc à poser assez rapidement. Je joins de photos de l'existant et de celui que nous avons commandé."
-/>
+            {postsData.map((postData, index) => (
+      <UserPost key={index} {...postData} />
+    ))}
+
           </div>
           <div className="col-md-5 col-lg-4">
             <DemandeCard />

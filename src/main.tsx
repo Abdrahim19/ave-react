@@ -15,6 +15,7 @@ import { YourContextProvider } from './context/MultiStepForm';
 import DetailsDemandeLayout from './layout/DetailsDemandeLayout';
 import ProfileLayout from './layout/ProfileLayout';
 import OfferLayout from './layout/OfferLayout';
+import MessagesLayout from './layout/MessagesLayout';
 
 const router = createBrowserRouter([
   {element:<HomeLayout /> , path: '/' , errorElement:<ErrorBoundary />},
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {element:<DetailsDemandeLayout /> , path: 'DetailsDemand' , errorElement:<ErrorBoundary />},
   {element:<ProfileLayout /> , path: 'profile' , errorElement:<ErrorBoundary />},
   {element:<OfferLayout /> , path: 'offreurs' , errorElement:<ErrorBoundary />},
+  {element:<MessagesLayout /> , path: 'Messages' , errorElement:<ErrorBoundary />},
 
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(
