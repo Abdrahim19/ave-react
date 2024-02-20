@@ -15,13 +15,14 @@ const Trouve = () => {
         <div className="row gap-4 gap-md-0 align-items-center">
           <div className="col-md-6">
             <div className="Trouve-big-cart bg-white mx-auto mx-md-0">
-              <div className="flex-items gap-2 p-4">
+              <div className="d-flex gap-2 p-4">
                 <img src={user_img} className="user-img" alt="" />
-                <p className="user-name">Gilberto B. <br />
-                  <span className="user-loction ">
+                <div>
+                <p className="user-name">Gilberto B.</p>
+                <p className="user-loction ">
               Vienne (Jean-Moulin) - 13,4 km
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
               <img src={big_img} className="request-img" alt="" />
               <div className="p-4 d-grid gap-3">

@@ -26,12 +26,6 @@
             border-radius: 20px;
             
         }
-        .user-loction {
-            font-size: 6px;
-            font-weight: 500;
-            line-height: 7px;    
-            color: var(--clr-gray-300);    
-        }
         .request-img {
             width: 100%;
             min-height: 197px;        
