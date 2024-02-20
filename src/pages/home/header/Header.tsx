@@ -61,7 +61,7 @@ const Header = () => {
             </NavLink>
             ))}
             <div className="d-grid d-lg-none text-center" style={{ gap: 'clamp(10px ,5vw , 20px)' }}>
-              <a href="#" className="navbar-link">S’inscrire</a>
+              <a href="#" onClick={toggleshowPopup}  className="navbar-link">S’inscrire</a>
               <button id="connecter-button" className="outline-button">Se connecter</button>
             </div>
           </ul>
