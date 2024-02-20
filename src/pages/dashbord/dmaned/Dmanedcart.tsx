@@ -1,3 +1,6 @@
+import Inputlabel from '../../../components/commen/ui/Inputlabel';
+import UplodeFile from './UplodeFile';
+import arrowDown from '../../../assets/Vector (1).png'
 import './dmaned.css'
 const DemandeCard = () => {
   return (
@@ -6,20 +9,13 @@ const DemandeCard = () => {
         <img src="./public/world 1.png" alt="" />
         <a href="#" className="flex-items gap-3 Demande-link">
           Demande publique
-          <img src="./public/Vector (1).png" alt="" />
+          <img src={arrowDown} alt="" />
         </a>
       </div>
-      <div>
-        <input type="text" className="inputText w-100 px-4" placeholder="Bonjour, " />
-        <span className="floating-label">Décrivez votre besoin</span>
-      </div>
-      <div className="uplode-file">
-        <p className="uplode-titel mb-3">Ajoutez des photos pour illustrer votre besoin :</p>
-        <div className="uploder-file-placeholder cenetr-grid text-center">
-          <i className="bi bi-cloud-arrow-up"></i>
-          <p className="uplode-discrption">Faites glisser et déposez votre photo</p>
-        </div>
-      </div>
+      <Inputlabel name={''} type={'text'} label={'Décrivez votre besoin'} error={''} />
+      <UplodeFile onFileUpload={(file: File) : void => {
+       console.log(file);
+      } } />
       <hr className="line-sparaiter" />
       <div className="flex-items justify-content-between">
         <p className="Lieu-text">Lieu</p>

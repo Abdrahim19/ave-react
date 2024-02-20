@@ -76,7 +76,6 @@ color: var(--clr-gray-300);
 .user-post {
     background-color: white;
     border-radius: 15px;
-    margin-top: clamp(20px ,4vw ,40px);
     display: grid;
     .user-name {
 font-size: 18px;

@@ -15,8 +15,8 @@ const PopupInfo = () => {
     <div className="price-box">
       <span>180€</span>
     </div>
-    <div ref={ref} className={`${Isvisabel  ? 'active animate__zoomIn' : 'animate__zoomOut'} 
-    animate__animated  user-popup-info d-grid gap-3 p-3`}>
+    <div ref={ref} className={`${Isvisabel  ? 'active animate__zoomIn' : 'animate__zoomOut d-none'} 
+    animate__animated  user-popup-info d-grid gap-3 p-3 z-3`}>
       <div className="flex-items justify-content-between gap-3">
         <Link to="/profile" className="underline-name text-decoration-underline">
         Morgan louis
