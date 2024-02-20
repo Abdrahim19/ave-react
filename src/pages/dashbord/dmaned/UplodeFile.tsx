@@ -15,6 +15,9 @@ const UplodeFile: React.FC<UploadFileProps> = ({onFileUpload}) => {
         onFileUpload(selected);
       }
     }
+
+    console.log(selectedFile);
+    
   return (
     <div className="uplode-file">
         <p className="uplode-titel mb-3">Ajoutez des photos pour illustrer votre besoin :</p>
