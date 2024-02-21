@@ -74,7 +74,6 @@ margin-top: 3px;
     max-width: 430px;
     padding: 1rem;
     border-radius: 1rem;
-    
     .msg {
     font-size: 16px;
     font-weight: 500;
@@ -111,7 +110,7 @@ line-height: 15px;
   
 
 .sand__input__conatiner {
-    width: 90%;
+  width: 100%;
 height: 60px;
 border-radius: 8px;
 padding: 1rem;
@@ -147,8 +146,12 @@ img {
 }
 
 /* comeen styles for this componant */
-
-.border-left-right {
+  
+@media (min-width:768px) {
+  .border-left-right {
     border-inline: 2px solid #E4E4E4;
 }
-  
+.sand__input__conatiner {
+  width: 90%;
+}
+}

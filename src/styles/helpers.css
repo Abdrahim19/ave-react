@@ -106,13 +106,48 @@
   cursor: pointer;
 }	
 
-.fs-2rem {
-  font-size:clamp(1.3rem ,4vw ,2rem ) !important;
-}
-
 .w-40 {
   width:clamp(40px ,4vw ,60px );
   aspect-ratio: 1;
 }
 
+.row-one-grid {
+  grid-template-rows: 1fr auto;
+}
 
+/* all helper for the template will be here */
+
+/* Fonts family */
+.monserrat { font-family: var(--ff-monserrat); }
+.Barlow { font-family: var(--ff-Barlow); }
+.inter { font-family: var(--ff-inter); }
+.Poppins { font-family: var(--ff-Poppins); }
+
+/* Colors */
+.clr-blue-gray { color: var(--clr-blue-gray); }
+.clr-green-light { color: var(--clr-green-light); }
+.clr-gray-300 { color: var(--clr-gray-300); }
+.clr-main-blue { color: var(--clr-main-blue); }
+.clr-gray-light { color: var(--clr-gray-light); }
+
+/* Font sizes */
+.fs-px_10 { font-size: var(--fs-px_10); }
+.fs-px_14 { font-size: var(--fs-px_14); }
+.fs-px_16 { font-size: var(--fs-px_16); }
+.fs-px_18 { font-size: var(--fs-px_18); }
+.fs-px_20 { font-size: var(--fs-px_20); }
+.fs-px-45 { font-size: var(--fs-px-45); }
+.fs-px-40 { font-size: var(--fs-px-40); }
+.fs-px-22 { font-size: var(--fs-px-22); }
+.fs-px-24 { font-size: var(--fs-px-24); }
+.fs-px-33 { font-size: var(--fs-px-33); }
+
+/* Line height sizes */
+.ln-ht-28px { line-height: var(--ln-ht-28px); }
+.ln-ht-55px { line-height: var(--ln-ht-55px); }
+.ln-ht-27px { line-height: var(--ln-ht-27px); }
+.ln-ht-50px { line-height: var(--ln-ht-50px); }
+.ln-ht-40px { line-height: var(--ln-ht-40px); }
+.ln-ht-30px { line-height: var(--ln-ht-30px); }
+.ln-ht-20px { line-height: var(--ln-ht-20px); }
+.ln-ht-17px { line-height: var(--ln-ht-17); }

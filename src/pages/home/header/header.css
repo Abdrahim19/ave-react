@@ -4,30 +4,6 @@ header {
     nav {
         gap:clamp(60px ,5vw  , 80px)
     }
-    .navlink {
-font-size: clamp(10px , 4vw ,1rem );
-        font-weight: 600;
-        line-height: 28px;
-    }
-    .navbar-link {
-        font-size: clamp(10px , 4vw ,1rem );
-        font-weight: 600;
-        line-height:clamp(1rem ,4vw ,28px );    
-        position: relative;
-        cursor: pointer;
-        &::after {
-            position: absolute;
-            width:0;
-            height: 1px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--clr-blue-gray);
-        }    
-        &:hover &::after {
-            width: 100%;
-        }
-    }
     .outline-button {
         width: 170px;
         height: 40px;
@@ -35,10 +11,6 @@ font-size: clamp(10px , 4vw ,1rem );
         border: 1px solid #30447F;
         display: grid;
         place-items: center;
-font-size: clamp(10px , 4vw ,1rem );
-font-weight: 600;
-line-height: 24px;        
-color: var(--clr-blue-gray);
 transition: .5s;
 &:hover {
     background-color:#30447F;

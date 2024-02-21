@@ -52,23 +52,27 @@ const Header = () => {
             <img src={nav_logo} alt="navbar logo" />
           </Link>
           <ul id="navlinsk" className={`${showMenu && isMobile ? 'active' : ''} flex-items navlinsk`} style={{ gap: 'clamp(30px ,5vw , 58px)' }}>
-            <a href="#" className="d-lg-none position-absolute left-50 translate-middle-x" style={{ top: '4rem' }}>
-              <img src={nav_logo} alt="navbar logo" />
-            </a>
+            <Link
+             to={'/'} 
+            style={{ top: '4rem' }}
+            className="d-lg-none position-absolute left-50 translate-middle-x"
+            >
+              <img src={nav_logo} loading='lazy' alt="navbar logo" />
+            </Link>
             {headerNavLinks.map((navlink, index) => (
-            <NavLink className="navlink" key={index} to={navlink.href}>
+            <NavLink className="fs-px_18 fw-semibold ln-ht-28px" key={index} to={navlink.href}>
             {navlink.title}
             </NavLink>
             ))}
             <div className="d-grid d-lg-none text-center" style={{ gap: 'clamp(10px ,5vw , 20px)' }}>
-              <a href="#" onClick={toggleshowPopup}  className="navbar-link">S’inscrire</a>
-              <button id="connecter-button" className="outline-button">Se connecter</button>
+              <a href="#" onClick={toggleshowPopup}  className="fs-px_18 fw-semibold ln-ht-28px">S’inscrire</a>
+              <button id="connecter-button" className="outline-button clr-blue-gray fs-px_18 fw-semibold ln-ht-25px">Se connecter</button>
             </div>
           </ul>
         </nav>
         <div className="d-none d-lg-flex align-items-center" style={{ gap: 'clamp(30px ,5vw , 45px)' }}>
-          <a href="#" onClick={toggleshowPopup} id="inscrire-link" className="navbar-link">S’inscrire</a>
-          <button id="connecter-button" className="outline-button">Se connecter</button>
+          <a href="#" onClick={toggleshowPopup} id="inscrire-link" className="fs-px_18 fw-semibold ln-ht-28px">S’inscrire</a>
+          <button id="connecter-button" className="outline-button clr-blue-gray fs-px_16 fw-semibold ln-ht-25px">Se connecter</button>
         </div>
         <button id="menu-button" onClick={toggleMenu} className="mobil-menu d-lg-none">
           <i className="bi bi-list"></i>

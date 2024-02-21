@@ -2,6 +2,8 @@
 @import url('./styles/reset.css');
 @import url('./styles/helpers.css');
 @import url('./styles/commen.css');
+@import url('./styles/fonts.css');
+
 
 /* import bootstrap icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
@@ -28,8 +30,37 @@
     --clr-green-light:#97E287;
     --clr-gray-300:#AFB7CF;
     --clr-main-blue:#5C85FF;
+    --clr-gray-light:#F3F3F3;
 
-    /*sizes*/
+    /*font sizes*/
+    --fs-px_10:10px;
+    --fs-px_14:clamp(8px ,4vw , 14px);
+    --fs-px_16:clamp(.5rem ,4vw , 1rem);
+    --fs-px_18:clamp(10px ,4vw ,18px);
+    --fs-px_20:clamp(8px  ,4vw , 20px);
+    --fs-px-45:clamp(15px ,4vw , 45px);
+    --fs-px-40:clamp(20px ,4vw , 40px);
+    --fs-px-22:clamp(12px ,4vw ,22px);
+    --fs-px-24:clamp(16px ,4vw ,24px);
+    --fs-px-33:clamp(20px ,4vw ,33px);
+
+
+    /* line height sizes */
+    --ln-ht-28px:clamp(18px , 4vw, 28px);
+    --ln-ht-55px:clamp(30px , 4vw , 55px);
+    --ln-ht-27px:clamp(16px ,4vw , 27px);
+    --ln-ht-50px:clamp(30px ,4vw , 60px);
+    --ln-ht-40px:clamp(20px ,4vw , 40px);
+    --ln-ht-30px:clamp(15px ,4vw , 30px);
+    --ln-ht-20px:clamp(10px ,4vw , 20px);
+    --ln-ht-17:clamp(8px ,4vw , 18px);
+
+    
+    /* all font weight  */
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    --fw-black: 900;
 
 }
 
@@ -38,3 +69,4 @@ body {
     font-family: var(--ff-monserrat);
     color: var(--clr-blue-gray);
 }
+

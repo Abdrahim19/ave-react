@@ -24,7 +24,7 @@ const UserPost: React.FC<UserPostProps> = ({
           <img
             src={userImage}
             className="user-post-img img-fluid"
-            style={{ height: 'clamp(60px, 4vw, 100px)' }}
+            style={{ height: 'clamp(40px, 4vw, 60px)' }}
             alt=""
           />
         </div>
