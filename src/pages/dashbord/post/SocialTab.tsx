@@ -14,15 +14,16 @@ const SocialTab = ({postDescription}:prop) => {
           Demande publique
           </Link>
         <div className="flex-items gap-3">
-          <a href="">
-            <i className="bi bi-suit-heart"></i>
-          </a>
-          <a href="">
-            <i className="bi bi-people"></i>
-          </a>
-          <a href="">
-            <i className="bi bi-chat"></i>
-          </a>
+          <button>
+          <i className="bi bi-suit-heart"></i>
+          </button>
+          <button className="position-relative">
+          <i className="bi bi-people"></i>
+          <span className="tool_tip_people">Recommender</span>
+          </button>
+          <button>
+          <i className="bi bi-chat"></i>
+          </button>
         </div>
         </div>
       </div>

@@ -15,14 +15,14 @@ const DemandeCard = () => {
   return (
     <div className="Demande-card">
       <div onClick={handleToggle} className="flex-items mb-md-4" style={{ gap: '1rem' }}>
-        <i className={`bi bi-globe-asia-australia fs-px-24 ${isShow ? 'r' : ''}`}></i>
+        <i className={`bi bi-globe-asia-australia fs-px-24 ${isShow ? '' : ''}`}></i>
         <button role='button' className="flex-items w-100 justify-content-between 
         justify-content-lg-start gap-3 Demande-link clr-blue-gray">
           Demande publique
           <img src={arrowDown} alt="" />
         </button>
       </div>
-      <div className={`animate__animated ${isShow ? 'animate__backInUp' : 'animate__backOutDown d-none d-md-block'} mt-2`} >
+      <div className={`animate__animated ${isShow ? 'animate__backInUp' : 'd-none d-md-block'} mt-2`} >
       <div className='mb-3'>
       <Inputlabel name={"besoin"} type={"text"} label={"Décrivez votre besoin"} error={""} />
       </div>
