@@ -13,14 +13,14 @@ const DashbordLayout = () => {
     <Navbar />
     <div className="main-page d-flex justify-content-center py-4">
       <div className="row gap-4 gap-md-0 container-lg">
-          <div className="col-md-7 col-lg-8">
+          <div className="col-md-7 col-lg-8 order-2 order-md-1">
             <AddPost />
             {postsData.map((postData, index) => (
       <UserPost key={index} {...postData} />
     ))}
 
           </div>
-          <div className="col-md-5 col-lg-4">
+          <div className="col-md-5 col-lg-4 order-1 order-md-2">
             <DemandeCard />
             <ProposezCard />
           </div>
