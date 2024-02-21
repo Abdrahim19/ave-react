@@ -1,5 +1,5 @@
 import Navbar from "../pages/dashbord/navbar/Navbar"
-import ProfileCard from "../pages/deatailsDemande/profileCard/ProfileCard"
+import ProfileCard from "../components/commen/cards/profileCard/ProfileCard"
 import UserAbout from "../pages/profile/about/UserAbout"
 import HeaderBackground from "../pages/profile/headerbackground/HeaderBackground"
 import ProfileLoction from "../pages/profile/userLoction/ProfileLoction"

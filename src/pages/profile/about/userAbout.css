@@ -70,7 +70,6 @@ margin-left: 1rem;
 
 @media (max-width:400px) {
     .about-box {
-        padding: .5rem;
         .titel,
         .discrption {
             text-align: center;

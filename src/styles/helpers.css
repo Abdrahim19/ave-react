@@ -151,3 +151,8 @@
 .ln-ht-30px { line-height: var(--ln-ht-30px); }
 .ln-ht-20px { line-height: var(--ln-ht-20px); }
 .ln-ht-17px { line-height: var(--ln-ht-17); }
+
+.size-100px {
+  width: 100px;
+  aspect-ratio: 1;
+}

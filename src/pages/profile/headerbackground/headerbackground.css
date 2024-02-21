@@ -45,3 +45,20 @@ height:clamp(150px ,4vw ,250px );
 height: 29.06px;
     transform: rotate(-46.68deg);
 }
+
+@media (max-width:768px) {
+    .titel__img {
+    width: 11rem !important;
+    height: 6rem !important;
+    bottom: 1.5rem !important;
+}
+.bigest__logo {
+    width: 6rem;
+}
+    .small__logo__1 {
+        right: 7rem;
+    }
+    .small__logo__2 {
+        right: 2rem;
+    }
+}

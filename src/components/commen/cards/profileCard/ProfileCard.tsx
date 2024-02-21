@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
-import user_img from '../../../assets/Image-40.png'
+import user_img from '../../../../assets/Image-40.png'
 import './profile_card.css'
 const ProfileCard = () => {
   return (
     <div className='ProfileCard p-3 text-center'>
       <div className='mb-2'>
-      <img src={user_img} className='user-img' alt="" />
+      <img src={user_img} className='size-100px rounded-circle' alt="" />
       </div>
       <h3 className='user-name'>Fernando Gaucho</h3>
       <div className='flex-items justify-content-center gap-2 my-1'>
@@ -46,3 +46,4 @@ const ProfileCard = () => {
 }
 
 export default ProfileCard
+

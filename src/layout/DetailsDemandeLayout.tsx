@@ -1,7 +1,7 @@
 import Navbar from "../pages/dashbord/navbar/Navbar"
 import DemandeUserPost from "../pages/deatailsDemande/UserPost/DemandeUserPost"
 import OffreursCards from "../pages/deatailsDemande/offreursCards/OffreursCards"
-import ProfileCard from "../pages/deatailsDemande/profileCard/ProfileCard"
+import ProfileCard from "../components/commen/cards/profileCard/ProfileCard"
 
 const DetailsDemandeLayout = () => {
   return (
