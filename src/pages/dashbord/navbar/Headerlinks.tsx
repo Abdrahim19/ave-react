@@ -13,13 +13,14 @@ const Headerlinks = () => {
   return (
     <ul className="d-md-flex align-items-center menu-container flex justify-content-between">
       {links.map((link, index) => (
-        <li key={index} className={`topmenu-link ${location.pathname === link.path  ? 'active' : ''}`}>
+        <li key={index} className={`topmenu-link
+         ${location.pathname === link.path || link.text === 'Accueil'  ? 'active' : ''}`}>
           <Link
             to={link.path}
             className="flex-items gap-2"
           >
             <i className={link.icon}></i>
-            {location.pathname === link.path ? link.text : false}
+            {location.pathname === link.path || link.text === 'Accueil' ? link.text : false}
           </Link>
         </li>
       ))}

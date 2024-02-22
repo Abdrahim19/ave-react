@@ -5,9 +5,6 @@ import tools_icon from  '../../../../assets/tools-icon.png'
 const PopupDmaend = () => {
   return (
     <>
-    <div className="bg-shadow">
-
-    </div>
     <section className="popup-type-server py-3 row bg-white">
       <div className="text-end">
         <button id="close">

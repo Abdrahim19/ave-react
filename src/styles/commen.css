@@ -192,6 +192,7 @@ line-height: 27px;
     border-color: #30447F;
   }
   
+  /* start checkbox styling */
   .checkbox-wrapper-30 .checkbox {
     --bg: #fff;
     --brdr: #d1d6ee;
@@ -259,6 +260,8 @@ line-height: 27px;
     height: 100%;
     width: 100%;
   }
+
+
   .btn-primary {
     min-height: 45px;
     border-radius: 30px;
