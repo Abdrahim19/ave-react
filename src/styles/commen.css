@@ -608,3 +608,143 @@ line-height: 24px;
   .border-right {
     border-right: 1.5px solid #EFF0F3
   }
+  .restof_Content {
+    margin-top: -1.5rem;
+    border-radius:  0 0 15px  15px ;
+    transition: 1.5s ease-in-out height, .5s ease-in-out padding;
+    height: 0;
+    overflow: hidden;
+    &.active {
+      padding: 1rem;
+      height: auto;
+    }
+  }
+
+.downlode__button {
+  width: 2rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background-color: #f4faf2;
+  border-radius: 5px;
+  i {
+font-size: 8px;
+color: #a7d296;
+  }
+}
+
+.package-price {
+  &::after {
+    content: '€';
+    position: absolute;
+    top: 0;
+    left: -1rem;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+  }
+}
+.pricePackage-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+  gap:1rem 8px;
+  align-items: center;
+}
+
+.pricePackage-box {
+  height: 471px;
+border-radius: 5px 0px 0px 5px;
+box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+transition: .5s ;
+&.Premium {
+  height: 600px;
+}
+&:hover {
+  height: 600px;
+}
+&:hover {
+  transform: scale(1.2);
+  scale: 1;
+}
+}
+
+.main_blue_button{
+max-height: 42px;
+background: #5c85ff;
+border-radius: 30px;
+display: grid;
+place-items: center;
+ font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px; 
+color: #f8f8f8;
+ 
+}
+
+.blue-box {
+min-height: 49px;
+display: grid;
+place-items: center; 
+border-radius: 5px 5px 0px 0px;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+
+.Abonnement-background {
+  min-height: 100vh;
+}
+.line-green {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute; 
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width:0;
+    height: 6px;
+    background-color: var(--clr-green-light);
+    transition: .5s width;
+  }
+  &.active {
+    &::after {
+      width: 100%;
+    }
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+
+.payment__box {
+  min-height:209px ;
+  border-radius: 25px;
+  padding: 2rem;
+hr {
+  border: 2px dashed  #AFB7CF;
+  height: 0;
+}
+}
+
+.dotted-hr {
+  border: 2px dashed  #AFB7CF;
+  height: 0;
+}
+
+.plus-button {
+  padding: 2rem;
+  border: 2px dotted #30447F;
+  border-radius: 13px;
+      img {
+      max-width: 51px;
+      aspect-ratio: 1;
+      }
+  }

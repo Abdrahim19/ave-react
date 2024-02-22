@@ -1,7 +1,10 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import arrow__down from '../../../assets/Vector (1).png';
 import user_img from '../../../assets/Image-40.png'
+import FichesCart from '../cartsChat/FichesCart';
+import ImgestCart from '../cartsChat/ImgestCart';
+import InformationsCart from '../cartsChat/InformationsCart';
+import PinnedItemsCart from '../cartsChat/PinnedItemsCart';
 
 interface AdditionalInfoProps {
   userName: string;
@@ -29,29 +32,11 @@ const AdditionalInfo: FC<AdditionalInfoProps> = ({ userName, userImage }) => {
           </Link> •Givors (Canal)
         </p>
       </div>
-      <div>
-        <div className="flex-items cursor-pointer rounded-corners_1rem justify-content-between py-3 bg-white px-4 my-2">
-          <h3 className="fs-3">Informations</h3>
-          <img src={arrow__down} alt="arrow down" />
-        </div>
-      </div>
-      <div>
-        <div className="flex-items cursor-pointer rounded-corners_1rem justify-content-between py-3 bg-white px-4 mb-2">
-          <h3 className="fs-3">Images (14)</h3>
-          <img src={arrow__down} alt="arrow down" />
-        </div>
-      </div>
-      <div>
-        <div className="flex-items cursor-pointer rounded-corners_1rem justify-content-between py-3 bg-white px-4 mb-2">
-          <h3 className="fs-3">Fichiers (3)</h3>
-          <img src={arrow__down} alt="arrow down" />
-        </div>
-      </div>
-      <div>
-        <div className="flex-items cursor-pointer rounded-corners_1rem justify-content-between py-3 bg-white px-4 mb-2">
-          <h3 className="fs-3">Pinned Items</h3>
-          <img src={arrow__down} alt="arrow down" />
-        </div>
+      <div className='d-grid mt-3' style={{gap:'2rem'}}>
+      <InformationsCart />
+      <ImgestCart />
+      <FichesCart />
+      <PinnedItemsCart />
       </div>
         </>
   );

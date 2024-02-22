@@ -16,6 +16,9 @@ import DetailsDemandeLayout from './layout/DetailsDemandeLayout';
 import ProfileLayout from './layout/ProfileLayout';
 import OfferLayout from './layout/OfferLayout';
 import MessagesLayout from './layout/MessagesLayout';
+import AbonnementLayout from './layout/AbonnementLayout';
+import PyementCardsLayout from './layout/pyementCardsLayout';
+import PaiementLayout from './layout/PaiementLayout';
 
 const router = createBrowserRouter([
   {element:<HomeLayout /> , path: '/' , errorElement:<ErrorBoundary />},
@@ -24,6 +27,9 @@ const router = createBrowserRouter([
   {element:<ProfileLayout /> , path: 'profile' , errorElement:<ErrorBoundary />},
   {element:<OfferLayout /> , path: 'offreurs' , errorElement:<ErrorBoundary />},
   {element:<MessagesLayout /> , path: 'Messages' , errorElement:<ErrorBoundary />},
+  {element:<AbonnementLayout /> , path: 'Abonnement' , errorElement:<ErrorBoundary />},
+  {element:<PyementCardsLayout /> , path: 'pyementCards' , errorElement:<ErrorBoundary />},
+  {element:<PaiementLayout /> , path: 'paiement' , errorElement:<ErrorBoundary />},
 
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(

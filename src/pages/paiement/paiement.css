@@ -1,0 +1,40 @@
+.paymentWay-box {
+    padding: 1rem 2rem;
+background-color: white;
+border-radius: 5px;
+width: 8rem;
+    height: 6rem;
+    display: grid;
+    place-items: center;
+}
+.green-sient  {
+    top: -0.5rem;
+    right: -0.5rem;
+    height: 23px;
+    aspect-ratio: 1;
+}
+
+.circal-white {
+    position: absolute;
+    width: 60px;
+    aspect-ratio: 1;
+    background-color: #f4f4f4;
+    border-radius:50%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+  }
+  
+  .pos-left {
+    left: -30px;
+  }
+  .pos-right {
+  right: -30px;
+  }
+  @media (min-width:992px) {
+    .master_card__img {
+      margin-top: -8rem;
+    }
+  
+  }
+  
