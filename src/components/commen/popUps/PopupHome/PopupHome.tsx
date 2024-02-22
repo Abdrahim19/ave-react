@@ -1,4 +1,3 @@
-import "./popup_home.css";
 import small_logo from  '../../../../assets/small-logo.png'
 import plan_icon from  '../../../../assets/plan.png'
 import lock_icon from  '../../../../assets/lock.png'
@@ -6,7 +5,7 @@ import lock_icon from  '../../../../assets/lock.png'
 
 const PopupHome = () => {
   return (
-    <section id="popup-type-server" className="popup-type-server d-none py-3 row bg-white">
+    <section className="popup-type-server  py-3 row bg-white">
       <div className="text-end">
         <button id="close">
           <i className="bi bi-x-lg" style={{ fontSize: 'min(40px, 20px)' }}></i>

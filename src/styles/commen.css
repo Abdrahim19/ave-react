@@ -748,3 +748,12 @@ hr {
       aspect-ratio: 1;
       }
   }
+
+  .scale__hover{
+    cursor: pointer;
+    transition: .5s ;
+    position: relative;
+    &:hover {
+        transform: scale(1.5);
+    }
+  }

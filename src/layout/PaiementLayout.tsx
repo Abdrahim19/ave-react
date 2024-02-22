@@ -7,7 +7,7 @@ import visa_image from '../assets/paymentway_icons/visa-image.png'
 import master_Card from "../assets/masterCard__img.png";
 import masterCardBox from "../assets/masterCard-box.png";
 import small__logo from "../assets/icon.png";
-
+import correct from '../assets/correct 1.png'
 import '../pages/paiement/paiement.css'
 import AddCartPayment from "../components/commen/ui/AddCartPayment";
 import CardDetails from "../components/commen/ui/CartDeatiles";
@@ -37,10 +37,11 @@ const PaiementLayout = () => {
           <h2 className="my-5 fs-px-24 ln-ht-30px">Choisissez votre carte</h2>
           <div>
             <div className="flex-items flex-column-reverse flex-md-row justify-content-center gap-5">
-              <div>
+              <div className="scale__hover">
               <img src={master_Card} alt="" />
               </div>
-              <div>
+              <div className="scale__hover">
+                <img src={correct} className={`green-sient position-absolute`} alt="" />
               <img src={master_Card} alt="" />
               </div>
           <AddCartPayment />

@@ -21,32 +21,3 @@ transition: .3s;
 }
 } 
 
-
-
-
-  /* .popup-type-server {
-    background-color: #f9f9f9;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  width:min(657px , 80%);
-  min-height: 472px;
-  padding: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  transform: translate(-50% , -50%);
-   transition: .5s;
-  }
-  .box-subtitel {
-  font-style: normal;
-  font-weight: 500;
-  font-size:clamp(7px ,4vw , 1rem);
-  line-height: 21px;
-  color: #aeb6cf;
-  }
-  
-  .arrow-right {
-    font-size:clamp(1rem ,4vw ,1.5rem );
-    font-weight: 500;
-  } */
