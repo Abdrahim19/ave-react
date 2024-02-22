@@ -6,6 +6,10 @@ width: 8rem;
     height: 6rem;
     display: grid;
     place-items: center;
+    transition: .5s ;
+    &:hover {
+        transform: scale(1.5);
+    }
 }
 .green-sient  {
     top: -0.5rem;
