@@ -2,6 +2,7 @@
     border-radius:6px;
     font-size:0;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: .5rem 2rem;
   }
   
   button {
@@ -15,6 +16,7 @@
     cursor:pointer;
     padding:10px;
     transition: background-color .4s ;
+    border-radius:6px ;
   }
   
   button:hover {

@@ -4,11 +4,11 @@ const SearchBar = () => {
     <div className="bar row p-2 align-items-center">
     <div className="location col-5">
       <p className='searchBar_label'>Location</p>
-      <input type="text" placeholder="Que vous voulez"  />
+      <input type="text" className='search__input' placeholder="Que vous voulez"  />
     </div>
     <div className="check-in col-5">
       <p className='searchBar_label'>Check in</p>
-      <input type="text" placeholder="W l'emplacement" />
+      <input type="text" className='search__input' placeholder="W l'emplacement" />
     </div>
     <div className='col-2'>
     <div className='search-container'>
