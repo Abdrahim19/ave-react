@@ -5,7 +5,7 @@ import Lodingpage from "../components/commen/pages/loding/Lodingpage";
 import Communauté from "../pages/home/communauté/Communauté";
 import Footer from "../pages/home/footer/Footer";
 import Jobtype from "../pages/home/job-types/Jobtype";
-import Carousel from "../pages/home/carousel/Carousel";
+// import Carousel from "../pages/home/carousel/Carousel";
 import Trouve from "../pages/home/trouve/Trouve";
 import Application from "../pages/home/Application/Application";
 import MultiStepForm from "../pages/home/popUps/MultiStepForm";
@@ -40,7 +40,7 @@ const HomeLayout = () => {
       <Trouve />
       <Jobtype />
       <StepsOverviwe />
-      <Carousel />
+      {/* <Carousel /> */}
       <Communauté />
       <Application />
       <Footer />
