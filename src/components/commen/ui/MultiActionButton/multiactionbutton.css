@@ -10,7 +10,7 @@
     cursor:pointer;
     padding:8px;
     transition: background-color .4s ;
-    border-radius:6px ;
+    border-radius:1rem;
     &:hover {
       background-color:#30447f26;
       transform : translate(0, 1px);

@@ -119,12 +119,12 @@ border-radius: 15px;
 padding: 1rem;
 text-align: center;
 .Proposez-titel {
-font-size: 18px;
+font-size:clamp(1*px ,4vw ,18px );
 font-weight: 700;
 line-height: 22px;
 }
 .Proposez-discrption {
-    font-size: 16px;
+    font-size:clamp( 10px , 4vw,16px);
     font-weight: 500;
     line-height: 20px;    
 }
