@@ -1,17 +1,13 @@
 .bar{
-    width:650px;
     background:white;
-    box-shadow:0 0 5px hsl(0 0% 78%);
-    height:55px;
-    border-radius:100vw;
-    display:flex;
-    justify-content:center;
     font-size:0.6rem;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.08);
+    border-radius: 32px;
+    border: 1px solid var(--j-qkgmf);
   }
   
   .bar div{
     border-radius:inherit;
-    padding:0.8rem 1.5rem;
     transition:background 250ms ease;
   }
   
@@ -30,6 +26,7 @@
     background:none;
     border:none;
     padding:0.2rem 0 0 0;
+    font-size: 1rem;
   }
   
   input[type="text"]:focus{
@@ -37,7 +34,7 @@
   }
   
   ::placeholder{
-    font-size:0.75rem;
+    font-size:.75rem;
   }
   
   .guests{
@@ -78,4 +75,24 @@
   
   .bar>div:hover::before{
     background:transparent;
+  }
+
+  .search-container {
+    background-color: var(--clr-green-light);
+    color: white;
+    border-radius: 50%;
+    width:45px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  .searchBar_label {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18px;
   }
