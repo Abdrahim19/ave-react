@@ -7,7 +7,7 @@ const ProposezCard = () => {
     <p className="Proposez-discrption">Arrondissez vos fins de mois ou développez
          votre activité professionnelle, 
         en répondant aux demandes postées autour de chez vous.</p>
-    <button className="green-outline-button mt-4">Devenir offreur</button>
+    <button className="green-outline-button">Devenir offreur</button>
 </div>
   )
 }

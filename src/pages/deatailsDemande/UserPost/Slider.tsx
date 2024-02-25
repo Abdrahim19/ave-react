@@ -18,7 +18,7 @@ const SliderDemand:FC<props> = ({imges}) => {
     
   return (
     <>
-        <img src={imges[currentIndex] || dogImage} className="tras w-100 mb-3 h-100 img-fluid" 
+        <img src={imges[currentIndex] || dogImage} className="tras w-100 mb-2 h-100 img-fluid" 
         style={{'borderRadius':'5px'}} alt={`Slide ${currentIndex}`} />
         <button onClick={nextSlide} className="next-button">
           <img src={arrowRight} alt="" />

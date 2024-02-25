@@ -17,7 +17,7 @@ const SocialTab = ({postDescription}:prop) => {
           <button>
           <i className="bi bi-suit-heart"></i>
           </button>
-          <button className="position-relative">
+          <button className="position-relative user__icon">
           <i className="bi bi-people"></i>
           <span className="tool_tip_people">Recommender</span>
           </button>

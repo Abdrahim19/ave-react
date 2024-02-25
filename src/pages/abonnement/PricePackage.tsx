@@ -46,7 +46,7 @@ const PricePackage: React.FC<PricePackageProps> = ({ title, price, features, isP
           </div>
         ))}
         {isPremium && (
-          <div>
+          <>
             <div className="flex-items gap-2 cursor-pointer">
               <img src={blue_correct_icon} alt="" className="img-fluid" />
               <p className="fw-normal fs-px_14 ln-ht-20px">Tout les droits</p>
@@ -55,7 +55,7 @@ const PricePackage: React.FC<PricePackageProps> = ({ title, price, features, isP
               <img src={blue_correct_icon} alt="" className="img-fluid" />
               <p className="fw-normal fs-px_14 ln-ht-20px">Tout les droits</p>
             </div>
-          </div>
+          </>
         )}
       </div>
       {isPremium && <button className="main_blue_button col-8 mx-auto mt-5 mb-3">CHOISIR</button>}

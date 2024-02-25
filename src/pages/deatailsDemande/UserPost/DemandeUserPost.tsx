@@ -16,8 +16,8 @@ const DemandeUserPost = () => {
       ]
   return (
     <div className="DemandeUserPost mb-4">
-      <div className="p-4 row">
-        <div className="col-sm-2 col-xl-2 px-0 text-center">
+      <div className="flex-items flex-wrap gap-4 mb-4">
+        <div style={{width:'10%'}}>
           <img
             src={userImage}
             className="user-post-img img-fluid"
@@ -25,8 +25,11 @@ const DemandeUserPost = () => {
             alt=""
           />
         </div>
-        <div className="col-sm-10 col-xl-10">
-          <h1 className="user-name text-center text-sm-start my-3 flex-1">Gilberto B.</h1>
+        <div className="w-100">
+          <div className="flex-items flex-wrap justify-content-between">
+          <h1 className="user-name text-center text-sm-start flex-1">Gilberto B.</h1>
+          <p className="fw-bolder clr-gray-300 fs-px_10" style={{lineHeight:'12px'}}>Hier à 13h</p>
+          </div>
           <span className="user-loction text-center text-sm-start">Vienne (Jean-Moulin) - 13,4 km</span>
         </div>
       </div>

@@ -14,5 +14,10 @@ border-radius: 15px;
 }
 
 @media (min-width:992px) {
+    .DeatilesCard {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 
 }
