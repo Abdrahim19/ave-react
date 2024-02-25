@@ -3,12 +3,12 @@ const SearchBar = () => {
   return (
     <div className="bar row p-2 align-items-center">
     <div className="location col-5">
-      <p className='searchBar_label'>Location</p>
+      <p className='searchBar_label'>Service</p>
       <input type="text" className='search__input' placeholder="Que vous voulez"  />
     </div>
     <div className="check-in col-5">
-      <p className='searchBar_label'>Check in</p>
-      <input type="text" className='search__input' placeholder="W l'emplacement" />
+      <p className='searchBar_label'>Emplacement</p>
+      <input type="text" className='search__input' placeholder="choisi votre emplacement" />
     </div>
     <div className='col-2'>
     <div className='search-container'>

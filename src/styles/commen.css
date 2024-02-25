@@ -761,3 +761,11 @@ hr {
         transform: scale(1.5);
     }
   }
+
+  @media (min-width:992px) {
+    .fixed__content {
+    position: fixed;
+    right: 30ch;
+    }
+    
+  }

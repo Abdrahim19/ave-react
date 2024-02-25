@@ -1,47 +1,23 @@
-.multi-button {
-    border-radius:6px;
-    font-size:0;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    padding: .5rem 2rem;
-  }
-  
-  button {
+
+  .action__button {
     outline:none;
     display:inline-flex;
     place-items: center;
     font-weight:bold;
-    background-color:#eeeeee;
+    background-color:transparent;
     border:none;
     color:#222222;
     cursor:pointer;
     padding:10px;
     transition: background-color .4s ;
     border-radius:6px ;
-  }
-  
-  button:hover {
-    background-color:#30447f26;
-    transform : translate(0, 1px);
-  }
-  
-  button:active {
-    background-color:#cccccc;
-    transform : translate(0, 2px);
-  }
-  
-  
-  button + button {
-    margin-left:0;
-  }
-  
-  .outer-left {
-     border-radius : 6px 0 0 6px;
-  }
-  
-  .outer-right {
-    border-radius : 0 6px 6px 0; 
-  }
-  
-  svg {
-    margin-right:5px;
+    &:hover {
+      background-color:#30447f26;
+      transform : translate(0, 1px);
+    }
+    &:active {
+      background-color:#cccccc;
+      transform : translate(0, 2px);
+    }
+    border-radius : 6px 0 0 6px;
   }
