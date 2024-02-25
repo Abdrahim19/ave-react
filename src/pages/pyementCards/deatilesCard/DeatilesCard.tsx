@@ -17,7 +17,7 @@ const DeatilesCard = () => {
       };
       
   return (
-    <div className="DeatilesCard">
+    <div className="DeatilesCard ml-auto">
         <div className="d-flex align-items-end  mb-2 gap-2">
             <img src={wallet} alt="" />
             <p className="fs-px-22 fw-bold ln-ht-28px">Balance</p>

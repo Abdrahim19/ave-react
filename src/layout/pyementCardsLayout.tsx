@@ -8,16 +8,16 @@ const PyementCardsLayout = () => {
   return (
     <>
     <Navbar />
-    <div className="main-page position-relative overflow-hidden flex-items justify-content-center py-4">
-      <div className="container-lg row gap-lg-0 gap-4">
-        <div className="col-lg-6">
+    <div className="main-page mobile-flex-col position-relative overflow-hidden flex-items justify-content-center py-4">
+      <div className="container-lg">
+        <div className="col-lg-10 col-xl-7 m-auto">
       <AddPaymentCard />
       <TransactionDeatiles />
         </div>
-        <div className="col-lg-6">
+      </div>
+        <div className="col-lg-6 mt-4 mt-lg-0">
           <DeatilesCard />
         </div>
-      </div>
   </div>
     </>
   )
