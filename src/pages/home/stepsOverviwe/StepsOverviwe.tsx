@@ -23,7 +23,8 @@ export default function StepsOverviwe() {
         },
       ];
   return (
-    <section className="min-vh-100 my-3">
+    <section className="min-vh-100 my-3 d-grid place-items-center">
+      <div className="w-100">
     <img src={wave} className="wave__top" alt="" />
         <div className='wave__background py-5 w-100'>
     <div className="container">
@@ -45,6 +46,7 @@ export default function StepsOverviwe() {
     </div>
         </div>
     <img src={wave} className="wave__bottom" alt="" />
+      </div>
 
   </section>
   )
