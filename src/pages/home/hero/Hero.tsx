@@ -6,7 +6,7 @@ import SearchBar from './searchBar/SearchBar';
 
 const Hero = () => {
   return (
-    <main className="hero-section mt-3 container-lg position-relative cenetr-grid">
+    <main className="hero-section mt-5 container-lg position-relative cenetr-grid">
       <img src={Ellipse} className="position-absolute big-circal w-100 z-1" alt="" />
       <div className="hero-background position-relative z-2 p-2 p-md-4">
         <div className="row gap-4 gap-lg-0">
