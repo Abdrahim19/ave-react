@@ -63,7 +63,6 @@
     margin-bottom: -2.5rem;
     z-index: 2;
     position: relative;
-    mask: url('../../../assets/wave-bottom.svg')  repeat-x center;
 }
 .wave__bottom {
     width: 100%;
@@ -71,5 +70,12 @@
     z-index: 2;
     position: relative;
     rotate: 180deg;
+}
+
+@media (max-width:2000px) {
+    .wave__bottom ,
+    .wave__top {
     mask: url('../../../assets/wave-bottom.svg')  repeat-x center;
+    }
+
 }

@@ -10,7 +10,7 @@ const PyementCardsLayout = () => {
     <Navbar />
     <div className="main-page mobile-flex-col position-relative overflow-hidden flex-items justify-content-center py-4">
       <div className="container-lg">
-        <div className="col-lg-10 col-xl-7 m-auto">
+        <div className="col-lg-10 col-xl-9 m-auto">
       <AddPaymentCard />
       <TransactionDeatiles />
         </div>
