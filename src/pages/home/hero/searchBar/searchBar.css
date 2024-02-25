@@ -65,7 +65,7 @@
     top:50%;
     transform:translateY(-50%);
     width:1px;
-    height:55%;
+    height:80%;
     background:hsl(0 0% 90%);
   }
   
@@ -96,4 +96,21 @@
     font-size: 1rem;
     font-weight: 500;
     line-height: 18px;
+  }
+  
+
+  .bar>div::before{
+    position:absolute;
+    content:"";
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:80%;
+    background:hsl(0 0% 90%);
+  }
+  @media (max-width:400px) {
+    .bar>div::before{
+      display: none;
+    }
   }

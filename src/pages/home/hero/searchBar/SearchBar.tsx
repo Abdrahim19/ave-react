@@ -2,15 +2,15 @@ import './searchBar.css'
 const SearchBar = () => {
   return (
     <div className="bar row p-2 align-items-center">
-    <div className="location col-5">
+    <div className="location col-12 col-sm-5">
       <p className='searchBar_label'>Service</p>
       <input type="text" className='search__input' placeholder="Que vous voulez"  />
     </div>
-    <div className="check-in col-5">
+    <div className="check-in col-9 col-sm-5">
       <p className='searchBar_label'>Emplacement</p>
       <input type="text" className='search__input' placeholder="choisi votre emplacement" />
     </div>
-    <div className='col-2'>
+    <div className='col-3 mx-auto mt-2 col-sm-2'>
     <div className='search-container'>
     <i className="bi bi-search"></i>
     </div>
