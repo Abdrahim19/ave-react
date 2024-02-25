@@ -11,7 +11,7 @@ interface PaymentDetailsListProps {
 
 const PaymentDetailsList: React.FC<PaymentDetailsListProps> = ({ details }) => {
   return (
-    <ul className="d-grid gap-2 mt-5 px-4">
+    <ul className="d-grid gap-3 mt-5 px-4">
       {details.map((detail, index) => (
         <li key={index} className="flex-items gap-2 flex-wrap justify-content-center justify-content-sm-between">
           <p className="fs-px_14 fw-medium ln-ht-17px clr-gray-300 ">{detail.label}</p>
