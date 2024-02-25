@@ -765,7 +765,6 @@ hr {
   @media (min-width:992px) {
     .fixed__content {
     position: fixed;
-    right: 30ch;
     }
     
   }

@@ -10,6 +10,7 @@ import Trouve from "../pages/home/trouve/Trouve";
 import Application from "../pages/home/Application/Application";
 import MultiStepForm from "../pages/home/popUps/MultiStepForm";
 import { useYourContext } from "../context/MultiStepForm";
+import StepsOverviwe from "../pages/home/stepsOverviwe/StepsOverviwe";
 
 const HomeLayout = () => {
   const [loaded, setLoaded] = useState(false);
@@ -38,6 +39,7 @@ const HomeLayout = () => {
       <Hero />
       <Trouve />
       <Jobtype />
+      <StepsOverviwe />
       <Carousel />
       <Communauté />
       <Application />

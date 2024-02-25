@@ -1,8 +1,10 @@
+import { useYourContext } from "../../../../context/MultiStepForm";
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
 
 
 const PopupPritacler = () => {
+  const { handleNext } = useYourContext();
   const handleCheckboxChange = (checked: boolean) => {
     console.log('Checkbox checked:', checked);
   };
@@ -36,7 +38,8 @@ const PopupPritacler = () => {
           </span> 
         </label>
       </div>
-        <button type="submit" className="btn-primary col-8 mx-auto">M’inscrire</button>
+        <button type="submit" className="btn-primary col-8 mx-auto" 
+        onClick={handleNext}>M’inscrire</button>
     </section>
     </>
   )
