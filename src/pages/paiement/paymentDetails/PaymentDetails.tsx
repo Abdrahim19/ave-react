@@ -12,11 +12,11 @@ const PaymentDetails: React.FC = () => {
       ];
   return (
     <>
-    <div className='text-center master_card__img d-none d-md-block'>
+    <div className='text-center master_card__img d-none d-lg-block'>
       <img src={masterCardBox} alt="Master Card Box" className="" />
     </div>
       <div className="w-100 masterCard-box rounded-4 position-relative m-auto py-4">
-        <div className="text-center d-md-none">
+        <div className="text-center d-lg-none">
           <img src={masterCardBox} alt="Master Card Box" className="" />
         </div>
         <PaymentDetailsList details={paymentDetails} />
