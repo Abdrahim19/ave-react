@@ -27,3 +27,34 @@ export interface UserOfferCardProps {
     description: string;
     users:User[];
   }
+
+  export type TypePropsBigRequest = {
+    id: number;
+    userName: string;
+    userLocation: string;
+    requestImageSrc: string;
+    requestDescription: string;
+    requestPublishedTime: string;
+    userImageSrc: string;
+  }
+  
+  export type TypePropsReview = {
+    id: number;
+    userName: string;
+    userType: string;
+    userRate: number;
+    userImageSrc: string;
+    reviewDescription: string;
+    reviewPublishedTime: string;
+    isActive: boolean;
+  }
+
+  export type UserPostProps =  {
+    id:number;
+    userName: string;
+    postTime: string;
+    userImagePost: string;
+    userLocation: string;
+    postImage: string[];
+    postDescription: string;
+  }

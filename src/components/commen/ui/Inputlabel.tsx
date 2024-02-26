@@ -17,11 +17,12 @@ const Inputlabel = ({ name, type, label,  error, onChange , value , register , r
   return (
     <div>
     <div className="col-12 position-relative">
-      <input {...register?.(name, rules)} className={`${error && 'is-invalid'} floting-input px-3`} value={value} required type={type} name={name} onChange={onChange} placeholder=" " />
-      <label className={`floting-label` } typeof="input"  
+      <input {...register?.(name, rules)} className={`${error && 'is-invalid'}
+       floting-input px-3`} value={value}  type={type} name={name} onChange={onChange} placeholder=" " />
+      <label className={`floting-label`} typeof="input"  
       htmlFor={name}>{label}</label>
     </div>
-      {error ? <div className="text-danger text-capitalize">{error.message}</div> : false}
+      {error ? <div className="text-danger fs-px_12">{error.message}</div> : false}
     </div>
   );
 };

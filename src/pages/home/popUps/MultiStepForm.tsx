@@ -6,6 +6,7 @@ import Singup from './Singup';
 import Stepper from '../../../components/commen/ui/Stepper';
 import PopupDone from '../../../components/commen/popUps/PopupDone/PopupDone';
 import Popupvladtion from '../../../components/commen/popUps/otpPopup/Popupvladtion';
+import LodingPopup from '../../../components/commen/popUps/popupLoding/LodingPopup';
 
 const MultiStepForm = () => {
   const { step, showPopup, toggleshowPopup } = useYourContext();
@@ -34,8 +35,9 @@ const MultiStepForm = () => {
         <div onClick={toggleshowPopup} className='bg-shadow active'></div>
       )}
       <section
-        className={`auth_box row m-0 gap-2 overflow-y-auto p-2 h- bg-white`}
+        className={`auth_box  row m-0 gap-2 overflow-y-auto p-2 h- bg-white`}
       >
+        {false && <LodingPopup />}
         <div className='text-end animate__animated animate__bounceInDown'>
           <button id='close' onClick={toggleshowPopup}>
             <i

@@ -1,28 +1,22 @@
 import './post.css';
-import userImage  from "../../../assets/Image-40.png";
 import SocialTab from './SocialTab';
 import PostImges from './PostImges';
-
-type UserPostProps =  {
-  userName: string;
-  postTime: string;
-  userLocation: string;
-  postImage: string[];
-  postDescription: string;
-}
+import { UserPostProps } from '../../../types/Types';
 
 const UserPost: React.FC<UserPostProps> = ({
   userName,
   postTime,
   userLocation,
   postDescription,
+  postImage,
+  userImagePost
 }) => {
   return (
-    <div className="user-post mt-4">
+    <div  className="user-post mt-4">
       <div className="row p-4">
         <div className="col-2 col-sm-2 col-xl-1 px-0 text-center">
           <img
-            src={userImage}
+            src={userImagePost}
             className="user-post-img img-fluid"
             style={{ height: 'clamp(40px, 4vw, 60px)' }}
             alt=""
@@ -36,12 +30,9 @@ const UserPost: React.FC<UserPostProps> = ({
           <span className="user-loction">{userLocation}</span>
         </div>
       </div>
-      <PostImges images={[              
-                  'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
-                  'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
-                  'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
-                  'https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg',
-        ]}/>
+      <PostImges 
+      images={postImage}        
+        />
       <SocialTab  postDescription={postDescription} />
     </div>
   );

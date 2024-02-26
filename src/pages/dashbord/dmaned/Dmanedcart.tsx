@@ -27,7 +27,7 @@ const DemandeCard = () => {
     ];  
   return (
     <>
-    <div className='Demande-card flex-items flex-wrap gap-2'>
+    <div className='Demande-card flex-items flex-wrap '>
       <MultiActionButton actions={actions} />
     </div>
     <LogoutPopup type='err' isActive={isShowPopup} onClose={ () => setShowPopup(false)} 

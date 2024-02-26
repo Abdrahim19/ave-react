@@ -7,12 +7,13 @@
     background: #51515152;
     z-index: 5;
     opacity: 0;
-    display: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .bg-shadow.active {
-    opacity: 1;
-    display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 
@@ -163,6 +164,11 @@ line-height: 27px;
 }
 &.is-invalid {
   border-color: rgb(247, 59, 59);
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color:rgb(247, 59, 59) ;
+  }
+  
 }
   }  
   .floting-label {
@@ -468,7 +474,7 @@ i {
 
 
 .user-img {
-  --Userimg-width:60px;
+  --Userimg-width:45px;
   object-fit: contain;
   width:var(--Userimg-width);
   aspect-ratio: 1;
