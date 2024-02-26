@@ -15,16 +15,16 @@ const Popu_association = () => {
     <section className="animate__animated
 animate__bounceInDown">
       <div className="col-12 mb-2 position-relative">
-      <Inputlabel name={""} type={"text"} label={"Nom de l’association"} error={""} />   
+      <Inputlabel name={""} type={"text"} label={"Nom de l’association"} />   
         </div>
         <div className="col-12 mb-2 position-relative">
-        <Inputlabel name={""} type={"text"} label={"Adresse postale"} error={""} />    
+        <Inputlabel name={""} type={"text"} label={"Adresse postale"} />    
         </div>
         <div className="col-12 mb-2 position-relative">
-        <Inputlabel name={""} type={"text"} label={"Numéro de téléphone"} error={""} />
+        <Inputlabel name={""} type={"text"} label={"Numéro de téléphone"} />
         </div>
         <div className="col-12 mb-2 position-relative">
-          <Inputlabel name={""} type={"text"} label={"Adresse E-mail"} error={""} />
+          <Inputlabel name={""} type={"text"} label={"Adresse E-mail"} />
         </div>
       <div className="flex-items my-3 gap-3">
         <Checkbox  onChange={handleCheckboxChange}   />
