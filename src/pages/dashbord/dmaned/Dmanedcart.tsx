@@ -4,6 +4,8 @@
 import './dmaned.css'
 // import { useState } from 'react';
 import MultiActionButton from '../../../components/commen/ui/MultiActionButton/MultiActionButton';
+import LogoutPopup from '../../../components/commen/popUps/LogoutPopup/StateSheardPopup';
+import { useState } from 'react';
 const DemandeCard = () => {
     // Define state and toggle function
     // const [isShow, setShow] = useState<boolean>(false);
@@ -11,18 +13,27 @@ const DemandeCard = () => {
     // const handleToggle = () => {
     //   setShow(!isShow);
     // };
-    const actions = [
-      { label: 'Mon Compte', icon:<i className="bi bi-shield-lock"></i>},
-      { label: 'Demande priveé', icon:<i className="bi bi-person"></i>},
-      { label: 'Demande publique', icon:<i className={`bi bi-globe-asia-australia`}></i>},
-      { label: 'Mes Informations', icon:<i className="bi bi-info-circle"></i>},
-      { label: 'Mes Demandes ', icon:<i className="bi bi-plus-circle"></i> },
-      { label: 'Deconnexion', icon: <i className="bi bi-box-arrow-right"></i>},
-    ];    
+    const [isShowPopup, setShowPopup] = useState<boolean>(false);
+    const handleToggle = () => {
+     setShowPopup(!isShowPopup);
+     };
+     const actions = [
+      { label: 'Mon Compte', icon: <i className="bi bi-shield-lock"></i>, onClick: () => console.log('Mon Compte clicked') },
+      { label: 'Demande priveé', icon: <i className="bi bi-person"></i>, onClick: () => console.log('Demande priveé clicked') },
+      { label: 'Demande publique', icon: <i className={`bi bi-globe-asia-australia`}></i>, onClick: () => console.log('Demande publique clicked') },
+      { label: 'Mes Informations', icon: <i className="bi bi-info-circle"></i>, onClick: () => console.log('Mes Informations clicked') },
+      { label: 'Mes Demandes ', icon: <i className="bi bi-plus-circle"></i>, onClick: () => console.log('Mes Demandes clicked') },
+      { label: 'Deconnexion', icon: <i className="bi bi-box-arrow-right"></i>, onClick: () => handleToggle() },
+    ];  
   return (
-    <div className='Demande-card d-grid'>
+    <>
+    <div className='Demande-card flex-items flex-wrap gap-2'>
       <MultiActionButton actions={actions} />
     </div>
+    <LogoutPopup type='err' isActive={isShowPopup} onClose={ () => setShowPopup(false)} 
+    title={'Deconnexion'} description={'Just a small miss, 2/5 Tasks'} 
+    onButtonClick={handleToggle} /> 
+    </>
     // <div className="">
     //   <div onClick={handleToggle} className="flex-items mb-md-4" style={{ gap: '1rem' }}>
     //     <i className={`bi bi-globe-asia-australia fs-px-24`}></i>

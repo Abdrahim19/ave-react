@@ -149,9 +149,6 @@ transition: .5s;
   
   .floting-input {
     width: 100%;
-    border: 2px solid #AFB7CF;
-    background: transparent;
-  border-radius: 16px;
   outline: none;
   font-family: var(--ff-monserrat);
   height:45px;
@@ -163,6 +160,9 @@ transition: .5s;
 font-size:clamp(1rem ,5vw ,30px );
 font-weight: 500;
 line-height: 27px;
+}
+&.is-invalid {
+  border-color: rgb(247, 59, 59);
 }
   }  
   .floting-label {

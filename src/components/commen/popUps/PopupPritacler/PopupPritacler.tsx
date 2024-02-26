@@ -14,20 +14,20 @@ const PopupPritacler = () => {
      className={`animate__animated animate__bounceInDown row gap-4`} >
       <div className="d-flex flex-column w-100 flex-md-row gap-2">
       <div className="flex-1 position-relative">
-      <Inputlabel name={""} type={"text"} label={"Nom"} error={""} />   
+      <Inputlabel name={""} type={"text"} label={"Nom"} />   
         </div>
       <div className="flex-1 position-relative">
-      <Inputlabel name={""} type={"text"} label={"Prénom"} error={""} />   
+      <Inputlabel name={""} type={"text"} label={"Prénom"} />   
         </div>
       </div>
         <div className="col-12 position-relative">
-        <Inputlabel name={"postale"} type={"text"} label={"Adresse postale"} error={""} />    
+        <Inputlabel name={"postale"} type={"text"} label={"Adresse postale"} />    
         </div>
         <div className="col-12 position-relative">
-        <Inputlabel name={"Numéro"} type={"text"} label={"Numéro de téléphone"} error={""} />
+        <Inputlabel name={"Numéro"} type={"text"} label={"Numéro de téléphone"} />
         </div>
         <div className="col-12 position-relative">
-          <Inputlabel name={"Adresse"} type={"text"} label={"Adresse E-mail"} error={""} />
+        <Inputlabel name={"Adresse"} type={"text"} label={"Adresse E-mail"} />
         </div>
       <div className="flex-items gap-3">
         <Checkbox  onChange={handleCheckboxChange}  />
