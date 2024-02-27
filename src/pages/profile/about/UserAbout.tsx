@@ -1,13 +1,23 @@
+import { DemandItem } from "../../../types/Types";
 import Certifications from "./Certifications";
 import Interdction from "./Interdction";
 import Listdmaend from "./Listdmaend";
 import "./userAbout.css";
-const UserAbout = () => {
+
+type PropsTypesNeeded = {
+  presentation: string,
+  demandesRepondues:DemandItem[],
+  certifications: string[]
+}
+const UserAbout:React.FC<PropsTypesNeeded> = ({presentation,
+  demandesRepondues,
+  certifications}) => {
+  
   return (
     <div className="d-grid gap-3">
-      <Interdction />
-      <Listdmaend />
-      <Certifications />
+      <Interdction description={presentation} />
+      <Listdmaend demands={demandesRepondues} />
+      <Certifications items={certifications} />
     </div>
   )
 }

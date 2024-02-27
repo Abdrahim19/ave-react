@@ -170,3 +170,15 @@
 .sp-letter-05{
   letter-spacing: 0.05em;
 }
+
+.size-50px {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.size-30px {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}

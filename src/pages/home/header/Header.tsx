@@ -9,7 +9,7 @@ import { useYourContext } from '../../../context/MultiStepForm';
 const Header = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-  const { toggleshowPopup } = useYourContext();
+  const { toggleshowPopup , showPopup } = useYourContext();
 
 
 
@@ -51,7 +51,7 @@ const Header = () => {
           <Link to='/' className='website-logo'>
             <img src={nav_logo} alt="navbar logo" />
           </Link>
-          <ul id="navlinsk" className={`${showMenu && isMobile ? 'active' : ''} flex-items navlinsk`} style={{ gap: 'clamp(30px ,5vw , 58px)' }}>
+          <ul id="navlinsk" className={`${showMenu && isMobile && !showPopup ? 'active' : ''} flex-items navlinsk`} style={{ gap: 'clamp(30px ,5vw , 58px)' }}>
             <Link
              to={'/'} 
             style={{ top: '4rem' }}

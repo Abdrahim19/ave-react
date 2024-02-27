@@ -1,33 +1,50 @@
-import { User } from "../../types/Types";
-import Filter from "./filter/Filter"
-import UserOfferCard from "./userOffercard/UserOfferCard"
+import { useState, useEffect } from "react";
+import { getAllUserOfferCard } from "../../service/apiService";
+import Filter from "./filter/Filter";
+import UserOfferCard from "./userOffercard/UserOfferCard";
+import { UserOfferCardTypes } from "../../types/Types";
+import LoderUserOfferCard from "../../components/commen/sklitionsLoders/UserOfferCardLoder";
 
 const OfferBigCard = () => {
-  const users: User[] = [
-    {
-        name: 'Sophia',
-        rating: 4.3,
-        type: 'Particulier',
-      online: true,
-      link: '/',
-      worKingimges:[],
-    },
-  ];
+  const [userOfferCards, setUserOfferCards] = useState<UserOfferCardTypes[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetchUserOfferCards = async () => {
+      try {
+        const userOfferCardData = await getAllUserOfferCard();
+        setUserOfferCards(userOfferCardData);
+      } catch (error) {
+        setLoading(false);
+        console.error('Error fetching user offer cards:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchUserOfferCards();
+  }, []);
+
   
   return (
     <div className="big__box">
-        <h2 className="titel mb-4">Contacter des offreurs</h2>
-        <div className="col-md-12 col-lg-10  mx-auto">
+      <h2 className="title mb-4">Contacter des offreurs</h2>
+      <div className="col-md-12 col-lg-10 mx-auto">
         <Filter />
-        </div>
-        <UserOfferCard title={"Femme de Ménage"} 
-        description={"36 Particuliers et 4 Professionnels"} users={users} />
-        <UserOfferCard title={"Bricolage - Petits travaux"}
-         description={"36 Particuliers et 4 Professionnels"} users={users} />
-        <UserOfferCard title={"Dépannage électroménager"} 
-        description={"36 Particuliers et 4 Professionnels"} users={users} />
+      </div>
+      {!loading ? (
+        userOfferCards.map((user) => (
+          <UserOfferCard
+            key={user.title} 
+            title={user.title}
+            description={user.description}
+            users={user.users}
+          />
+        ))
+      ) : (
+        <LoderUserOfferCard />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default OfferBigCard
+export default OfferBigCard;

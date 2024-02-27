@@ -27,3 +27,22 @@ const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
 };
 
 export default useOnClickOutside
+
+
+import axios, { AxiosResponse } from 'axios';
+
+const BASE_URL = 'http://localhost:3000'; // Replace with your actual API base URL
+
+export const postData = async <T>(endpoint: string, data: T): Promise<AxiosResponse> => {
+  // eslint-disable-next-line no-useless-catch
+  try {
+    const response = await axios.post(`${BASE_URL}/${endpoint}`, data, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};

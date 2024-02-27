@@ -1,6 +1,29 @@
+import { useState, useEffect } from 'react';
+import { getFavorisUsers } from '../../../service/apiService';
+import UserFavorisProfile from './UserFavorisProfile';
+import { UserFavorisProfileProps } from '../../../types/Types';
 import './favoris__card.css'
-import userImage from '../../../assets/userImage.png'
+import FavorisCardLoder from '../../../components/commen/sklitionsLoders/FavorisCardLoder';
+
 const FavorisCard = () => {
+    const [favorisUsers, setFavorisUsers] = useState<UserFavorisProfileProps[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      const fetchFavorisUsers = async () => {
+        try {
+          const favorisUsersData = await getFavorisUsers();
+          setFavorisUsers(favorisUsersData);
+        } catch (error) {
+        setLoading(false);
+          console.error('Error fetching favoris users:', error);
+        } finally {
+            setLoading(false);
+          }
+      };
+  
+      fetchFavorisUsers();
+    }, []);
   return (
     <div className='box'>
         <div className='flex-items justify-content-center gap-3'>
@@ -9,36 +32,9 @@ const FavorisCard = () => {
         </div>
         <hr className='mb-4' />
         <div className='d-grid gap-3'>
-        <div className='flex-items gap-3'>
-            <img src={userImage} className='w-40' alt="" />
-            <div>
-                <div className='flex-items gap-2'>
-                    <h4 className='user-name'>Gilberto B.</h4>
-                    <button className='verySmall-button'>Particulier</button>
-                </div>
-                <p className='user-loction'>Vienne (Jean-Moulin) - 13,4 km</p>
-            </div>
-        </div>
-        <div className='flex-items gap-3'>
-            <img src={userImage} className='w-40' alt="" />
-            <div>
-                <div className='flex-items gap-2'>
-                    <h4 className='user-name'>Gilberto B.</h4>
-                    <button className='verySmall-button'>Particulier</button>
-                </div>
-                <p className='user-loction'>Vienne (Jean-Moulin) - 13,4 km</p>
-            </div>
-        </div>
-        <div className='flex-items gap-3'>
-            <img src={userImage} className='w-40' alt="" />
-            <div>
-                <div className='flex-items gap-2'>
-                    <h4 className='user-name'>Gilberto B.</h4>
-                    <button className='verySmall-button'>Particulier</button>
-                </div>
-                <p className='user-loction'>Vienne (Jean-Moulin) - 13,4 km</p>
-            </div>
-        </div>
+        {!loading ? favorisUsers.map((user) => (
+         <UserFavorisProfile key={user.id} {...user} />
+      )) : <FavorisCardLoder />}
         </div>
     </div>
   )

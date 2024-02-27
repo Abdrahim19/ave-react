@@ -4,6 +4,8 @@ import React, { createContext, useContext, ReactNode, useState } from 'react';
 interface YourContextProps {
   step: number;
   showPopup:boolean;
+  IslodingPopUp:boolean;
+  IsChatOpen:boolean;
   userType:string;
   handleNext: () => void;
   handlePrevious: () => void;
@@ -12,6 +14,8 @@ interface YourContextProps {
   ToStep:(stepNumber:number) => void,
   setVerification:(vlaue:string) => void,
   TypeVerification:string,
+  ChangelodingPopUpState:(value:boolean) => void;
+  toggleChatOpen:() => void
 }
 
 // Create the context
@@ -25,6 +29,8 @@ interface YourContextProviderProps {
 const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) => {
   const [step, setStep] = useState(1);
   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [IslodingPopUp, setIslodingPopUp] = useState<boolean>(false);
+  const [IsChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [userType, setuserType] = useState<string>('Particulier');
   const [TypeVerification, setTypeVerification] = useState<string>('');
 
@@ -41,8 +47,9 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
   const setVerification = (vlaue:string) => {
     setTypeVerification(vlaue)
   }
-
-
+  const ChangelodingPopUpState = (value:true|false) => {
+    setIslodingPopUp(value)
+  }
 
   const handleNext = () => {
     setStep((prevStep) => prevStep + 1);
@@ -54,6 +61,9 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
 
   const toggleshowPopup = () => {
     setShowPopup(!showPopup)
+  };
+  const toggleChatOpen = () => {
+    setIsChatOpen(!IsChatOpen)
   };
 
   const contextValue: YourContextProps = {
@@ -67,6 +77,10 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
     ToStep,
     setVerification,
     TypeVerification,
+    IslodingPopUp,
+    ChangelodingPopUpState,
+    IsChatOpen,
+    toggleChatOpen
   };
 
   return <YourContext.Provider value={contextValue}>{children}</YourContext.Provider>;

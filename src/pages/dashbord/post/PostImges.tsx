@@ -17,8 +17,8 @@ const PostImages: React.FC<Props> = ({ images }) => {
   };
 
   return (
-    <div className="imgesPost-container">
-      <Slider {...settings} className="col-3 col-sm-2 col-xl-1 px-0 text-center w-auto">
+      <div className="slider-container w-100 overflow-hidden">
+      <Slider {...settings}>
         {images.map((img: string, index: number) => {
           return (
                 <img
@@ -31,7 +31,7 @@ const PostImages: React.FC<Props> = ({ images }) => {
           );
         })}
       </Slider>
-    </div>
+      </div>
   );
 };
 

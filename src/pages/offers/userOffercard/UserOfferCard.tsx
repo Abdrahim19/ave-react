@@ -1,12 +1,12 @@
 import './user__offer__card.css'
 import bigwhitearrow from "../../../assets/bigwhitearrow.png";
 import CarsoulUser from './CarsoulUser';
-import { UserOfferCardProps } from '../../../types/Types';
+import { UserOfferCardTypes } from '../../../types/Types';
 
 
 
 
-const UserOfferCard: React.FC<UserOfferCardProps> = ({ title, description, users }) => {
+const UserOfferCard: React.FC<UserOfferCardTypes> = ({ title, description, users }) => {
   return (
     <div className='UserOfferCard mt-5'>
       <h1 className='titel'>{title}</h1>
@@ -16,7 +16,8 @@ const UserOfferCard: React.FC<UserOfferCardProps> = ({ title, description, users
           <img src={bigwhitearrow} alt="" />
         </div>
         {users.map((user, index) => (
-          <CarsoulUser key={index} name={user.name} rating={user.rating} type={user.type} online={user.online} link={user.link} worKingimges={[]}  />
+          <CarsoulUser key={index} name={user.name} rating={user.rating} type={user.type} 
+          online={user.online} link={user.link} workingImages={user.workingImages} id={user.id} />
         ))}
       </div>
     </div>

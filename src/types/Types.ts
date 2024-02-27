@@ -13,20 +13,7 @@ export type carsoulCard = {
     userJob:string;
     userTages:string[];
 }
-export type User =  {
-    name: string;
-    rating: number;
-    type: string;
-    online: boolean;
-    link: string;
-    worKingimges:string[];
-  }
 
-export interface UserOfferCardProps {
-    title: string;
-    description: string;
-    users:User[];
-  }
 
   export type TypePropsBigRequest = {
     id: number;
@@ -58,3 +45,47 @@ export interface UserOfferCardProps {
     postImage: string[];
     postDescription: string;
   }
+
+  export type UserFavorisProfileProps = {
+    id:number;
+    userName: string;
+    userType: string;
+    userLocation: string;
+    userImage: string;
+  }
+
+  export type UserOfferUser = {
+    id: number;
+    name: string;
+    rating: number;
+    type: "Particulier" | "Professional";
+    online: boolean;
+    link: string;
+    workingImages: string[];
+  };
+
+  export type UserOfferCardTypes = {
+    title: string;
+    description: string;
+    users: UserOfferUser[];
+  };
+  export type DemandItem = {
+    title: string;
+    responses: number;
+    buttons: string[];
+  };
+
+  export interface ProfileCardProps {
+      user_img: string;
+      name: string;
+      rating: string;
+      category: string;
+      location: string;
+      city: string;
+      memberSince: string;
+      avgResponseTime: string;
+      presentation: string,
+      demandesRepondues:DemandItem[],
+      certifications: string[]
+  }
+  

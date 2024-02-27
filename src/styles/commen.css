@@ -72,9 +72,23 @@ transition: .5s;
 &:hover {
 background-color: #4d63a3ad;
 }
-
  }
-
+ .medium-blue-button  {
+  border-radius: 32.5px;
+  color: white;
+  font-size: clamp(12px, 5vw, 1.1rem);
+  font-weight: 700;
+  line-height: 24px;
+  background-color: var(--clr-main-blue);
+  width: min(118px, 80%);
+  height: 40px;
+  transition: .5s;
+  &.outline {
+    background-color: transparent;
+    border: 2px solid var(--clr-main-blue);
+    color: var(--clr-main-blue);
+}
+   }
  .circal-bhind-phone {
     position: absolute;
     top: 50%;
@@ -773,4 +787,12 @@ hr {
     position: fixed;
     }
     
+  }
+
+  .hover__underline {
+    transform: .5s;
+    &:hover {
+      color: #30447f8e;
+      text-decoration: underline;
+    }
   }

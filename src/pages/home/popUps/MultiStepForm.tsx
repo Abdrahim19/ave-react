@@ -9,7 +9,7 @@ import Popupvladtion from '../../../components/commen/popUps/otpPopup/Popupvladt
 import LodingPopup from '../../../components/commen/popUps/popupLoding/LodingPopup';
 
 const MultiStepForm = () => {
-  const { step, showPopup, toggleshowPopup } = useYourContext();
+  const { step, showPopup, toggleshowPopup ,IslodingPopUp } = useYourContext();
 
   // Render the component based on the step value using a switch statement
   const renderComponent = () => {
@@ -37,7 +37,7 @@ const MultiStepForm = () => {
       <section
         className={`auth_box  row m-0 gap-2 overflow-y-auto p-2 h- bg-white`}
       >
-        {false && <LodingPopup />}
+        {IslodingPopUp && <LodingPopup />}
         <div className='text-end animate__animated animate__bounceInDown'>
           <button id='close' onClick={toggleshowPopup}>
             <i

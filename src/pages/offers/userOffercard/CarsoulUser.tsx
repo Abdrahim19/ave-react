@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import userImage from '../../../assets/Image-50.png';
 import workImge from '../../../assets/workPostimg.png';
-import { User } from '../../../types/Types';
+import { UserOfferUser } from '../../../types/Types';
 
 
-const CarsoulUser: React.FC<User> = ({ link , name , online , rating  , type , worKingimges }) => {
+const CarsoulUser: React.FC<UserOfferUser> = ({ link , name , online , rating  , type , workingImages , id }) => {
   return (
-    <div className='carsoul__user'>
+    <div key={id} className='carsoul__user'>
       <div className='flex-items gap-3 px-3'>
         <div className='user__img position-relative'>
           <img src={userImage} alt="" />
@@ -30,9 +30,9 @@ const CarsoulUser: React.FC<User> = ({ link , name , online , rating  , type , w
         </div>
       </div>
       <div className='flex-items workimg__space mt-3'>
-        {worKingimges.map((image: string, index: React.Key | null | undefined) => (
+        {workingImages && workingImages.map((image: string, index: React.Key) => (
           <div key={index}>
-            <img src={image || workImge} className='img-fluid object-fit-fill' alt='' />
+            <img src={image || workImge} loading='lazy' className='img-fluid object-fit-fill' alt='' />
           </div>
         ))}
       </div>

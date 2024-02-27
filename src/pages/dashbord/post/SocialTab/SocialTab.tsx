@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom"
+import LikeButton from "./LikeButton"
+import ChatButton from "./ChatButton"
 
 type prop = {
     postDescription:string
 }
 const SocialTab = ({postDescription}:prop) => {
   return (
-    <div className="p-4 ">
+    <div className="p-4">
         <p className="post-discrption">{postDescription}</p>
         <hr className="post-line" />
         <div className='flex-items flex-column-reverse justify-content-center flex-sm-row justify-content-sm-between gap-3'>
@@ -14,16 +16,12 @@ const SocialTab = ({postDescription}:prop) => {
           Demande publique
           </Link>
         <div className="flex-items gap-3 ">
-          <button>
-          <i className="bi bi-suit-heart clr-blue-gray"></i>
-          </button>
+          <LikeButton />
           <button className="position-relative user__icon">
           <i className="bi bi-people clr-blue-gray"></i>
           <span className="tool_tip_people">Recommender</span>
           </button>
-          <button>
-          <i className="bi bi-chat clr-blue-gray"></i>
-          </button>
+          <ChatButton />
         </div>
         </div>
       </div>

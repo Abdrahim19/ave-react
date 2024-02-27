@@ -39,7 +39,7 @@ const PopupInfo = () => {
         <hr className="sparaiter" />
         {menuItems.map((item, index) => (
           <>
-          <Link key={index} to="#" className={` d-flex align-items-center gap-3 link`}>
+          <Link key={item.text} to="#" className={` d-flex align-items-center gap-3 link`}>
             <i className={item.icon}></i>
             {item.text}
           </Link>

@@ -7,8 +7,7 @@ footer {
     .footer-title {
         font-size:clamp(10px ,4vw , 1rem);
         font-weight: 800;
-        line-height: 24px;
-        margin-bottom: 20px;    
+        line-height: 24px;   
       }
     .footer-link {
        font-size:clamp(7px ,4vw , 13px);

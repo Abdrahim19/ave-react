@@ -1,7 +1,8 @@
 import './post.css';
-import SocialTab from './SocialTab';
+import SocialTab from './SocialTab/SocialTab';
 import PostImges from './PostImges';
 import { UserPostProps } from '../../../types/Types';
+import CommentSection from './CommentSection';
 
 const UserPost: React.FC<UserPostProps> = ({
   userName,
@@ -33,7 +34,8 @@ const UserPost: React.FC<UserPostProps> = ({
       <PostImges 
       images={postImage}        
         />
-      <SocialTab  postDescription={postDescription} />
+      <SocialTab postDescription={postDescription} />
+      <CommentSection />
     </div>
   );
 };
