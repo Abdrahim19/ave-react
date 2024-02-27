@@ -76,16 +76,10 @@ i {
     }
 }
 
-
-.comment__section {
-   height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease; /* You can adjust the duration and timing function as needed */
-  
-    &.active {
-    height: auto; /* Set a value that is greater than the expected content height */
-    }
-  }
+  .h-transtion {
+    height: 0;
+    transition: height 5s ; 
+  } 
 
   .slick-prev {
     left: 11px !important;
