@@ -88,4 +88,28 @@ export type carsoulCard = {
       demandesRepondues:DemandItem[],
       certifications: string[]
   }
-  
+
+  export type interpriceInputForm =  {
+    nomCommercial:string ,
+    metier:string,
+    nom:string,
+    prenom:string,
+    adressePostale:string,
+    numeroTelephone:string,
+    email:string,
+  }
+
+  export type PritaclerType =  {
+    nom:string,
+    prenom:string,
+    adressePostale:string,
+    numeroTelephone:string,
+    email:string,
+  }
+
+  export type associationType =  {
+    association_nom:string,
+    adressePostale:string,
+    numeroTelephone:string,
+    email:string,
+  }

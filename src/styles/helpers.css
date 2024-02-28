@@ -182,3 +182,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
+.border__active {
+  border: 3px solid #9cf39c;
+}

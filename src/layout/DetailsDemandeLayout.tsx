@@ -14,7 +14,9 @@ const DetailsDemandeLayout = () => {
           <OffreursCards />
           </div>
           <div className="col-md-5 col-lg-4">
-            <ProfileCard />
+            <ProfileCard user_img={""} name={""} rating={""} category={""} location={""}
+             city={""} memberSince={""} avgResponseTime={""} presentation={""}
+              demandesRepondues={[]} certifications={[]} />
           </div>
       </div>
   </div>

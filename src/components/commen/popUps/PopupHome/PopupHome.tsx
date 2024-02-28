@@ -1,13 +1,15 @@
 import small_logo from  '../../../../assets/small-logo.png'
 import plan_icon from  '../../../../assets/plan.png'
 import lock_icon from  '../../../../assets/lock.png'
-
+import { useYourContext } from '../../../../context/MultiStepForm';
 
 const PopupHome = () => {
+  const { setActiveButton } = useYourContext();
   return (
-    <section className="popup-type-server  py-3 row bg-white">
+    <>
+    <section className={`popup-type-server py-3 row bg-white active`}>
       <div className="text-end">
-        <button id="close">
+        <button id="close" onClick={() => setActiveButton('nothing')}>
           <i className="bi bi-x-lg" style={{ fontSize: 'min(40px, 20px)' }}></i>
         </button>
       </div>
@@ -42,6 +44,7 @@ const PopupHome = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

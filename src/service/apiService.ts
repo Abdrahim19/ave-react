@@ -1,6 +1,6 @@
 // apiService.ts
 import axios from 'axios';
-import { ProfileCardProps } from '../types/Types';
+import { PritaclerType, ProfileCardProps, associationType, interpriceInputForm } from '../types/Types';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -75,6 +75,50 @@ export const postUserData = async (email: string, password: string): Promise<voi
     });
 
     // You can handle success here if needed
+    console.log('Data submitted successfully:', response.data);
+  } catch (error) {
+    console.error('Error submitting data:', error);
+    throw error;
+  }
+};
+
+
+export const postInterpriceUserData = async (data:interpriceInputForm): Promise<void> => {
+  const apiUrl = `${BASE_URL}/interpriceusers`; // Replace with your actual API endpoint
+
+  try {
+    const response = await axios.post(apiUrl, {
+      ...data
+    });
+    console.log('Data submitted successfully:', response.data);
+  } catch (error) {
+    console.error('Error submitting data:', error);
+    throw error;
+  }
+};
+
+export const postPritaclerUserData = async (data:PritaclerType): Promise<void> => {
+  const apiUrl = `${BASE_URL}/PritaclerUser`; // Replace with your actual API endpoint
+
+  try {
+    const response = await axios.post(apiUrl, {
+      ...data
+    });
+    // You can handle success here if needed
+    console.log('Data submitted successfully:', response.data);
+  } catch (error) {
+    console.error('Error submitting data:', error);
+    throw error;
+  }
+};
+
+export const postAssociationUserData = async (data:associationType): Promise<void> => {
+  const apiUrl = `${BASE_URL}/AssociationUser`; 
+
+  try {
+    const response = await axios.post(apiUrl, {
+      ...data
+    });
     console.log('Data submitted successfully:', response.data);
   } catch (error) {
     console.error('Error submitting data:', error);

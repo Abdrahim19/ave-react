@@ -79,6 +79,7 @@ i {
   .h-transtion {
     height: 0;
     transition: height 5s ; 
+    overflow: hidden;
   } 
 
   .slick-prev {

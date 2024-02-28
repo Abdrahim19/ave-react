@@ -10,6 +10,10 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+      }
     &.success {
     .backgroundCircal {
     background:#13c39c;
@@ -36,10 +40,6 @@
         color:#fb4b4b ;
     }
     }
-    &.active {
-        opacity: 1;
-        visibility: visible;
-      }
     .backgroundCircal {
 width: 100px;
 aspect-ratio: 1;

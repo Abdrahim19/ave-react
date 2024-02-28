@@ -5,18 +5,11 @@ import { Iterpriceschema } from "../../../../schema";
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
 import './popupIterprice.css'
+import { interpriceInputForm } from "../../../../types/Types";
+import { postInterpriceUserData } from "../../../../service/apiService";
 
-interface IFormInput {
-  nomCommercial:string ,
-  metier:string,
-  nom:string,
-  prenom:string,
-  adressePostale:string,
-  numeroTelephone:string,
-  email:string,
-}
 const PopupIterprice = () => {
-  const { handleNext } = useYourContext();
+  const { handleNext , ChangelodingPopUpState } = useYourContext();
   const handleCheckboxChange = (checked: boolean) => {
     console.log('Checkbox checked:', checked);
   };
@@ -24,11 +17,19 @@ const PopupIterprice = () => {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<IFormInput>({ resolver: yupResolver(Iterpriceschema)});
+  } = useForm<interpriceInputForm>({ resolver: yupResolver(Iterpriceschema)});
   
-  const onSubmit = (data: IFormInput) => {
+  const onSubmit = async (data: interpriceInputForm) => {
     console.log(data);
+    ChangelodingPopUpState(true);
+    try {
+    await postInterpriceUserData(data);
+    ChangelodingPopUpState(false);
     handleNext()
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    ChangelodingPopUpState(false);
+    }
   };
 
 
@@ -57,11 +58,11 @@ const PopupIterprice = () => {
             register={register}  />
         </div>
         <div className="col-12 position-relative">
-          <Inputlabel name={"Adresse"} type={"text"} label={"Adresse postale"} error={errors.adressePostale}      
+          <Inputlabel name={"adressePostale"} type={"text"} label={"Adresse postale"} error={errors.adressePostale}      
             register={register}  />
         </div>
         <div className="col-12 position-relative">
-        <Inputlabel name={"Numéro"} type={"text"} label={"Numéro de téléphone"} error={errors.numeroTelephone}      
+        <Inputlabel name={"numeroTelephone"} type={"text"} label={"Numéro de téléphone"} error={errors.numeroTelephone}      
             register={register}  />    
         </div>
         <div className="col-12 position-relative">

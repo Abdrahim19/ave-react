@@ -4,16 +4,11 @@ import { useYourContext } from "../../../../context/MultiStepForm";
 import { Pritaclerschema } from "../../../../schema";
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
-
-interface IFormInput {
-  nom:string,
-  prenom:string,
-  adressePostale:string,
-  numeroTelephone:string,
-  email:string,
-}
+import { PritaclerType } from "../../../../types/Types";
+import { postPritaclerUserData } from "../../../../service/apiService";
+ 
 const PopupPritacler = () => {
-  const { handleNext } = useYourContext();
+  const { handleNext , ChangelodingPopUpState } = useYourContext();
   const handleCheckboxChange = (checked: boolean) => {
     console.log('Checkbox checked:', checked);
   };
@@ -21,11 +16,20 @@ const PopupPritacler = () => {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<IFormInput>({ resolver: yupResolver(Pritaclerschema)});
+  } = useForm<PritaclerType>({ resolver: yupResolver(Pritaclerschema)});
   
-  const onSubmit = (data: IFormInput) => {
+  const onSubmit = async (data: PritaclerType) => {
     console.log(data);
     handleNext()
+    ChangelodingPopUpState(true);
+    try {
+    await postPritaclerUserData(data);
+    ChangelodingPopUpState(false);
+    handleNext()
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    ChangelodingPopUpState(false);
+    }
   };
   return (
     <>
@@ -42,15 +46,15 @@ const PopupPritacler = () => {
         </div>
       </div>
         <div className="col-12 position-relative">
-        <Inputlabel name={"postale"} type={"text"} label={"Adresse postale"} error={errors.adressePostale}      
+        <Inputlabel name={"adressePostale"} type={"text"} label={"Adresse postale"} error={errors.adressePostale}      
             register={register}  />    
         </div>
         <div className="col-12 position-relative">
-        <Inputlabel name={"Numéro"} type={"text"} label={"Numéro de téléphone"} error={errors.numeroTelephone}      
+        <Inputlabel name={"numeroTelephone"} type={"text"} label={"Numéro de téléphone"} error={errors.numeroTelephone}      
             register={register}  />
         </div>
         <div className="col-12 position-relative">
-        <Inputlabel name={"Adresse"} type={"text"} label={"Adresse E-mail"} error={errors.email}      
+        <Inputlabel name={"email"} type={"text"} label={"Adresse E-mail"} error={errors.email}      
             register={register}  />
         </div>
       <div className="flex-items gap-3">

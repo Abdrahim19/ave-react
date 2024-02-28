@@ -1,27 +1,23 @@
 import './StateSheardPopup.css'
 import closePopup from '../../../../assets/closePopup.png'
+import { useYourContext } from '../../../../context/MultiStepForm';
 
 interface PopupProps {
-    isActive: boolean;
-    onClose: () => void;
     title: string;
     description: string;
-    onButtonClick: () => void;
     type:'err' | 'success';
   }
 
-const StateSheardPopup: React.FC<PopupProps> = ({
-    isActive,
-    onClose,
+const LogoutPopup: React.FC<PopupProps> = ({
     title,
     description,
-    onButtonClick,
     type
   }) => {
+  const { setActiveButton } = useYourContext();
+
   return (
     <> 
-    {isActive && <div onClick={onClose} className='bg-shadow active'></div>}
-    <div className={`${type} ${isActive ? 'active' :  ''} 
+    <div className={`${type} active
     position-fixed d-grid place-items-center 
     top-50 left-50 translate-middle bg-white logout__popup`} >
         <div className='position-relative backgroundCircal'>
@@ -33,12 +29,12 @@ const StateSheardPopup: React.FC<PopupProps> = ({
             {description}</p>
         </div>
         <div className='p-3 flex-items flex-sm-nowrap flex-wrap justify-content-center justify-content-sm-between gap-3 w-100'>
-            <button onClick={onClose} className='popupButton gray__button'>Cancel</button>
-            <button onClick={onButtonClick} className='popupButton main__button text-white'>Deconnexion</button>
+            <button onClick={() => setActiveButton('nothing')} className='popupButton gray__button'>Cancel</button>
+            <button onClick={() => setActiveButton('nothing')}  className='popupButton main__button text-white'>Deconnexion</button>
         </div>
     </div>
     </>
   )
 }
 
-export default StateSheardPopup
+export default LogoutPopup

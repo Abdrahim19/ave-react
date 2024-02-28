@@ -4,29 +4,35 @@ import { useYourContext } from "../../../../context/MultiStepForm";
 import { associationschema } from "../../../../schema";
 import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
-
-interface IFormInput {
-  association_nom:string,
-  adressePostale:string,
-  numeroTelephone:string,
-  email:string,
-}
+import { associationType } from "../../../../types/Types";
+import { postAssociationUserData } from "../../../../service/apiService";
 
 const Popu_association = () => {
-  const { handleNext  } = useYourContext();
+  const { handleNext , ChangelodingPopUpState  } = useYourContext();
 
   const handleCheckboxChange = (checked: boolean) => {
     console.log('Checkbox checked:', checked);
   };
+
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<IFormInput>({ resolver: yupResolver(associationschema)});
+  } = useForm<associationType>({ resolver: yupResolver(associationschema)});
   
-  const onSubmit = (data: IFormInput) => {
+  const onSubmit = async (data: associationType) => {
     console.log(data);
     handleNext()
+
+    ChangelodingPopUpState(true);
+    try {
+    await postAssociationUserData(data);
+    ChangelodingPopUpState(false);
+    handleNext()
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    ChangelodingPopUpState(false);
+    }
   };
 
   return (
@@ -39,7 +45,7 @@ animate__bounceInDown">
         register={register} />   
         </div>
         <div className="col-12 mb-2 position-relative">
-        <Inputlabel name={"postale"} type={"text"} label={"Adresse postale"}
+        <Inputlabel name={"adressePostale"} type={"text"} label={"Adresse postale"}
         error={errors.adressePostale}      
         register={register} />    
         </div>

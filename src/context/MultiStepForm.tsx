@@ -15,7 +15,9 @@ interface YourContextProps {
   setVerification:(vlaue:string) => void,
   TypeVerification:string,
   ChangelodingPopUpState:(value:boolean) => void;
-  toggleChatOpen:() => void
+  toggleChatOpen:() => void;
+  ActiveCartButton:string;
+setActiveButton:(value:string) => void
 }
 
 // Create the context
@@ -32,6 +34,7 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
   const [IslodingPopUp, setIslodingPopUp] = useState<boolean>(false);
   const [IsChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [userType, setuserType] = useState<string>('Particulier');
+  const [ActiveCartButton, setActiveCartButton] = useState<string>('nothing');
   const [TypeVerification, setTypeVerification] = useState<string>('');
 
   const handleButtonClick = (value:string) => {
@@ -50,7 +53,9 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
   const ChangelodingPopUpState = (value:true|false) => {
     setIslodingPopUp(value)
   }
-
+  const setActiveButton = (vlaue:string) => {
+    setActiveCartButton(vlaue)
+  }
   const handleNext = () => {
     setStep((prevStep) => prevStep + 1);
   };
@@ -80,7 +85,9 @@ const YourContextProvider: React.FC<YourContextProviderProps> = ({ children }) =
     IslodingPopUp,
     ChangelodingPopUpState,
     IsChatOpen,
-    toggleChatOpen
+    toggleChatOpen,
+    ActiveCartButton,
+    setActiveButton
   };
 
   return <YourContext.Provider value={contextValue}>{children}</YourContext.Provider>;

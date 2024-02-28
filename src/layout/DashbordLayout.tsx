@@ -1,5 +1,5 @@
-import PopupDmaend from "../components/commen/popUps/PopupDmaend/PopupDmaend"
-import PopupHome from "../components/commen/popUps/PopupHome/PopupHome"
+
+import AccueilPopup from "../pages/dashbord/AccueilPopup/AccueilPopup"
 import ProposezCard from "../pages/dashbord/ProposezCard/ProposezCard"
 import AddPost from "../pages/dashbord/addPost/AddPost"
 import DemandeCard from "../pages/dashbord/dmaned/Dmanedcart"
@@ -24,8 +24,7 @@ const DashbordLayout = () => {
           </div>
       </div>
   </div>
-  <PopupDmaend />
-  <PopupHome />
+  <AccueilPopup />
     </>
   )
 }
