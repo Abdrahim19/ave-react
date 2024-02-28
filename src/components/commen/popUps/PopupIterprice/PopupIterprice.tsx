@@ -17,7 +17,7 @@ const PopupIterprice = () => {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<interpriceInputForm>({ resolver: yupResolver(Iterpriceschema)});
+  } = useForm({ resolver: yupResolver(Iterpriceschema)});
   
   const onSubmit = async (data: interpriceInputForm) => {
     console.log(data);
