@@ -67,7 +67,6 @@ const PopupPritacler = () => {
         </label>
       </div>
         <button type="submit" className="btn-primary col-8 mx-auto" >M’inscrire</button>
-
       </form>
     </>
   )

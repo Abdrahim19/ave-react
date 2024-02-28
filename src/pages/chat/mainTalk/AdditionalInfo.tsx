@@ -1,10 +1,12 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import user_img from '../../../assets/Image-40.png'
-import FichesCart from '../cartsChat/FichesCart';
+// import FichesCart from '../cartsChat/FichesCart';
 import ImgestCart from '../cartsChat/ImgestCart';
-import InformationsCart from '../cartsChat/InformationsCart';
-import PinnedItemsCart from '../cartsChat/PinnedItemsCart';
+// import InformationsCart from '../cartsChat/InformationsCart';
+// import PinnedItemsCart from '../cartsChat/PinnedItemsCart';
+import arrowDownIcon from '../../../assets/Vector (1).png';
+
 
 interface AdditionalInfoProps {
   userName: string;
@@ -12,6 +14,10 @@ interface AdditionalInfoProps {
 }
 
 const AdditionalInfo: FC<AdditionalInfoProps> = ({ userName, userImage }) => {
+  const imagesData = [
+    { name: 'loding.page.zip', url: '...' },
+    { name: 'another.file.zip', url: '...' },
+  ];
   return (
         <>
       <div className='offerUser-Card bg-white rounded-3 p-3 text-center'>
@@ -33,10 +39,10 @@ const AdditionalInfo: FC<AdditionalInfoProps> = ({ userName, userImage }) => {
         </p>
       </div>
       <div className='d-grid mt-3' style={{gap:'2rem'}}>
-      <InformationsCart />
-      <ImgestCart />
-      <FichesCart />
-      <PinnedItemsCart />
+      <ImgestCart title={'Images'} icon={arrowDownIcon} data={imagesData} />
+      {/* <InformationsCart /> */}
+      {/* <FichesCart /> */}
+      {/* <PinnedItemsCart /> */}
       </div>
         </>
   );

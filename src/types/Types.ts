@@ -90,7 +90,12 @@ export type carsoulCard = {
   }
 
   export type interpriceInputForm =  {
-    nomCommercial?: string | undefined; metier?: string | undefined; nom: string; prenom: string; adressePostale: string; numeroTelephone: string; email: string;
+    nomCommercial?: string | undefined; 
+    metier?: string | undefined; 
+    nom: string; prenom: string; 
+    adressePostale: string;
+    numeroTelephone: string; 
+    email: string;
   }
 
   export type PritaclerType =  {
@@ -106,4 +111,19 @@ export type carsoulCard = {
     adressePostale:string,
     numeroTelephone:string,
     email:string,
+  }
+
+  export type MessageUserProps = {
+    userId:number;
+    userName: string;
+    userImage: string;
+    onlineStatus: boolean;
+    lastOnlineTime: string;
+  }
+
+  export type User = {
+    id:NumberConstructor;
+  }
+  export type Post = {
+    id:NumberConstructor;
   }

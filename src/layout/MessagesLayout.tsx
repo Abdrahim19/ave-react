@@ -21,7 +21,7 @@ const MessagesLayout = () => {
           <div className="col-md-3 order-1 order-md-3">
             <AdditionalInfo userName={"HamZa"} userImage={""} />
             </div>
-            </div>
+          </div>
   </div>
     </>
   )

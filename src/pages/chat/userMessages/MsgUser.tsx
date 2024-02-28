@@ -1,17 +1,16 @@
 import { FC } from 'react';
+import  masg_user_img from "../../../assets/masg-user-img.png";
+import { MessageUserProps } from '../../../types/Types';
+import { MassgesContext } from '../../../context/MassgesContext';
 
-interface MessageUserProps {
-  userName: string;
-  userImage: string;
-  onlineStatus: boolean;
-  lastOnlineTime: string;
-}
 
-const MessageUser: FC<MessageUserProps> = ({ userName, userImage, onlineStatus, lastOnlineTime }) => {
+const MessageUser: FC<MessageUserProps> = ({ userName, userImage, onlineStatus, lastOnlineTime 
+  , userId }) => {
+    const  {toggolUser} = MassgesContext()
   return (
-    <div className="msg-user cursor-pointer flex-items gap-3">
+    <div key={userId} onClick={() => toggolUser(userId)} className="msg-user cursor-pointer flex-items gap-3">
       <div className="position-relative masg_user_img">
-        <img src={userImage} className="img-fluid" alt={userName} />
+        <img src={userImage || masg_user_img} className="img-fluid" alt={userName} />
         {onlineStatus && <span className="online-dot position-absolute"></span>}
       </div>
       <div>

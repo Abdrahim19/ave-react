@@ -19,6 +19,7 @@ import MessagesLayout from './layout/MessagesLayout';
 import AbonnementLayout from './layout/AbonnementLayout';
 import PyementCardsLayout from './layout/pyementCardsLayout';
 import PaiementLayout from './layout/PaiementLayout';
+import { MassgesContextProvider } from './context/MassgesContext';
 
 const router = createBrowserRouter([
   {element:<HomeLayout /> , path: '/' , errorElement:<ErrorBoundary />},
@@ -35,7 +36,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <YourContextProvider>
+      <MassgesContextProvider>
     <RouterProvider router={router} />
+      </MassgesContextProvider>
     </YourContextProvider>
   </React.StrictMode>,
 )

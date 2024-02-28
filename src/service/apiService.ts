@@ -84,8 +84,7 @@ export const postUserData = async (email: string, password: string): Promise<voi
 
 
 export const postInterpriceUserData = async (data:interpriceInputForm): Promise<void> => {
-  const apiUrl = `${BASE_URL}/interpriceusers`; // Replace with your actual API endpoint
-
+  const apiUrl = `${BASE_URL}/interpriceusers`;
   try {
     const response = await axios.post(apiUrl, {
       ...data
@@ -98,7 +97,7 @@ export const postInterpriceUserData = async (data:interpriceInputForm): Promise<
 };
 
 export const postPritaclerUserData = async (data:PritaclerType): Promise<void> => {
-  const apiUrl = `${BASE_URL}/PritaclerUser`; // Replace with your actual API endpoint
+  const apiUrl = `${BASE_URL}/PritaclerUser`;
 
   try {
     const response = await axios.post(apiUrl, {
@@ -125,3 +124,14 @@ export const postAssociationUserData = async (data:associationType): Promise<voi
     throw error;
   }
 };
+
+export const getMessageUserData = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}/messageUserData`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    throw error;
+  }
+};
+
