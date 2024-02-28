@@ -27,7 +27,7 @@ const AddPostPopup = () => {
       <Inputlabel name={""} type={"text"} label={""} />
       <div className="my-2"></div>
       <UplodeFile onFileUpload={function (file: File): void {
-              throw new Error("Function not implemented.");
+        console.log(file);              
           } } />
     <div className="my-4"></div>
   <div className="flex-items justify-content-between">
