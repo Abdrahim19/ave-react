@@ -155,3 +155,8 @@ img {
   width: 90%;
 }
 }
+
+.chat__container {
+  height: 80vh;
+  overflow-y: scroll;
+}

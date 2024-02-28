@@ -10,15 +10,16 @@ const MessagesLayout = () => {
   return (
     <>
     <Navbar />
-    <div className="main-page d-flex justify-content-center py-4">
+    <div className="main-page d-flex justify-content-center">
       <div className="row container-lg">
-          <div className="col-md-3 px-0 px-sm-2 order-2 order-md-1">
+          <div className="pt-4 col-md-3 px-0 px-sm-2 order-2 order-md-1">
             <UsersMessages />
           </div>
-          <div className="col-md-6 order-3 order-md-2 d-grid px-sm-4 row-one-grid border-left-right position-relative">
+          <div className="pt-4 col-md-6 order-3 order-md-2 px-sm-4 border-left-right
+           position-relative">
             <TalkArea />
           </div>
-          <div className="col-md-3 order-1 order-md-3">
+          <div className="pt-4 col-md-3 order-1 order-md-3">
             <AdditionalInfo userName={"HamZa"} userImage={""} />
             </div>
           </div>

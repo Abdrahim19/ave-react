@@ -8,7 +8,8 @@ const MessageUser: FC<MessageUserProps> = ({ userName, userImage, onlineStatus, 
   , userId }) => {
     const  {toggolUser} = MassgesContext()
   return (
-    <div key={userId} onClick={() => toggolUser(userId)} className="msg-user cursor-pointer flex-items gap-3">
+    <div key={userId} onClick={() => toggolUser(userId)} className=
+    {`msg-user cursor-pointer flex-items gap-3`}>
       <div className="position-relative masg_user_img">
         <img src={userImage || masg_user_img} className="img-fluid" alt={userName} />
         {onlineStatus && <span className="online-dot position-absolute"></span>}
