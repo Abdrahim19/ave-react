@@ -4,9 +4,11 @@ import { MessageUserProps } from '../../../types/Types';
 import { MassgesContext } from '../../../context/MassgesContext';
 
 
-const MessageUser: FC<MessageUserProps> = ({ userName, userImage, onlineStatus, lastOnlineTime 
-  , userId }) => {
-    const  {toggolUser} = MassgesContext()
+const MessageUser: FC<MessageUserProps> = ({ userName, userImage, onlineStatus,
+   lastOnlineTime , userId }) => {
+    const {toggolUser  , SelectedUser} = MassgesContext()
+    console.log(SelectedUser);
+    
   return (
     <div key={userId} onClick={() => toggolUser(userId)} className=
     {`msg-user cursor-pointer flex-items gap-3`}>

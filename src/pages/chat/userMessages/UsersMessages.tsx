@@ -1,25 +1,32 @@
 import masgDots from "../../../assets/masgDots.svg";
 import { useEffect, useState } from "react";
 import MessageUser from "./MsgUser";
-import { getMessageUserData } from "../../../service/apiService";
-import { MessageUserProps } from "../../../types/Types";
+import { getAllUsers } from "../../../service/apiService";
+import { User } from "../../../types/Types";
 import UsersMessagesLoder from "../../../components/commen/sklitionsLoders/UsersMessagesLoder";
 import { MassgesContext } from "../../../context/MassgesContext";
 
 const UsersMessages = () => {
+  const [messageUserData, setMessageUserData] = useState<User[]>([]);
+  const [loading, setLoading] = useState(true);
   const [isToggled, setToggled] = useState<boolean>(false);
+  const { search, setSearch } = MassgesContext();
+
+
   const handleToggle = () => {
     setToggled((prevToggled) => !prevToggled);
   };
 
-  const [messageUserData, setMessageUserData] = useState<MessageUserProps[]>([]);
-  const [loading, setLoading] = useState(true);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getMessageUserData();
+        const data = await getAllUsers();
         setMessageUserData(data);
+        console.log(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -30,13 +37,6 @@ const UsersMessages = () => {
     fetchData();
   }, []);
 
-  const { search, setSearch } = MassgesContext();
-
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value);
-  };
-
-  // Filter the messageUserData based on the search term
   const filteredMessageUserData = messageUserData.filter((user) =>
     user.userName.toLowerCase().includes(search.toLowerCase())
   );
@@ -65,10 +65,10 @@ const UsersMessages = () => {
               <MessageUser
                 key={index}
                 userName={item.userName}
-                userImage={item.userImage}
+                userImage={item.userImg}
                 onlineStatus={item.onlineStatus}
                 lastOnlineTime={item.lastOnlineTime}
-                userId={item.userId}
+                userId={item.id}
               />
             ))
           ) : (

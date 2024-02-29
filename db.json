@@ -266,19 +266,9 @@
   ],
   "users": [
     {
-      "email": "hamza@gmail.com",
-      "password": "hamza123456.com",
-      "id": "3c0d"
-    },
-    {
-      "id": "8cd8",
-      "email": "essh4014@gmail.com",
-      "password": "hamza is thr       "
-    },
-    {
-      "id": "f7d7",
-      "email": "essh4014@gmail.com",
-      "password": "hamza123456.com"
+      "id": "6f68",
+      "email": "hamza.kaaouane@symloop.com",
+      "password": "hamza123456789"
     }
   ],
   "user": [
@@ -325,11 +315,99 @@
       "id": "cf71"
     }
   ],
-  
+  "userapp": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "password": "password123",
+      "userName": "User One",
+      "onlineStatus": true,
+      "lastOnlineTime": "2022-01-01T12:00:00Z",
+      "userImg": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
+      "rating": "4.5",
+      "category": "Category One",
+      "location": "Location One",
+      "city": "City One",
+      "memberSince": "2022-01-01",
+      "avgResponseTime": "2 hours",
+      "presentation": "This is the presentation for User One.",
+      "demandesRepondues": [],
+      "certifications": [
+        "Certification One",
+        "Certification Two"
+      ],
+      "userType": "Particulier",
+      "interpriceInputForm": {
+        "nomCommercial": "Company One",
+        "metier": "Business One",
+        "nom": "Name One",
+        "prenom": "Surname One",
+        "adressePostale": "Address One",
+        "numeroTelephone": "123456789",
+        "email": "email1@example.com"
+      },
+      "PritaclerType": {
+        "nom": "Name P",
+        "prenom": "Surname P",
+        "adressePostale": "Address P",
+        "numeroTelephone": "987654321",
+        "email": "emailP@example.com"
+      },
+      "associationType": {
+        "association_nom": "Association One",
+        "adressePostale": "Address Association One",
+        "numeroTelephone": "555-1234",
+        "email": "association1@example.com"
+      }
+    },
+    {
+      "id": 2,
+      "email": "user1@example.com",
+      "password": "password123",
+      "userName": "User two",
+      "onlineStatus": false,
+      "lastOnlineTime": "2022-01-01T12:00:00Z",
+      "userImg": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
+      "rating": "4.5",
+      "category": "Category One",
+      "location": "Location One",
+      "city": "City One",
+      "memberSince": "2022-01-01",
+      "avgResponseTime": "2 hours",
+      "presentation": "This is the presentation for User One.",
+      "demandesRepondues": [],
+      "certifications": [
+        "Certification One",
+        "Certification Two"
+      ],
+      "userType": "Particulier",
+      "interpriceInputForm": {
+        "nomCommercial": "Company One",
+        "metier": "Business One",
+        "nom": "Name One",
+        "prenom": "Surname One",
+        "adressePostale": "Address One",
+        "numeroTelephone": "123456789",
+        "email": "email1@example.com"
+      },
+      "PritaclerType": {
+        "nom": "Name P",
+        "prenom": "Surname P",
+        "adressePostale": "Address P",
+        "numeroTelephone": "987654321",
+        "email": "emailP@example.com"
+      },
+      "associationType": {
+        "association_nom": "Association One",
+        "adressePostale": "Address Association One",
+        "numeroTelephone": "555-1234",
+        "email": "association1@example.com"
+      }
+    }
+  ],
   "interpriceusers": [],
   "PritaclerUser": [],
   "AssociationUser": [],
-
   "messageUserData": [
     {
       "id": 1,
@@ -401,5 +479,6 @@
       "onlineStatus": false,
       "lastOnlineTime": "3 weeks ago"
     }
-  ]
+  ],
+  "massgesTabels": []
 }

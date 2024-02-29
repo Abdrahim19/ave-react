@@ -1,51 +1,71 @@
-import { FC } from 'react';
-import { Link } from 'react-router-dom';
-import user_img from '../../../assets/Image-40.png'
-// import FichesCart from '../cartsChat/FichesCart';
+import { FC, useEffect, useState } from 'react';
+import FichesCart from '../cartsChat/FichesCart';
 import ImgestCart from '../cartsChat/ImgestCart';
-// import InformationsCart from '../cartsChat/InformationsCart';
-// import PinnedItemsCart from '../cartsChat/PinnedItemsCart';
+import InformationsCart from '../cartsChat/InformationsCart';
+import PinnedItemsCart from '../cartsChat/PinnedItemsCart';
 import arrowDownIcon from '../../../assets/Vector (1).png';
+import MassgesCard from '../ui/MassgesCard';
+import { getUserById } from '../../../service/apiService';
+import { User } from '../../../types/Types';
+import { MassgesContext } from '../../../context/MassgesContext';
+import LodingPopup from '../../../components/commen/popUps/popupLoding/LodingPopup';
 
-
-interface AdditionalInfoProps {
-  userName: string;
-  userImage: string;
-}
-
-const AdditionalInfo: FC<AdditionalInfoProps> = ({ userName, userImage }) => {
+const AdditionalInfo: FC = () => {
+  const { SelectedUser } = MassgesContext();
   const imagesData = [
     { name: 'loding.page.zip', url: '...' },
     { name: 'another.file.zip', url: '...' },
   ];
-  return (
-        <>
-      <div className='offerUser-Card bg-white rounded-3 p-3 text-center'>
-        <div className='mb-2'>
-          <img src={userImage || user_img} className='user-img' style={{ width: '101px', aspectRatio: '1' }} alt={userName} />
+
+  const [userProfile, setUserProfile] = useState<User | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      try {
+        setLoading(true);
+        const userData = await getUserById(SelectedUser);
+        setUserProfile(userData);
+        console.log(userData.demandesRepondues);
+        
+        setLoading(false); // Move setLoading(false) inside the try block
+      } catch (error) {
+        setError('Error fetching user profile.');
+        setLoading(false); // Also set loading to false in case of an error
+      }
+    };
+
+    fetchUserProfile();
+  }, [SelectedUser]);
+
+  // Return loading popup if still loading
+  if (loading) {
+    return <LodingPopup />;
+  }
+
+  // Return an error message if an error occurred
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  // Return the MassgesCard if userProfile is available
+  if (userProfile) {
+    return (
+      <>
+        <MassgesCard {...userProfile} />
+        <div className='d-grid mt-3' style={{ gap: '2rem' }}>
+          <ImgestCart title={'Images'} icon={arrowDownIcon} data={imagesData} />
+          <InformationsCart />
+          <FichesCart />
+          <PinnedItemsCart />
         </div>
-        <h3 className='user-name'>{userName}</h3>
-        <div className='flex-items justify-content-center gap-2 my-1'>
-          <button className='small-blue-button'>Auto-Entreprise</button>
-          <div className='flex-items gap-1'>
-            <p className='rate-gray'>(4.3)</p>
-            <i className="bi bi-star-fill"></i>
-          </div>
-        </div>
-        <p className='contect-link'>
-          <Link to='/'>
-            <strong>Menage</strong>
-          </Link> •Givors (Canal)
-        </p>
-      </div>
-      <div className='d-grid mt-3' style={{gap:'2rem'}}>
-      <ImgestCart title={'Images'} icon={arrowDownIcon} data={imagesData} />
-      {/* <InformationsCart /> */}
-      {/* <FichesCart /> */}
-      {/* <PinnedItemsCart /> */}
-      </div>
-        </>
-  );
+      </>
+    );
+  }
+
+  // Return null or another default component if none of the conditions are met
+  return null;
 };
 
 export default AdditionalInfo;

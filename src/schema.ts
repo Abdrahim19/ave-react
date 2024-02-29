@@ -31,6 +31,7 @@ const emailPasswordschema = yup.object().shape({
     email: yup.string().email('Adresse E-mail invalide')
     .required('L\'Adresse E-mail est obligatoire')
     .max(255, 'L\'Adresse E-mail ne doit pas dépasser 255 caractères'),
+    checkboxField: yup.boolean().oneOf([true], 'La case à cocher est obligatoire'),
   });
   const associationschema = yup.object().shape({
     association_nom: yup.string()
@@ -59,7 +60,7 @@ const emailPasswordschema = yup.object().shape({
     .min(2, 'Le Prénom doit avoir au moins 2 caractères')
     .max(50, 'Le Prénom ne doit pas dépasser 50 caractères')
     .matches(/^[a-zA-ZÀ-ÿ\s'-]+$/, 'Le Prénom doit contenir uniquement des lettres, des espaces, des tirets et des apostrophes'),
-    nomCommercial: yup.string()
+  nomCommercial: yup.string()
     .min(2, 'Le Nom commercial doit avoir au moins 2 caractères')
     .max(50, 'Le Nom commercial ne doit pas dépasser 50 caractères')
     .matches(/^[a-zA-ZÀ-ÿ\s\d',-]+$/, 'Le Nom commercial doit contenir uniquement des lettres, chiffres, espaces et caractères spéciaux (,\'-)'),

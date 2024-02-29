@@ -1,11 +1,10 @@
-import React, { createContext, useContext, ReactNode, useState } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
+import { User } from '../types/Types';
 
 // Define the types for your context
 interface YourContextProps {
-SelectedUser:number,
-toggolUser:(vlaue:number) => void
-search: string;
-setSearch: (value: string) => void;
+    user: User | null;
+    setUser: React.Dispatch<React.SetStateAction<User | null>>
 }
 
 // Create the context
@@ -17,24 +16,18 @@ interface YourContextProviderProps {
 }
 
 const MassgesContextProvider: React.FC<YourContextProviderProps> = ({ children }) => {
-    const [SelectedUser, setSelectedUser] = useState<number>(1);
-    const [search, setSearch] = useState<string>('');
-    const toggolUser = (vlaue:number) => {
-        setSelectedUser(vlaue)
-     }
-     
+  const [user, setUser] = React.useState<User | null>(null);
+    
   const contextValue: YourContextProps = {
-    SelectedUser,
-    toggolUser,
-    search,
-    setSearch,
+    user,
+    setUser,
   };
-
+  
   return <YourContext.Provider value={contextValue}>{children}</YourContext.Provider>;
 };
 
 // Create a custom hook for using the context
-const MassgesContext = () => {
+const FormDataContext = () => {
   const context = useContext(YourContext);
   if (!context) {
     throw new Error('useYourContext must be used within a YourContextProvider');
@@ -42,4 +35,4 @@ const MassgesContext = () => {
   return context;
 };
 
-export { MassgesContextProvider, MassgesContext };
+export { MassgesContextProvider, FormDataContext };

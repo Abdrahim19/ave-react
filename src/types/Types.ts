@@ -69,6 +69,7 @@ export type carsoulCard = {
     description: string;
     users: UserOfferUser[];
   };
+  
   export type DemandItem = {
     title: string;
     responses: number;
@@ -122,8 +123,39 @@ export type carsoulCard = {
   }
 
   export type User = {
-    id:NumberConstructor;
-  }
-  export type Post = {
-    id:NumberConstructor;
+    id: number;
+    email: string;
+    password: string;
+    userName: string;
+    onlineStatus: boolean;
+    lastOnlineTime: string;
+    userImg: string;
+    rating: string;
+    category: string;
+    location: string;
+    city: string;
+    memberSince: string;
+    avgResponseTime: string;
+    presentation: string;
+    demandesRepondues: DemandItem[];
+    certifications: string[];
+  } & {
+    userType: "Particulier" | "Indépendant" | "Entreprise" | "Association";
+    interpriceInputForm: interpriceInputForm;
+    PritaclerType: PritaclerType;
+    associationType: associationType;
+  };
+
+  export type RequestType = {
+    RequestId:number;
+    User:User;
+    RequestImageSrc:string,
+    RequestDescription: string,
+    RequestPublishedTime: string,
+    RequestTitle:string,
+    RequestContent:string,
+    RequestImages: string[],
+    Likes:number;
+    comment:string[];
+    RequestCategory:string|string[];
   }

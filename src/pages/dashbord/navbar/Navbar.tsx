@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import logo  from '../../../assets/logo.png'
 import PopupInfo from './PopupInfo';
-
-
-import "./navbar.css";
 import Headerlinks from './Headerlinks';
+import "./navbar.css";
+
+
 const Navbar = () => {
     return (
       <header className="home-header">

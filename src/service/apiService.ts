@@ -1,6 +1,6 @@
 // apiService.ts
 import axios from 'axios';
-import { PritaclerType, ProfileCardProps, associationType, interpriceInputForm } from '../types/Types';
+import { PritaclerType, ProfileCardProps, User, associationType, interpriceInputForm } from '../types/Types';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -66,15 +66,12 @@ export const getUser = async () => {
 };
 
 export const postUserData = async (email: string, password: string): Promise<void> => {
-  const apiUrl = `${BASE_URL}/users`; // Replace with your actual API endpoint
-
-  try {
+  const apiUrl = `${BASE_URL}/users`; 
+   try {
     const response = await axios.post(apiUrl, {
       email,
       password,
     });
-
-    // You can handle success here if needed
     console.log('Data submitted successfully:', response.data);
   } catch (error) {
     console.error('Error submitting data:', error);
@@ -127,7 +124,41 @@ export const postAssociationUserData = async (data:associationType): Promise<voi
 
 export const getMessageUserData = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/messageUserData`);
+    const response = await axios.get(`${BASE_URL}/userapp`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    throw error;
+  }
+};
+
+export const getUserById = async (id:number) => {
+  try {
+    const response = await axios.get<User>(`${BASE_URL}/userapp?id=${id}`);    
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    throw error;
+  }
+};
+
+export const postUserInfo = async (data:User): Promise<void> => {
+  const apiUrl = `${BASE_URL}/users`; 
+  try {
+    const response = await axios.post(apiUrl, {
+     ...data
+    });
+    console.log('Data submitted successfully:', response.data);
+  } catch (error) {
+    console.error('Error submitting data:', error);
+    throw error;
+  }
+};
+
+export const getAllUsers = async () => {
+  try {
+    const response = await axios.get<User>(`${BASE_URL}/userapp`);  
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error('Error fetching reviews:', error);

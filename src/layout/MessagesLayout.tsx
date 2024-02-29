@@ -20,7 +20,7 @@ const MessagesLayout = () => {
             <TalkArea />
           </div>
           <div className="pt-4 col-md-3 order-1 order-md-3">
-            <AdditionalInfo userName={"HamZa"} userImage={""} />
+            <AdditionalInfo />
             </div>
           </div>
   </div>

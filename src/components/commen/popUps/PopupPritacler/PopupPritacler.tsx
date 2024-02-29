@@ -58,7 +58,7 @@ const PopupPritacler = () => {
             register={register}  />
         </div>
       <div className="flex-items gap-3">
-        <Checkbox  onChange={handleCheckboxChange}  />
+      <Checkbox onChange={handleCheckboxChange}  />
       <label className="form-check-label" htmlFor="exampleCheck1">
         J’accepte {" "}
             <span>  

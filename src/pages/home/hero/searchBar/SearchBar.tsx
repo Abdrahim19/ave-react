@@ -10,7 +10,7 @@ const SearchBar = () => {
       <p className='searchBar_label'>Emplacement</p>
       <input type="text" className='search__input' placeholder="choisi votre emplacement" />
     </div>
-    <div className='col-3 mx-auto mt-2 col-sm-2'>
+    <div className='col-3 mx-auto col-sm-2'>
     <div className='search-container'>
     <i className="bi bi-search"></i>
     </div>

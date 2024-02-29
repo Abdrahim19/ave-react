@@ -16,6 +16,9 @@ const HomeLayout = () => {
   const [loaded, setLoaded] = useState(false);
   const { showPopup } = useYourContext();
 
+  
+
+
 
   useEffect(() => {
     const handleLoad = () => {
