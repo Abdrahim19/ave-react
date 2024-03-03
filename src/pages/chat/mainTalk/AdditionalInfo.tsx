@@ -41,20 +41,22 @@ const AdditionalInfo: FC = () => {
 
   //   fetchUserProfile();
   // }, [SelectedUser]);
- const userProfile = users[SelectedUser];
- console.log(userProfile);
- 
+  
   // // Return loading popup if still loading
   // if (loading) {
-  //   return <LodingPopup />;
-  // }
+    //   return <LodingPopup />;
+    // }
+    
+    // // Return an error message if an error occurred
+    // if (error) {
+      //   return <div>Error: {error}</div>;
+      // }
+      
+      // Return the MassgesCard if userProfile is available
 
-  // // Return an error message if an error occurred
-  // if (error) {
-  //   return <div>Error: {error}</div>;
-  // }
-
-  // Return the MassgesCard if userProfile is available
+  const userProfile = users[SelectedUser];
+  console.log(userProfile);
+  
   if (userProfile) {
     return (
       <>

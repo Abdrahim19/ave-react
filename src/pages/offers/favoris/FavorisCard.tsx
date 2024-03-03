@@ -41,7 +41,7 @@ const FavorisCard = () => {
         userImage: "https://i.ibb.co/L8cZR6s/Image-40.png"
       },
       {
-        id: 2,
+        id: 3,
         userName: "Another User",
         userType: "Professional",
         userLocation: "Some Location - 10 km",

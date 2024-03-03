@@ -39,13 +39,13 @@ const PopupInfo = () => {
         </div>
         <hr className="sparaiter" />
         {menuItems.map((item, index) => (
-          <>
-          <Link key={item.text} to={item.path} className={` d-flex align-items-center gap-3 link`}>
+          <div key={index}>
+          <Link to={item.path} className={` d-flex align-items-center gap-3 link`}>
             <i className={item.icon}></i>
             {item.text}
           </Link>
         {index === 2 && <hr className="sparaiter" />}
-          </>
+          </div>
         ))}
         <hr className="sparaiter" />
         <a href="#" className="d-flex align-items-center gap-3 link">
