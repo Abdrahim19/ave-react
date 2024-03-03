@@ -1,6 +1,9 @@
 const SucsesAdedPost = () => {
   return (
-    <div>SucsesAdedPost</div>
+    <div className='animate__animated animate__fadeInLeftBig delay-3s'
+    >
+      
+    </div>
   )
 }
 

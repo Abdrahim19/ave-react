@@ -482,7 +482,7 @@
   ],
   "userapp": [
     {
-      "id": 1,
+      "id": "1",
       "email": "user1@example.com",
       "password": "password123",
       "userName": "User One",
@@ -526,7 +526,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "user1@example.com",
       "password": "password123",
       "userName": "User two",
@@ -570,75 +570,86 @@
       }
     }
   ],
-  "interpriceusers": [],
+  "interpriceusers": [
+    {
+      "id": "5017",
+      "nom": "hamza",
+      "prenom": "abdrahim",
+      "nomCommercial": "essh",
+      "metier": "hamza is",
+      "adressePostale": "124567",
+      "numeroTelephone": "0668700685",
+      "email": "rsstrr7@gmail.com"
+    }
+  ],
   "PritaclerUser": [],
   "AssociationUser": [],
   "messageUserData": [
     {
-      "id": 1,
+      "id": "1",
       "userName": "John Doe",
       "userImage": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
       "onlineStatus": true,
       "lastOnlineTime": "2 hours ago"
     },
     {
-      "id": 2,
+      "id": "2",
       "userName": "Jane Smith",
       "userImage": "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       "onlineStatus": false,
       "lastOnlineTime": "1 day ago"
     },
     {
-      "id": 3,
+      "id": "3",
       "userName": "Alice Johnson",
       "userImage": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
       "onlineStatus": true,
       "lastOnlineTime": "30 minutes ago"
     },
     {
-      "id": 4,
+      "id": "4",
       "userName": "Bob Williams",
       "userImage": "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       "onlineStatus": true,
       "lastOnlineTime": "3 days ago"
     },
     {
-      "id": 5,
+      "id": "5",
       "userName": "Eva Davis",
       "userImage": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
       "onlineStatus": false,
       "lastOnlineTime": "4 hours ago"
     },
     {
-      "id": 6,
+      "id": "6",
       "userName": "Michael Brown",
       "userImage": "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       "onlineStatus": true,
       "lastOnlineTime": "1 week ago"
     },
     {
-      "id": 7,
+      "id": "7",
       "userName": "Olivia Miller",
       "userImage": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
       "onlineStatus": false,
       "lastOnlineTime": "5 minutes ago"
     },
     {
-      "id": 8,
+      "id": "8",
       "userName": "David Davis",
       "userImage": "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       "onlineStatus": true,
       "lastOnlineTime": "2 weeks ago"
     },
     {
-      "id": 9,
+      "id": "9",
       "userName": "Sophia Johnson",
       "userImage": "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
       "onlineStatus": true,
       "lastOnlineTime": "1 hour ago"
     },
     {
-      "id": 10,
+      "id": "10",
       "userName": "William Smith",
       "userImage": "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       "onlineStatus": false,
