@@ -6,11 +6,15 @@ import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
 import { associationType } from "../../../../types/Types";
 import { postAssociationUserData } from "../../../../service/apiService";
+import { useState } from "react";
 
 const Popu_association = () => {
   const { handleNext , ChangelodingPopUpState  } = useYourContext();
+  const [IsCheckbox, setIsCheckbox] = useState(false)
+
 
   const handleCheckboxChange = (checked: boolean) => {
+    setIsCheckbox(checked)
     console.log('Checkbox checked:', checked);
   };
 
@@ -61,7 +65,7 @@ animate__bounceInDown">
           />
         </div>
       <div className="flex-items my-3 gap-3">
-        <Checkbox  onChange={handleCheckboxChange}   />
+        <Checkbox  onChange={handleCheckboxChange} IsChecked={IsCheckbox}  />
       <label className="form-check-label" htmlFor="Check1">
         J’accepte {" "}
             <span>  

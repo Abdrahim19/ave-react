@@ -6,10 +6,14 @@ import Checkbox from "../../ui/Checkbox";
 import Inputlabel from "../../ui/Inputlabel";
 import { PritaclerType } from "../../../../types/Types";
 import { postPritaclerUserData } from "../../../../service/apiService";
+import { useState } from "react";
  
 const PopupPritacler = () => {
   const { handleNext , ChangelodingPopUpState } = useYourContext();
+  const [IsCheckbox, setIsCheckbox] = useState(false)
+
   const handleCheckboxChange = (checked: boolean) => {
+    setIsCheckbox(checked)
     console.log('Checkbox checked:', checked);
   };
   const {
@@ -58,7 +62,7 @@ const PopupPritacler = () => {
             register={register}  />
         </div>
       <div className="flex-items gap-3">
-      <Checkbox onChange={handleCheckboxChange}  />
+      <Checkbox onChange={handleCheckboxChange} IsChecked={IsCheckbox}  />
       <label className="form-check-label" htmlFor="exampleCheck1">
         J’accepte {" "}
             <span>  

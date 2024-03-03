@@ -7,10 +7,13 @@ import Inputlabel from "../../ui/Inputlabel";
 import './popupIterprice.css'
 import { interpriceInputForm } from "../../../../types/Types";
 import { postInterpriceUserData } from "../../../../service/apiService";
+import { useState } from "react";
 
 const PopupIterprice = () => {
   const { handleNext , ChangelodingPopUpState } = useYourContext();
+  const [IsCheckbox, setIsCheckbox] = useState(false)
   const handleCheckboxChange = (checked: boolean) => {
+    setIsCheckbox(checked)
     console.log('Checkbox checked:', checked);
   };
   const {
@@ -70,7 +73,7 @@ const PopupIterprice = () => {
             register={register}  />
         </div>
       <div className="flex-items gap-3">
-        <Checkbox  onChange={handleCheckboxChange}  />
+        <Checkbox  onChange={handleCheckboxChange}  IsChecked={IsCheckbox} />
       <label className="form-check-label" htmlFor="Check1">
         J’accepte {" "}
             <span>  
