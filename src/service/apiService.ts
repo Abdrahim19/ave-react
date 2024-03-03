@@ -1,6 +1,6 @@
 // apiService.ts
 import axios from 'axios';
-import { PritaclerType, ProfileCardProps, User, associationType, interpriceInputForm } from '../types/Types';
+import { LocationData, PritaclerType, ProfileCardProps, User, associationType, interpriceInputForm } from '../types/Types';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -162,6 +162,18 @@ export const getAllUsers = async () => {
     return response.data;
   } catch (error) {
     console.error('Error fetching reviews:', error);
+    throw error;
+  }
+};
+
+
+export const getLocationByPostalCode = async (postalCode: string): Promise<LocationData> => {
+  const apiUrl = "https://api.zippopotam.us/FR"
+  try {
+    const response = await axios.get<LocationData>(`${apiUrl}/${postalCode}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching location for postal code ${postalCode}:`, error);
     throw error;
   }
 };

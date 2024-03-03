@@ -21,6 +21,7 @@ import PyementCardsLayout from './layout/pyementCardsLayout';
 import PaiementLayout from './layout/PaiementLayout';
 import { MassgesContextProvider } from './context/MassgesContext';
 import { AddPostContextProvider } from './context/AddPostSteeperContext';
+import AccountLayout from './layout/AccountLayout';
 
 const router = createBrowserRouter([
   {element:<HomeLayout /> , path: '/' , errorElement:<ErrorBoundary />},
@@ -32,8 +33,9 @@ const router = createBrowserRouter([
   {element:<AbonnementLayout /> , path: 'Abonnement' , errorElement:<ErrorBoundary />},
   {element:<PyementCardsLayout /> , path: 'pyementCards' , errorElement:<ErrorBoundary />},
   {element:<PaiementLayout /> , path: 'paiement' , errorElement:<ErrorBoundary />},
-
+  {element:<AccountLayout /> , path: 'account' , errorElement:<ErrorBoundary />},
 ])
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <YourContextProvider>

@@ -2,10 +2,12 @@ import { useState } from 'react';
 
 type CheckboxProps = {
   onChange: (checked: boolean) => void;
+  IsRounded?:boolean;
+  IsChecked?:boolean;
 };
 
 function Checkbox(props: CheckboxProps) {
-  const { onChange } = props;
+  const { onChange , IsRounded ,  IsChecked = false } = props;
   const [checked, setChecked] = useState(false);
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +19,8 @@ function Checkbox(props: CheckboxProps) {
   return (
     <div className="checkbox-wrapper-30">
       <span className="checkbox">
-        <input  type="checkbox" id='Check1' checked={checked} onChange={handleCheckboxChange} />
+        <input  type="checkbox" id='Check1' className={`${IsRounded && 'rounded-circle'}`}
+         checked={IsChecked} onChange={handleCheckboxChange} />
         <svg>
           <use xlinkHref="#checkbox-30" className="checkbox"></use>
         </svg>

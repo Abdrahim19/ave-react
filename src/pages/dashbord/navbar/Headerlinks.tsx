@@ -19,7 +19,7 @@ const Headerlinks = () => {
          ${location.pathname === link.path  ? 'active' : ''}`}>
           <Link
             to={link.text === 'Demande' ? "#" : link.path}
-            onClick={() => link.text === 'Demande' ? toggleshowPostPopup : false}
+            onClick={() => (link.text === 'Demande' ? toggleshowPostPopup() : null)}
             className="flex-items gap-2"
           >
             <i className={link.icon}></i>

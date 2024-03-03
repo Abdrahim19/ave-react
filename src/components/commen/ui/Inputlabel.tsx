@@ -6,7 +6,7 @@ type InputProps = {
   name: string;
   type: "text" | "password" | 'email';
   label: string;
-  error?: FieldError | undefined;
+  error?: FieldError | undefined ;
   value?:string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   register?: UseFormRegister<any>;

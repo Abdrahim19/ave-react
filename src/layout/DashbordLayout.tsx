@@ -28,7 +28,7 @@ const DashbordLayout = () => {
       </div>
   </div>
   <AccueilPopup />
-  {!showPostPopup ? <AddPostSteeper /> : false}
+  {showPostPopup ? <AddPostSteeper /> : false}
     </>
   )
 }

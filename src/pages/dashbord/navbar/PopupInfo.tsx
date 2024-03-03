@@ -12,11 +12,12 @@ const PopupInfo = () => {
   useOnClickOutside(ref, handleClickOutside);
 
   const menuItems = [
-    { text: 'Mes demandes', icon: 'bi bi-plus-circle' },
-    { text: 'Mon solde', icon: 'bi bi-currency-euro' },
-    { text: 'Mes cartes', icon: 'bi bi-credit-card-2-front' },
-    { text: 'Centre d’aide', icon: 'bi bi-info-circle' },
-    { text: 'À propos', icon: 'bi bi-info-circle' },
+    { text: 'Mon profile', icon: 'bi bi-person' , path:'/account' },
+    { text: 'Mes demandes', icon: 'bi bi-plus-circle' , path:'' },
+    { text: 'Mon solde', icon: 'bi bi-currency-euro' , path:'' },
+    { text: 'Mes cartes', icon: 'bi bi-credit-card-2-front' , path:'' },
+    { text: 'Centre d’aide', icon: 'bi bi-info-circle' , path:'' },
+    { text: 'À propos', icon: 'bi bi-info-circle' , path:'' },
   ];
 
   return (
@@ -39,7 +40,7 @@ const PopupInfo = () => {
         <hr className="sparaiter" />
         {menuItems.map((item, index) => (
           <>
-          <Link key={item.text} to="#" className={` d-flex align-items-center gap-3 link`}>
+          <Link key={item.text} to={item.path} className={` d-flex align-items-center gap-3 link`}>
             <i className={item.icon}></i>
             {item.text}
           </Link>

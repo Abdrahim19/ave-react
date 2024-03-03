@@ -7,6 +7,7 @@ import AddLoction from "./components/addLoction/AddLoction";
 import AddBudget from "./components/addBudget/AddBudget";
 import AddAi from "./components/addAi/AddAi";
 import AddPostImges from "./components/addPostImges/AddPostImges";
+import { Suspense } from "react";
 
 
 const AddPostSteeper = () => {
@@ -28,10 +29,9 @@ const AddPostSteeper = () => {
     }
   };
   return (
-    <div>
- 
+ <Suspense fallback={<LodingPopup />}>
     <div onClick={toggleshowPostPopup} className={`bg-shadow active`}></div>
-        <section className={`auth_box  row m-0 gap-2 overflow-y-auto p-2 h- bg-white`}>
+        <section className={`auth_box col-xxl-4 row m-0 gap-2 overflow-y-auto p-2 h- bg-white`}>
         {IslodingPostPopUp && <LodingPopup />}
         <div className='text-end animate__animated animate__bounceInDown'>
           <button id='close' onClick={toggleshowPostPopup}>
@@ -48,8 +48,8 @@ const AddPostSteeper = () => {
         <PostSteeper />
         {renderPostComponent()}
       </section>
-
-    </div>
+</Suspense>
+  
   )
 }
 

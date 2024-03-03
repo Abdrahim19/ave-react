@@ -8,6 +8,8 @@ interface YourContextProps {
     toggleshowPostPopup:() => void;
     ChangelodingPostPopUpState:(value:boolean) => void;
     ToPoststep:(value:number) => void
+    IsAddloctionPopup:boolean;
+toggleIsAddloctionPopup:() => void;
 }
 
 const YourContext = createContext<YourContextProps | undefined>(undefined);
@@ -20,12 +22,17 @@ const AddPostContextProvider: React.FC<YourContextProviderProps> = ({ children }
   const [Poststep, setPoststep] = useState(1);
   const [showPostPopup, setShowPostPopup] = useState<boolean>(false);
   const [IslodingPostPopUp, setIslodingPostPopUp] = useState<boolean>(false);
+  const [IsAddloctionPopup, setIsAddloctionPopup] = useState<boolean>(false);
+
 
   const handleNextStep = () => {
     setPoststep((prevStep) => prevStep + 1);
   };
   const toggleshowPostPopup = () => {
     setShowPostPopup(!showPostPopup)
+  };
+  const toggleIsAddloctionPopup = () => {
+    setIsAddloctionPopup(!IsAddloctionPopup)
   };
 
   const ChangelodingPostPopUpState = (value:true|false) => {
@@ -46,7 +53,9 @@ IslodingPostPopUp,
 handleNextStep,
 toggleshowPostPopup,
 ChangelodingPostPopUpState,
-ToPoststep
+ToPoststep,
+IsAddloctionPopup,
+toggleIsAddloctionPopup
   };
 
   

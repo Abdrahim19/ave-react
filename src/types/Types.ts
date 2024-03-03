@@ -159,3 +159,18 @@ export type carsoulCard = {
     comment:string[];
     RequestCategory:string|string[];
   }
+
+  export interface Place {
+    "place name": string;
+    longitude: string;
+    state: string;
+    "state abbreviation": string;
+    latitude: string;
+  }
+  
+  export interface LocationData {
+    "post code": string;
+    country: string;
+    "country abbreviation": string;
+    places: Place[];
+  }

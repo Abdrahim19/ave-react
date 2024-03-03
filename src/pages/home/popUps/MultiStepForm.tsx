@@ -7,6 +7,7 @@ import Stepper from '../../../components/commen/ui/Stepper';
 import PopupDone from '../../../components/commen/popUps/PopupDone/PopupDone';
 import Popupvladtion from '../../../components/commen/popUps/otpPopup/Popupvladtion';
 import LodingPopup from '../../../components/commen/popUps/popupLoding/LodingPopup';
+import { Suspense } from 'react';
 
 const MultiStepForm = () => {
   const { step, showPopup, toggleshowPopup ,IslodingPopUp } = useYourContext();
@@ -30,7 +31,7 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div>
+    <Suspense fallback={<LodingPopup />}>
       {showPopup && (
         <div onClick={toggleshowPopup} className='bg-shadow active'></div>
       )}
@@ -51,7 +52,7 @@ const MultiStepForm = () => {
         <Stepper />
         {renderComponent()}
       </section>
-    </div>
+    </Suspense>
   );
 };
 
