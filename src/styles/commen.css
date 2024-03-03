@@ -16,9 +16,6 @@
   visibility: visible;
 }
 
-
-
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -344,13 +341,6 @@ top: 50%;
 left: 50%;
 z-index: 10;
 transform: translate(-50% , -50%);
- opacity: 0;
- visibility: hidden;
- transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
- &.active {
-  opacity: 1;
-  visibility: visible;
-}
 }
 .box-subtitel {
 font-style: normal;
@@ -823,4 +813,5 @@ line-height: 27px;
   .no-scrollbar {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 11 */
+    display: none;
   }
