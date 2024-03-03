@@ -9,7 +9,7 @@ const Footer = () => {
     "Comment réinitialiser / modifier mon mot de passe",
   ];
   return (
-    <footer className="min-vh-100 d-grid" style={{placeItems:'center'}}>
+    <footer className="min-vh-100 d-grid py-2" style={{placeItems:'center'}}>
       <div className="d-flex flex-column mt-3 flex-sm-row footer-wrapper align-items-start justify-content-center flex-wrap gap-5 container">
         <FooterSection title="QUESTIONS FRÉQUENTES - AIDE" items={FAQ_ITEMS} Showlogo />
         <FooterSection title="QUESTIONS FRÉQUENTES - AIDE" items={FAQ_ITEMS} />
