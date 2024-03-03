@@ -55,7 +55,7 @@ const AdditionalInfo: FC = () => {
       // Return the MassgesCard if userProfile is available
 
   const userProfile = users[SelectedUser];
-  console.log(userProfile);
+  console.log(userProfile.name);
   
   if (userProfile) {
     return (

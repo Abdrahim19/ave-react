@@ -20,21 +20,21 @@ const UsersMessages = () => {
   const messageUserData = [
   
     {
-      id: "8",
+      id:1 ,
       userName: "David Davis",
       userImage: "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       onlineStatus: true,
       lastOnlineTime: "2 weeks ago"
     },
     {
-      id: "9",
+      id:2 ,
       userName: "Sophia Johnson",
       userImage: "https://i.postimg.cc/F7Q8pcc9/Image-60.png",
       onlineStatus: true,
       lastOnlineTime: "1 hour ago"
     },
     {
-      id: "10",
+      id:3 ,
       userName: "William Smith",
       userImage: "https://i.postimg.cc/fkd1Y5V2/Image-40.png",
       onlineStatus: false,
