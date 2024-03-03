@@ -1,35 +1,9 @@
 import './trouve.css'
+import user_img from "../../../assets/Image-40.png";
 import circles from "../../../assets/circles.png";
-import BigRequestCard from './BigRequestCard';
-import ReviewCard from './ReviewCard';
-import { useState, useEffect } from 'react';
-import { getBigRequests, getReviews } from '../../../service/apiService';
-import { TypePropsBigRequest, TypePropsReview } from '../../../types/Types';
-import BigRequestCardLoder from '../../../components/commen/sklitionsLoders/BigRequestCardLoder';
-import ReviewCardLoder from '../../../components/commen/sklitionsLoders/ReviewCardLoder';
+import big_img from "../../../assets/image 1 (1).png"
 
 const Trouve = () => {
-  const [bigRequests, setBigRequests] = useState<TypePropsBigRequest[]>([]);
-  const [reviews, setReviews] = useState<TypePropsReview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const bigRequestsData = await getBigRequests();
-        const reviewsData = await getReviews();
-
-        setBigRequests(bigRequestsData);
-        setReviews(reviewsData);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
   return (
     <section className="min-vh-100 my-4 cenetr-grid position-relative z-3">
     <div className="position-absolute circal-green z-2">
@@ -40,31 +14,96 @@ const Trouve = () => {
        <span>répond à vos demandes</span></h2>
         <div className="row gap-4 gap-md-0 align-items-center">
           <div className="col-md-6">
-          {!isLoading ? bigRequests.map((bigRequest) => (
-          <BigRequestCard
-            key={bigRequest.id}
-            userName={bigRequest.userName}
-            userLocation={bigRequest.userLocation}
-            requestImageSrc={bigRequest.requestImageSrc}
-            requestDescription={bigRequest.requestDescription}
-            requestPublishedTime={bigRequest.requestPublishedTime}
-            userImageSrc={bigRequest.userImageSrc}
-          />
-        )) : <BigRequestCardLoder />}
+            <div className="Trouve-big-cart bg-white mx-auto mx-md-0">
+              <div className="flex-items gap-2 p-4">
+                <img src={user_img} className="user-img" alt="" />
+                <p className="user-name">Gilberto B. <br />
+                  <span className="user-loction ">
+              Vienne (Jean-Moulin) - 13,4 km
+                  </span>
+                </p>
+              </div>
+              <img src={big_img} className="request-img" alt="" />
+              <div className="p-4 d-grid gap-3">
+                <p className="request-discrption">
+                Bonjour, Je cherche un plombier pour remplacer un wc à poser assez rapidement. 
+                Je joins de photos de l'existant et de celui que nous avons commandé.
+                </p>
+                <p className="request-pupliched">
+                Hier à 13h
+                </p>
+              </div>
+            </div>
           </div>
           <div className="col-md-6 d-grid" style={{gap:'clamp(10px ,4vw , 20px)'}}>
-          {!isLoading ? reviews.map((review) => (
-          <ReviewCard
-            key={review.id}
-            userName={review.userName}
-            userType={review.userType}
-            userRate={review.userRate}
-            userImageSrc={review.userImageSrc}
-            reviewDescription={review.reviewDescription}
-            reviewPublishedTime={review.reviewPublishedTime}
-            isActive={review.isActive}
-          />
-        )) : <ReviewCardLoder /> }
+            <div className="reviews-card mx-auto">
+              <div className="flex-items gap-2 mb-4">
+                <img src={user_img} className="user-img" alt="" />
+                <div className="d-flex flex-column">
+                  <div className="flex-items">
+                    <p className="user-name mb-0">Gilberto B.
+                    </p>
+                    <button className="revwie-button">Particulier</button>
+                  </div>
+                    <span className="user-rate flex-items gap-1">
+                      (4.3)
+                      <i className="bi bi-star-fill" 
+                      style={{color:'rgb(252,221,46);font-size: 14px'}}></i>
+                    </span>
+                </div>
+              </div>
+              <div>
+                <p className="review-discrption">Pour me contacter directement sois m'appeler au 
+                  6. 82. 90. 08. 45 sois choisir la catégorie bricolage ou ...</p>
+                  <a href="#" className="readmore-button">Voir plus</a>
+              </div>
+              <p className="review-publiched mt-4">Aujourd’hui à 13h</p>
+            </div>
+            <div className="reviews-card active">
+              <div className="flex-items gap-2 mb-4">
+                <img src={user_img} className="user-img" alt="" />
+                <div className="d-flex flex-column">
+                  <div className="flex-items">
+                    <p className="user-name mb-0">Gilberto B.
+                    </p>
+                    <button className="revwie-button">Particulier</button>
+                  </div>
+                    <span className="user-rate flex-items gap-1">
+                      (4.3)
+                      <i className="bi bi-star-fill" 
+                      style={{color:'rgb(252,221,46);font-size: 14px'}}></i>
+                    </span>
+                </div>
+              </div>
+              <div>
+                <p className="review-discrption">Pour me contacter directement sois m'appeler au 
+                  6. 82. 90. 08. 45 sois choisir la catégorie bricolage ou ...</p>
+                  <a href="#" className="readmore-button">Voir plus</a>
+              </div>
+              <p className="review-publiched mt-4">Aujourd’hui à 13h</p>
+            </div>
+            <div className="reviews-card mx-auto">
+              <div className="flex-items gap-2 mb-4">
+                <img src={user_img} className="user-img" alt="" />
+                <div className="d-flex flex-column">
+                  <div className="flex-items">
+                    <p className="user-name mb-0">Gilberto B.
+                    </p>
+                    <button className="revwie-button">Particulier</button>
+                  </div>
+                    <span className="user-rate flex-items gap-1">
+                      (4.3)
+                      <i className="bi bi-star-fill" style={{color:'rgb(252,221,46);font-size: 14px'}}></i>
+                    </span>
+                </div>
+              </div>
+              <div>
+                <p className="review-discrption">Pour me contacter directement sois m'appeler au 
+                  6. 82. 90. 08. 45 sois choisir la catégorie bricolage ou ...</p>
+                  <a href="#" className="readmore-button">Voir plus</a>
+              </div>
+              <p className="review-publiched mt-4">Aujourd’hui à 13h</p>
+            </div>
           </div>
         </div>
     </div>
