@@ -1,38 +1,69 @@
-import { useState, useEffect } from "react";
-import { getAllPostes } from "../../../service/apiService";
 import UserPost from "./UserPost";
-import PostesLoder from "../../../components/commen/sklitionsLoders/PostesLoder";
-import { UserPostProps } from "../../../types/Types";
-
 const AllPosts = () => {
-  const [posts, setPosts] = useState<UserPostProps[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const fetchedPosts = await getAllPostes();
-        setPosts(fetchedPosts);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+  const postsData = [
+    {
+      id: 1,
+      userName: "John Doe",
+      postTime: "2024-02-26T12:00:00Z",
+      userLocation: "City, Country",
+      userImagePost: "https://i.ibb.co/PTrBjrY/Image-40.png",
+      postImage: [
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg"
+      ],
+      postDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 2,
+      userName: "John Doe",
+      postTime: "2024-02-26T12:00:00Z",
+      userLocation: "City, Country",
+      userImagePost: "https://i.ibb.co/PTrBjrY/Image-40.png",
+      postImage: [
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg"
+      ],
+      postDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 3,
+      userName: "John Doe",
+      postTime: "2024-02-26T12:00:00Z",
+      userLocation: "City, Country",
+      userImagePost: "https://i.ibb.co/PTrBjrY/Image-40.png",
+      postImage: [
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg"
+      ],
+      postDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      id: 4,
+      userName: "John Doe",
+      postTime: "2024-02-26T12:00:00Z",
+      userLocation: "City, Country",
+      userImagePost: "https://i.ibb.co/PTrBjrY/Image-40.png",
+      postImage: [
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg",
+        "https://w10.naukri.com/mailers/2021/naukri-learning/oct/27oct-v2/What-is-Web-Developer.jpg"
+      ],
+      postDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+  ];
   return (
     <div>
-    {!isLoading ? (
-      posts.map((post) => (
+      {postsData.map((post) => (
         <UserPost key={post.id} {...post} />
-      ))
-    ) : (
-      <PostesLoder />
-    )}
-  </div>
+      ))}
+    </div>
   );
 };
 
