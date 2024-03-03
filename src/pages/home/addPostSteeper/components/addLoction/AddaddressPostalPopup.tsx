@@ -39,7 +39,6 @@ const AddaddressPostalPopup: React.FC = () => {
       setLocationData(data);
       console.log(data);
     } catch (err) {
-      setError(err?.message);
       console.error('Error:', err);
     }
   };
