@@ -8,7 +8,7 @@ import AddBudget from "./components/addBudget/AddBudget";
 import AddAi from "./components/addAi/AddAi";
 import AddPostImges from "./components/addPostImges/AddPostImges";
 import { Suspense } from "react";
-import LogoutPopup from "../../../components/commen/popUps/LogoutPopup/StateSheardPopup";
+import SucsesAdedPost from "./components/SucsesAdedPost";
 
 
 const AddPostSteeper = () => {
@@ -25,14 +25,13 @@ const AddPostSteeper = () => {
         return <AddAi />;  
     case 5: 
     return <AddPostImges />;
+    case 6: 
+    return <SucsesAdedPost />;
       default:
       return null;
     }
   };
 
-  if (Poststep === 6) {
-    return <LogoutPopup title={"Done"} description={"you add your post succsefly"} type={"success"}  />
-  }
   return (
  <Suspense fallback={<LodingPopup />}>
     <div onClick={toggleshowPostPopup} className={`bg-shadow active`}></div>
