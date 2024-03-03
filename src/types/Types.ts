@@ -137,8 +137,8 @@ export type carsoulCard = {
     memberSince: string;
     avgResponseTime: string;
     presentation: string;
-    demandesRepondues: DemandItem[];
-    certifications: string[];
+    demandesRepondues?: DemandItem[];
+    certifications?: string[];
   } & {
     userType: "Particulier" | "Indépendant" | "Entreprise" | "Association";
     interpriceInputForm: interpriceInputForm;

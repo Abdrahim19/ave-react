@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
-import { User } from "../../../types/Types"
 
-const MassgesCard: React.FC<User> = (User) => {      
+type MassgesCardType = {
+  id: number;
+  userImg: string;
+  userName: string;
+  userType: string;
+  rating: string;
+};
+const MassgesCard: React.FC<MassgesCardType> = (User) => {      
   return (
     <div key={User.id} className='offerUser-Card bg-white rounded-3 p-3 text-center'>
         <div className='mb-2'>
