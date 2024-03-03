@@ -25,7 +25,7 @@ const UsersMessages = () => {
     const fetchData = async () => {
       try {
         const data = await getAllUsers();
-        setMessageUserData(data);
+        setMessageUserData([data]);
         console.log(data);
       } catch (error) {
         console.error('Error fetching data:', error);
