@@ -35,7 +35,7 @@ const AccountLayout = () => {
             <img src={user__img} alt="" />
           </div>
           <div className="flex-items justify-content-center gap-2 px-2 px-lg-4 mt-2 justify-content-sm-between flex-wrap gap-1">
-            <p className="fw-medium fs-px_24 ln-ht-20px">Informations personels</p>
+            <p className="fw-medium fs-px_20 ln-ht-20px">Informations personels</p>
             <Link onClick={handleClick} to={""}
              className={`${isEditInfo && 'outline'} medium-blue-button d-grid place-items-center`}>
               Modifire
