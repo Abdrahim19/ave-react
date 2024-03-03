@@ -38,8 +38,8 @@ const AddaddressPostalPopup: React.FC = () => {
       const data: LocationData = await getLocationByPostalCode(postalCode);
       setLocationData(data);
       console.log(data);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err) {
+      setError(err?.message);
       console.error('Error:', err);
     }
   };
@@ -61,7 +61,7 @@ const AddaddressPostalPopup: React.FC = () => {
           label="Enter your postal address"
           value={postalCode}
           onChange={handleInputChange}
-          error={error}
+          
         />
       </div>
       {error && <div style={{ color: 'red' }}>{error === "Request failed with status code 404" ? "not found" : error}</div>}

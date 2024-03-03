@@ -8,7 +8,7 @@ import { useRef } from 'react';
 
 
 const UserOfferCard: React.FC<UserOfferCardTypes> = ({ title, description, users }) => {
-  const listRef = useRef(null);
+  const listRef = useRef<HTMLDivElement | null>(null);
   const itemWidth = 150;
   const padding = 10;
 
