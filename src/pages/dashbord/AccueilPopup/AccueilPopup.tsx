@@ -4,6 +4,7 @@ import PopupDmaend from "../../../components/commen/popUps/PopupDmaend/PopupDmae
 import PopupHome from "../../../components/commen/popUps/PopupHome/PopupHome";
 import { useYourContext } from "../../../context/MultiStepForm";
 import LogoutPopup from "../../../components/commen/popUps/LogoutPopup/StateSheardPopup";
+import AddPostSteeper from "../../home/addPostSteeper/AddPostSteeper";
 
 const AccueilPopup = () => {
   const { ActiveCartButton , setActiveButton } = useYourContext();
@@ -32,7 +33,7 @@ const AccueilPopup = () => {
       case "Demande priveé":
         return <PopupDmaend />;
       case "Mes Demandes ":
-        return <AddPostPopup />;
+        return <AddPostSteeper />;
       case 'nothing':
         return null 
       default:

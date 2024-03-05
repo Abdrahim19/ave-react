@@ -15,7 +15,7 @@ const PopupInfo = () => {
     { text: 'Mon profile', icon: 'bi bi-person' , path:'/account' },
     { text: 'Mes demandes', icon: 'bi bi-plus-circle' , path:'' },
     { text: 'Mon solde', icon: 'bi bi-currency-euro' , path:'' },
-    { text: 'Mes cartes', icon: 'bi bi-credit-card-2-front' , path:'' },
+    { text: 'Mes cartes', icon: 'bi bi-credit-card-2-front' , path:'paiement' },
     { text: 'Centre d’aide', icon: 'bi bi-info-circle' , path:'' },
     { text: 'À propos', icon: 'bi bi-info-circle' , path:'' },
   ];
@@ -40,7 +40,7 @@ const PopupInfo = () => {
         <hr className="sparaiter" />
         {menuItems.map((item, index) => (
           <div key={index}>
-          <Link to={item.path} className={` d-flex align-items-center gap-3 link`}>
+          <Link to={item.path} className={`${item.text === "Mon solde" ? "mb-2" : ""} d-flex align-items-center gap-3 link`}>
             <i className={item.icon}></i>
             {item.text}
           </Link>

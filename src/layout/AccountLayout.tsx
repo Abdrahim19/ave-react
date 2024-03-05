@@ -20,8 +20,11 @@ const AccountLayout = () => {
     {name: "phone", iconClass: "bi bi-telephone-fill", customText: "0668700685" },
     {name: "siteWeb", iconClass: "bi bi-browser-chrome", customText: "www.symloop.com" },
     {name: "siteWeb", iconClass: "bi bi-geo", customText: "setife" },
-
   ];
+
+  // const MonCompt = [
+  //   {name: "name", iconClass:"bi bi-person-circle", customText: "hamza" },
+  // ] 
   return (
     <>
       <Navbar />
@@ -55,7 +58,22 @@ const AccountLayout = () => {
           ) : (
             <EditUserInfo />
           )}
-          
+          <div className="flex-items justify-content-between fw-medium col-lg-10 mx-auto my-4">
+            <p className="fs-px_18 lh-base">Mon Compte</p>
+            <Link to={""} className="clr-green-light fs-px_18 ln-ht-17px">
+              modifier
+            </Link>
+          </div>
+          <div className="d-grid gap-2">
+          {people.map(person => (
+              <UserInfo
+                key={person.name}
+                name={person.name}
+                iconClass={person.iconClass}
+                customText={person.customText}
+                />
+                ))}
+                </div>
         </div>
       </div>
     </>

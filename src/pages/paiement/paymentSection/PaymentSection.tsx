@@ -19,7 +19,7 @@ const PaymentSection: React.FC = () => {
       };
   return (
     <>
-      <h1 className="ln-ht-50px fs-px-40 fw-bold mb-5">Méthode de paiement</h1>
+      <h1 className="ln-ht-50px fs-px-40 fw-bold mt-3 mb-5">Méthode de paiement</h1>
       <div className="flex-items flex-wrap justify-content-center justify-content-md-start gap-4">
         <PaymentWayBox paymentImageSrc={masterCard} />
         <PaymentWayBox paymentImageSrc={payoneer} />

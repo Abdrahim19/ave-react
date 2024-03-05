@@ -5,6 +5,7 @@ import './dmaned.css'
 // import { useState } from 'react';
 import MultiActionButton from '../../../components/commen/ui/MultiActionButton/MultiActionButton';
 import { useState } from 'react';
+import { AddPostContext } from '../../../context/AddPostSteeperContext';
 const DemandeCard = () => {
     // Define state and toggle function
     // const [isShow, setShow] = useState<boolean>(false);
@@ -14,6 +15,7 @@ const DemandeCard = () => {
     // };
     const [isShowPopup, setShowPopup] = useState<boolean>(false);
     const [ShowDemandepubliquePopup, setShowDemandepubliquePopup] = useState<boolean>(false);
+    const {toggleshowPostPopup} = AddPostContext()
 
     const handleToggle = () => {
      setShowPopup(!isShowPopup);
@@ -29,7 +31,7 @@ const DemandeCard = () => {
       { label: 'Mes Informations', icon: <i className="bi bi-info-circle"></i>,
        onClick: () => console.log('Mes Informations clicked') },
       { label: 'Mes Demandes ', icon: <i className="bi bi-plus-circle"></i>,
-       onClick: () => console.log('Mes Demandes clicked') },
+       onClick: () => toggleshowPostPopup() },
       { label: 'Deconnexion', icon: <i className="bi bi-box-arrow-right"></i>,
        onClick: () => handleToggle() },
     ];  
