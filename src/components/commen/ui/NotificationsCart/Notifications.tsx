@@ -4,7 +4,7 @@ const Notifications = () => {
     
   return (
     <>
-    <div style={{width:'min( 550px, 90%)' , zIndex:12}} className="position-fixed Poppins
+    <div style={{width:'min(400px, 90%)' , zIndex:12}} className="position-fixed Poppins
      fw-medium top-0 animate__animated animate__slideInRight
      right-0 h-screen bg-white 
     shadow-lg p-4">

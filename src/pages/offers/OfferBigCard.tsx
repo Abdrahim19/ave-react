@@ -58,6 +58,54 @@ const OfferBigCard = () => {
           "https://i.ibb.co/6rY6zNP/Rectangle-242.png",
           "https://i.ibb.co/6rY6zNP/Rectangle-242.png"
         ]
+      },
+      {
+        id: 5,
+        name: "Sophia",
+        rating: 4.3,
+        type: "Particulier",
+        online: true,
+        link: "/",
+        workingImages: [
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png",
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png"
+        ]
+      },
+      {
+        id: 6,
+        name: "Michael",
+        rating: 4.2,
+        type: "Professional",
+        online: true,
+        link: "/",
+        workingImages: [
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png",
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png"
+        ]
+      },
+      {
+        id: 7,
+        name: "Emma",
+        rating: 4.5,
+        type: "Particulier",
+        online: true,
+        link: "/",
+        workingImages: [
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png",
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png"
+        ]
+      },
+      {
+        id: 8,
+        name: "John",
+        rating: 4.7,
+        type: "Professional",
+        online: false,
+        link: "/",
+        workingImages: [
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png",
+          "https://i.ibb.co/6rY6zNP/Rectangle-242.png"
+        ]
       }
     ],
   },]
@@ -85,6 +133,22 @@ const OfferBigCard = () => {
       <div className="col-md-12 col-lg-10 mx-auto">
         <Filter />
       </div>
+{      userOfferCards.map((user, index) => (
+  <UserOfferCard
+    key={index} // Use index as key if user.title is not unique
+    title={user.title}
+    description={user.description}
+    users={user.users}
+  />
+))}
+{      userOfferCards.map((user, index) => (
+  <UserOfferCard
+    key={index} // Use index as key if user.title is not unique
+    title={user.title}
+    description={user.description}
+    users={user.users}
+  />
+))}
 {      userOfferCards.map((user, index) => (
   <UserOfferCard
     key={index} // Use index as key if user.title is not unique

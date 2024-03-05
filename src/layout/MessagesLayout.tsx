@@ -10,7 +10,7 @@ const MessagesLayout = () => {
   return (
     <>
     <Navbar />
-    <div className="main-page d-flex justify-content-center">
+    <div style={{minHeight:'90vh'}} className="main-page d-flex justify-content-center">
       <div className="row container-lg">
           <div className="pt-4 col-md-3 px-0 px-sm-2 order-2 order-md-1">
             <UsersMessages />
